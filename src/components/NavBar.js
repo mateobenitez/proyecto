@@ -3,13 +3,17 @@ import React from 'react';
 class NavBar extends React.Component{
     render() {
         return(
-            <div>
-               <div class="navbar navbar-dark bg-primary">
-                    <div class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <div className="navbar-fixed">
+                <nav  className="transparent">
+                    <div className= "nav-wrapper" >
+                        <a href="#" className= "brand-logo lime-text"> FORAÜ</a>
+                        <ul id="nav-mobile" className= "right hide-on-med-and-down">
+                            <li><a href="#">a</a></li>
+                            <li><a href="#">a</a></li>
+                            <li><a href="#">a</a></li>
+                        </ul>
                     </div>
-                </div>
+                </nav>
             </div>
         );
     }
