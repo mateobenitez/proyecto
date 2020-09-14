@@ -1,0 +1,39 @@
+.brand-log{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 64px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #4D3E3E;
+}
+.linea{
+    position:relative;
+    border: 0 none #4D3E3E;
+    border-top: 1px solid #4D3E3E;
+    top:-30px;
+}
+.nav-com{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #4D3E3E;
+}
+.nav-reg{
+font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 36px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #ffff;
+}

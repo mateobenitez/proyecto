@@ -1,6 +1,58 @@
 .App{
-    background: linear-gradient(#ffff, #f0f4c3);
+    background: linear-gradient(180deg, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%), #FFF6CF;
 }
 p{
     text-align: center;
+}
+.que{
+
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 56px;
+line-height: 84px;
+/* identical to box height */
+
+
+color: #4D3E3E;
+}
+.texto{
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    margin-left: 0px;
+/* or 65px */
+text-align: left;
+letter-spacing: 0.01em;
+
+color: #4D3E3E;
+
+}
+
+.linea-reg {
+    border-left: 2px solid;
+    height: 350px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    
+  }
+
+.text {
+    background-color: transparent;
+    border: none transparent;
+    outline: none;
+    position: relative;
+    left: 30%;
+}
+
+.linea-texto{
+    position: absolute;
+    left: 30%;
+    width: 270px;
+}
+
+a-sesion{
+    font-family: Poppins;
+    color:  #4D3E3E;
 }
