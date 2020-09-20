@@ -1,14 +1,20 @@
 .brand-log{
-    font-family: Poppins;
+    font-family: "pop";
     font-style: normal;
     font-weight: normal;
     font-size: 64px;
     display: flex;
     align-items: center;
     text-align: center;
-    
     color: #4D3E3E;
+    transition: 0.3s;
 }
+
+.brand-log:hover{
+    color:#755d5d;
+    text-decoration: none;
+}
+
 .linea{
     position:relative;
     border: 0 none #4D3E3E;
@@ -16,7 +22,7 @@
     top:-30px;
 }
 .nav-com{
-font-family: Poppins;
+font-family: "pop";
 font-style: normal;
 font-weight: 600;
 font-size: 24px;
@@ -25,9 +31,16 @@ display: flex;
 align-items: center;
 text-align: center;
 color: #4D3E3E;
+transition: 0.3s;
+opacity:0.6;
 }
+
+.nav-com:hover{
+    color:#755d5d;
+}
+
 .nav-reg{
-font-family: Poppins;
+font-family: "pop";
 font-style: normal;
 font-weight: 600;
 font-size: 24px;
@@ -36,4 +49,53 @@ display: flex;
 align-items: center;
 text-align: center;
 color: #ffff;
+}
+
+@font-face{
+    font-family: "pop";
+    src: url(/poppins/Poppins-Regular.ttf);
+}
+
+.boton1{
+    background-color: #4D3E3E;
+    color:white;
+    border-top-left-radius: 29px;
+    border-bottom-left-radius: 29px;
+    font-family: "pop";
+    border:2px solid #4D3E3E;
+    transition: 0.6s;
+    padding: 8px 16px;
+    font-size: 24px;
+}
+
+.boton1:hover{
+    background-color: #755d5d;
+    border-color: #4D3E3E;
+    
+}
+
+.boton1:active{
+    background-color: black;
+}
+
+.boton2:hover{
+    background-color: lightgrey;
+    border-color: #4D3E3E;
+}
+
+.boton2:active{
+    background-color: white;
+}
+
+
+.boton2{
+    background-color: #ffffff;
+    border-color:  #4D3E3E;
+    border:2px solid;
+    border-top-right-radius: 29px;
+    border-bottom-right-radius: 29px;
+    font-family: "pop";
+    transition: 0.6s;
+    padding: 8px 16px;
+    font-size: 24px;
 }
