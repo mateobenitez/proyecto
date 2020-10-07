@@ -1,4 +1,4 @@
-.Inicio{
+.IniciarSesion{
     
     overflow-x: hidden;
 }
@@ -6,8 +6,6 @@
     text-align: center;
 }*/
 .que{
-
-font-family: "pop";
 font-style: normal;
 font-weight: normal;
 font-size: 3.5em;
@@ -17,19 +15,17 @@ position: relative;
 left: -140%;
 }
 
-.ques{
-    font-family: "pop";
+.quesi{
     font-style: normal;
     font-weight: normal;
     font-size: 3.5em;
     line-height: 5.0 em;
-    color: #393939;
+    color:#393939;
     position: relative;
-    left:-5%;
+    left:-2%;
 }
 
-.texto{
-    font-family: "pop";
+.txt{
     font-style: normal;
     font-weight: normal;
     margin-left: 0px;
@@ -40,21 +36,21 @@ left: -140%;
     left:8%;
 }
 
-.linea-reg {
+.linea-regi {
     transform: rotate(90deg);
     position: relative;
+    top: 8em;
     width: 28.875em;
     border-top: 1px solid black;
-    
   }
 
-.text {
+.txto {
     background-color: transparent;
     border: none transparent;
     outline: none;
     position: relative;
+    top: 5em;
     left: 70%;
-    font-family: "pop";
 
 }
 
@@ -65,32 +61,20 @@ left: -140%;
     
 }
 
-.li1{
+.l1{
     position: absolute;
-    bottom:24.9em;
+    top:8.75em;
 }
-.li2{
+.l2{
     position: absolute;
-    bottom: 20.3em;
+    top: 13.35em;
 }
-.li3{
+.l3{
     position: absolute;
-    bottom: 15.7em;
+    top: 17.95em;
 }
-.li4{
-    position: absolute;
-    bottom: 11.1em;
-}
-.li5{
-    position: absolute;
-    bottom: 6.5em;
-}
-.li6{
-    position: absolute;
-    bottom: 1.9em;
-}
+
 .a-sesion{
-    font-family: "pop";
     color:  #393939;
 }
 
@@ -105,26 +89,19 @@ left: -140%;
     right: 30%;
 }
 
-@font-face{
-    font-family: "pop";
-    src: url(components/poppins/Poppins-Regular.ttf);
-}
 
-
-
-.boton3{
+.bot3{
     background-color: transparent;
     color:#393939;
     border-radius: 1.8125em;
-    font-family: "pop";
     border:3px solid #393939;
     transition: 0.6s;
     padding: 0.5em 2em;
     font-size: 0.9375em;
     outline:none;
     position: relative;
-    right: -223%;
-    top: 5em;
+    right: -232%;
+    top: 20em;
 }
 
 .divBoton{
@@ -133,7 +110,7 @@ left: -140%;
     top:48%;
 }
 
-.obl-texto{
+.obli-texto{
     position: absolute;
     left: 70%;
     width: 16.8125em;
@@ -142,34 +119,21 @@ left: -140%;
     font-size: 0.8em;
 }
 
-.obl{
+
+
+.obli3{
     position: absolute;
-    top: 5.5em;
+    top: 12em;
 }
 
-.obl1{
-    position: absolute; 
-    top: 11.2em;
+.obli4{
+    position: absolute;
+    top: 17.8em;
 }
 
-.obl2{
+.obli5{
     position: absolute;
-    top: 17em;
-}
-
-.obl3{
-    position: absolute;
-    top: 22.7em;
-}
-
-.obl4{
-    position: absolute;
-    top: 28.5em;
-}
-
-.obl5{
-    position: absolute;
-    top: 34.3em;
+    top: 23.4em;
 }
 
 .ya{

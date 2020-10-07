@@ -1,0 +1,89 @@
+.princ{
+    
+    overflow-x: hidden;
+    font-family: pop;
+    margin-right: 15em;
+    margin-left: 15em;
+    background: #F9EAB7;
+}
+
+@font-face{
+    font-family: "pop";
+    src: url(components/poppins/Poppins-Regular.ttf);
+}
+
+.misG{
+    background-color: #f6f6f6;
+    border-radius:2em;
+}
+
+.misS{
+    background-color: #DADADA;
+    border-radius:2em;
+}
+
+
+.misC{
+    position: relative;
+    left: 3%;
+    font-size: 1.5em;
+    background-color: #f6f6f6;
+    border-radius:200000em;
+    width: 30px;
+    
+}
+
+.misI{
+    background-color: #DADADA;
+    border-radius:2em;
+    max-width: 30em;
+    background-color: #EED375;
+}
+
+.cat{
+    font-size: 2.25em;
+}
+
+.publicaciones{
+    border-color: #EED375;
+    border-width: 0.4em;
+    border-style: solid;
+    border-radius: 1em;
+} 
+
+.pibe{
+    font-size: 1.25em;
+}
+
+.botonP{
+    background-color:  #C5C5C5;
+    border-radius: 1.8125em;
+    border:none transparent;
+    font-family: "pop";
+    transition: 0.6s;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+    outline:none;
+}
+
+.cont{
+    max-width: 67%;
+}
+
+.imagenP{
+    background-color: #F9EAB7 ;
+    border-radius: 2em;
+}
+
+.lineaP{
+    border-width: .125em;
+    color: #828282;
+    
+}
+
+.boton{
+    background-color: white;
+    border: none;
+    text-decoration: none;
+}

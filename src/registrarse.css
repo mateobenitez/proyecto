@@ -1,11 +1,6 @@
 .Reg{
-    background: linear-gradient(180deg, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%), #FFF6CF;
     font-family: pop;
-}
-
-.Reg1{
-    background: linear-gradient(180deg, #F7F7F7 0%, rgba(255, 255, 255, 0) 100%), #FFF6CF;
-    font-family: pop;
+    overflow-x: hidden;
 }
 
 @font-face{
@@ -16,9 +11,10 @@
 .cambio{
     border: transparent 80px;
     border-radius: 80px;
-    background-color: #4D3E3E;
+    background-color: #393939;
     height: 80px;
     width: 80px;
+    outline:none;
 }
 
 .flecha{
@@ -27,44 +23,186 @@
 }
 
 .grupos{
-    background-color: #EDEFF1;
     max-width: 1000px;
     border-radius: 20px;
+    border:5px solid #EDEFF1;
+    background: #EDEFF1;
+
 }
 
+
 .btnNC{
-    background-color: #FFC38B;
     border: transparent;
     border-radius: 500px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    max-width: 160px;
-    min-width: 160px;
+    max-width: 170px;
+    min-width: 170px;
     max-height: 60px;
     min-height: 60px;
+    
+}
+
+.btnNC:focus{
+    color: red;
 }
 
 .btnNO{
-    background-color: #FF926B;
     border: transparent;
     border-radius: 500px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-    max-width: 160px;
-    min-width: 160px;
+    max-width: 170px;
+    min-width: 170px;
     max-height: 60px;
     min-height: 60px;
+    
 }
 
 .btnM{
-    background-color: #4D3E3E;
+    background-color: #393939;
     border-radius: 50px;
     border: transparent;
     color: #FFFf;
     height: 50PX;
     width: 250px;
+}
+
+.botn1{
+    background-color: rgba(0,0,0,0.6);
+    border: transparent;
+    border-radius: 500px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    max-width: 170px;
+    min-width: 170px;
+    max-height: 60px;
+    min-height: 60px;
+   
+}
+
+.completar{
+    background-color: #98B9F1;
+    max-width: 1000px;
+    border-top-left-radius: 20px;
+    border-top-right-radius:20px;
+}
+
+.completar2{
+    background-color: #F6F6F6;
+    max-width: 1000px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius:20px;
+}
+
+.linea-completar{
+    position: absolute;
+    width: 270px;
+    bottom:40%;
+    right:0%;
+}
+
+.textCompletar {
+    background-color: transparent;
+    border: none transparent;
+    outline: none;
+    position: relative;
+    font-family: "pop";
+    right:20%;
+}
+
+.soy{
+    position: absolute;
+    left: 3.8em;
+}
+
+.mail{
+    position: absolute;
+    left: .3em;
+}
+
+.país{
+    position: absolute;
+    left: 3.8em;
+}
+
+.provincia{
+    position: absolute;
+    left: .5em;
+}
+
+.ciudad{
+    position: absolute;
+    left: .5em;
+}
+
+.blackButton{
+    background-color: black;
+    color: white;
+  }
+  
+  .whiteButton{
+    background-color: white;
+    color: black;
+  }
+
+#btn1{
+    background: #F27E11;
+    opacity: 54%;
+  }
+ 
+#btn2{
+    background: #1EC643;
+    opacity: 56%;
+}
+
+#btn3{
+    background:#E00E0E;
+    opacity: 57%;
+}
+
+#btn4{
+    background: #EBC12C;
+    opacity: 61%;
+}
+
+#btn5{
+    background: #FF5FA2;
+    opacity: 60%;
+}
+
+#btn6{
+    background: #4285F4;
+    opacity: 54%;
+}
+
+#btn7{
+    background: #A719CB;
+    opacity: 39%;
+}
+
+#btn8{
+    background: #6D3500;
+    opacity: 58%;
+}
+
+.as{
+    position: absolute;
+    right: 10em;
+}
+
+.finalizar{
+    position: relative;
+    bottom: 2.5em;    
+}
+
+.imgReg1{
+    position: relative;
+    bottom: 6.25em;
 }

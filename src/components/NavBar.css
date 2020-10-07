@@ -2,49 +2,54 @@
     font-family: "pop";
     font-style: normal;
     font-weight: normal;
-    font-size: 64px;
+    font-size: 4em;
     display: flex;
     align-items: center;
     text-align: center;
-    color: #4D3E3E;
+    color: #393939;
     transition: 0.3s;
 }
 
+.user{
+    font-size: 1.5em;
+}
+
 .brand-log:hover{
-    color:#755d5d;
+    color:#4b3a3a;
     text-decoration: none;
 }
 
 .linea{
     position:relative;
-    border: 0 none #4D3E3E;
-    border-top: 1px solid #4D3E3E;
-    top:-30px;
+    border: 0 none #393939;
+    border-top: 1px solid #393939;
+    top:-16px;
+    box-shadow: 0px 3px 15px black;
 }
 .nav-com{
 font-family: "pop";
 font-style: normal;
 font-weight: 600;
-font-size: 24px;
-line-height: 36px;
+font-size: 1.5em;
+line-height: 2.25em;
 display: flex;
 align-items: center;
 text-align: center;
-color: #4D3E3E;
+color: #393939;
 transition: 0.3s;
 opacity:0.6;
 }
 
 .nav-com:hover{
-    color:#755d5d;
+    color:#4b3a3a;
 }
 
 .nav-reg{
 font-family: "pop";
 font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 36px;
+font-weight: 25.000em;
+font-size: 1.5em;
+line-height: 2.25em;
 display: flex;
 align-items: center;
 text-align: center;
@@ -57,20 +62,20 @@ color: #ffff;
 }
 
 .boton1{
-    background-color: #4D3E3E;
+    background-color: #393939;
     color:white;
     border-top-left-radius: 29px;
     border-bottom-left-radius: 29px;
     font-family: "pop";
-    border:2px solid #4D3E3E;
+    border:2px solid #393939;
     transition: 0.6s;
-    padding: 8px 16px;
-    font-size: 24px;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
 }
 
 .boton1:hover{
-    background-color: #755d5d;
-    border-color: #4D3E3E;
+    background-color: #4b3a3a;
+    border-color: #393939;
     
 }
 
@@ -80,7 +85,7 @@ color: #ffff;
 
 .boton2:hover{
     background-color: lightgrey;
-    border-color: #4D3E3E;
+    border-color: #393939;
 }
 
 .boton2:active{
@@ -90,12 +95,16 @@ color: #ffff;
 
 .boton2{
     background-color: #ffffff;
-    border-color:  #4D3E3E;
+    border-color: #393939;
     border:2px solid;
     border-top-right-radius: 29px;
     border-bottom-right-radius: 29px;
     font-family: "pop";
     transition: 0.6s;
-    padding: 8px 16px;
-    font-size: 24px;
+    padding: 0.5em 1em;
+    font-size: 1.5em;
+}
+
+.navbar{
+    background-color: #F6F6F6;
 }
