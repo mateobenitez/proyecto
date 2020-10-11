@@ -7,6 +7,7 @@ import Registrarse1 from './registrarse1.js'
 import Registrarse2 from './registrarse2.js'
 import Registrarse3 from './registrarse3.js'
 import PagPrinc from './páginaPrincipal.js'
+import PagPrinca from './páginaPrincipal copy.js'
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -19,6 +20,9 @@ function App() {
       <Switch>
         <Route path="/IniciarSesion">
           <IniciarSesion />
+        </Route>
+        <Route path="/princa">
+          <PagPrinca />
         </Route>
         <Route path="/princ">
           <PagPrinc />

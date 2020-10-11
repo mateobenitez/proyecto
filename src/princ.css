@@ -1,10 +1,15 @@
 .princ{
-    
+    overflow-x: hidden;
+    font-family: pop;
+    background: #F9EAB7;
+}
+
+.princEdu{
     overflow-x: hidden;
     font-family: pop;
     margin-right: 15em;
     margin-left: 15em;
-    background: #F9EAB7;
+    background: rgb(30,198,67, 0.35) ;
 }
 
 @font-face{
@@ -12,14 +17,54 @@
     src: url(components/poppins/Poppins-Regular.ttf);
 }
 
+.misGa{
+    position: fixed;
+    top: 16.3em;
+    background-color: #f6f6f6;
+    border-radius:2em;
+    max-width: 18.27em;
+}
+
+.misGa1{
+    position: fixed;
+    top: 44.3em;
+    background-color: #f6f6f6;
+    border-radius:2em;
+    max-width: 18.27em;
+}
+
 .misG{
     background-color: #f6f6f6;
     border-radius:2em;
+    position: relative;
+    
 }
 
 .misS{
+    position: fixed;
+    top: 12em;
     background-color: #DADADA;
     border-radius:2em;
+    max-width: 18.27em;
+    max-height: 3.7em;
+}
+
+.misS1{
+    position: fixed;
+    top: 40em;
+    background-color: #DADADA;
+    border-radius:2em;
+    max-width: 18.27em;
+    max-height: 3.7em;
+}
+
+
+.misI{
+    position: relative;
+    background-color: #DADADA;
+    border-radius:2em;
+    max-width: 30em;
+    max-height: 3.7em;
 }
 
 
@@ -28,20 +73,15 @@
     left: 3%;
     font-size: 1.5em;
     background-color: #f6f6f6;
-    border-radius:200000em;
+    border-radius:2em;
     width: 30px;
-    
 }
 
-.misI{
-    background-color: #DADADA;
-    border-radius:2em;
-    max-width: 30em;
-    background-color: #EED375;
-}
+
+
 
 .cat{
-    font-size: 2.25em;
+    font-size: 2em;
 }
 
 .publicaciones{
@@ -67,6 +107,24 @@
     outline:none;
 }
 
+.botonE{
+    background-color:  #C5C5C5;
+    border-radius: 1.8125em;
+    border:none transparent;
+    font-family: "pop";
+    transition: 0.6s;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    font-size: 1em;
+    outline:none;
+}
+
+.a{
+    float: right;
+}
+
 .cont{
     max-width: 67%;
 }
@@ -87,3 +145,141 @@
     border: none;
     text-decoration: none;
 }
+
+
+
+#btnInfo:hover{
+    color: #EBC12C;
+}
+
+#btnEdu:hover{
+    color: rgba(3, 99, 13, 1);
+}
+
+#btnTec:hover{
+    color:rgba(4, 95, 146, 1);
+}
+
+#btnSal:hover{
+    color:rgba(148, 0, 0, 1);
+}
+
+#btnDep:hover{
+    color:rgba(152, 69, 23, 1);
+}
+
+#btnDoc:hover{
+    color:rgba(109, 53, 0, 1);
+}
+
+#btnSal:hover{
+    color:rgba(148, 0, 0, 1);
+}
+
+#btnArt:hover{
+    color:rgba(109, 0, 136, 1);
+}
+
+
+#btnRel:hover{
+    color:rgba(189, 38, 101, 1);
+}
+
+#btnInfo{
+    color: #EBC12C;
+    background-color: rgba(238, 211, 117, 0.19);
+    border-radius: 15px;
+}
+
+#btnEdu{
+    border-radius: 15px;
+}
+
+button:focus {outline:0;}
+
+#btnTec{
+    border-radius: 15px;
+}
+
+#btnSal{
+    border-radius: 15px;
+}
+
+#btnDep{
+    border-radius: 15px;
+}
+
+#btnDoc{
+    border-radius: 15px;
+}
+
+#btnSal{
+    border-radius: 15px;
+}
+
+#btnArt{
+    border-radius: 15px;
+}
+
+
+#btnRel{
+    border-radius: 15px;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+.modal{
+    background: rgba(0, 0, 0, 0.6);
+}
+.modal-container {
+    position: absolute;
+    width: 60%;
+    background: #ffffff;
+    left: 25%;
+    top: 30%;
+    padding: 20px;
+    border-radius: 40px;
+    border-color: black;
+}
+  
+.descPub{
+    width: 30em;
+    background-color: rgba(196, 196, 196, 1);
+    border-color: transparent;
+    border-radius: 30px;
+    height: 3em;
+    outline: none;
+}
+
+.des{
+    width: 35em !important;
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 30px;
+}
+
+.queDes{
+    font-size: 2.125em;
+}
+
+.btnPub{
+    width: 35em;
+    height: 2.5em;
+    background-color: rgba(196, 196, 196, 1);
+    border-color: transparent;
+    border-radius: 30px;
+    outline: none;
+    text-align: 20em;
+}
+
+.btnAña{
+    width: 13em;
+    height: 2.5em;
+    background-color: rgba(196, 196, 196, 1);
+    border-color: transparent;
+    border-radius: 30px;
+    outline: none;
+    text-align: 20em;
+}
+

@@ -36,7 +36,7 @@ function Reg() {
                     </div>
                 </div>
                 <form method="get" action="/registrarse1">   
-                    <button className="cambio"><FontAwesomeIcon icon={faAngleRight} className="flecha"/></button>
+                    <button className="cambio">&nbsp;&nbsp;<FontAwesomeIcon icon={faAngleRight} className="flecha"/></button>
                 </form> 
                 <p className="mt-4">Siguiente</p>
             </div>

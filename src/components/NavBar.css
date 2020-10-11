@@ -8,6 +8,7 @@
     text-align: center;
     color: #393939;
     transition: 0.3s;
+    position: relative;
 }
 
 .user{
@@ -20,7 +21,7 @@
 }
 
 .linea{
-    position:relative;
+    position: relative;
     border: 0 none #393939;
     border-top: 1px solid #393939;
     top:-16px;
@@ -59,7 +60,9 @@ color: #ffff;
 @font-face{
     font-family: "pop";
     src: url(/poppins/Poppins-Regular.ttf);
+    
 }
+
 
 .boton1{
     background-color: #393939;
@@ -107,4 +110,21 @@ color: #ffff;
 
 .navbar{
     background-color: #F6F6F6;
+}
+
+
+.buscar{
+    background-color: transparent;
+    border: transparent;
+    outline: none;
+    max-width: 7em;
+} 
+  
+.icono:focus { outline:none }
+
+
+.searchbar{
+    min-width: 10em;
+    min-height: 1em;
+    font-size: 0.3em;
 }

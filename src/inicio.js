@@ -42,6 +42,7 @@ class Inicio extends Component{
    }
    this.onChange = this.onChange.bind(this);
  }
+ 
  onChange(e){
    let name = e.target.name;
    let value = e.target.value;
