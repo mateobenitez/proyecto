@@ -62,7 +62,6 @@ left: -140%;
     position: absolute;
     left: 70%;
     width: 16.8125em;
-    
 }
 
 .li1{
@@ -110,7 +109,10 @@ left: -140%;
     src: url(components/poppins/Poppins-Regular.ttf);
 }
 
-
+.nena{
+    position: absolute;
+    left: 30em;
+}
 
 .boton3{
     background-color: transparent;
@@ -125,6 +127,7 @@ left: -140%;
     position: relative;
     right: -223%;
     top: 5em;
+    z-index: 1;
 }
 
 .divBoton{
@@ -173,15 +176,15 @@ left: -140%;
 }
 
 .ya{
-    position: relative;
-    left: 13.5em;
-    top: 5.7em;
+    position: absolute;
+    left: 14.2em;
+    top: 6em;
 }
 
 .ya2{
-    position: relative;
-    left: 15.6em;
-    top: 4.7em;
+    position: absolute;
+    left: 16.4em;
+    top: 7.7em;
     color: #393939;
     text-decoration: underline;
 }

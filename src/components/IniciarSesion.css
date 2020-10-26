@@ -25,7 +25,7 @@ left: -140%;
     left:-2%;
 }
 
-.txt{
+.ttxt{
     font-style: normal;
     font-weight: normal;
     margin-left: 0px;
@@ -33,16 +33,22 @@ left: -140%;
     letter-spacing: 0.01em;
     color: #393939;
     position: relative;
-    left:8%;
+    left:-11%;
 }
 
 .linea-regi {
     transform: rotate(90deg);
-    position: relative;
-    top: 8em;
-    width: 28.875em;
+    position: absolute;
+    top: 4em;
+    width: 18em;
     border-top: 1px solid black;
-  }
+    right: 3em;
+}
+
+.placeho{
+    position: absolute;
+    right: 32em;
+}
 
 .txto {
     background-color: transparent;
@@ -84,13 +90,7 @@ left: -140%;
     right: 21.875 em;
 }
 
-.placeh{
-    position: relative;
-    right: 30%;
-}
-
-
-.bot3{
+.boto3{
     background-color: transparent;
     color:#393939;
     border-radius: 1.8125em;
@@ -101,7 +101,8 @@ left: -140%;
     outline:none;
     position: relative;
     right: -232%;
-    top: 20em;
+    top: 14em;
+    left: 18.7em;
 }
 
 .divBoton{
@@ -153,4 +154,9 @@ left: -140%;
 .ya2:hover{
     color: #393939;
     text-decoration: underline;
+}
+
+.nen{
+    position: absolute;
+    left: 28em;
 }

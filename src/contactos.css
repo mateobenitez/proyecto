@@ -1,0 +1,95 @@
+.contacto{
+    overflow-x: hidden;
+}
+
+.titulo{
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+.sel{
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+.nosotros{
+    border-radius: 40px;
+    background-color: rgba(238, 238, 238, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 36em;
+    max-height: 36em;
+    max-width: 10em;
+    position: relative;
+    left: -3em;
+}
+
+.nosotros1{
+    border-radius: 60px;
+    background-color: rgba(238, 238, 238, 1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    min-height: 36em;
+    max-width: 36em;
+    position: relative;
+    left: 3em;
+}
+
+.nosp{
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0em;
+}
+
+.lineanos{
+    max-width: 29.875em;
+}
+
+.botCon:focus{
+    outline: none;
+}
+
+.botCon{
+    position: relative;  
+    height: 13.625em;
+    width: 37.500em;
+}
+
+.inputsNos{
+    position: relative;
+    bottom: 10em;
+    visibility: hidden;
+}
+
+.botonesNos{
+    background-color: rgba(221, 221, 221, 1);
+    border: 2px solid #CFCFCF;
+    box-sizing: border-box;
+    border-radius: .3em;
+    max-width: 9em;
+    font-size: 36px;
+}
+
+.textYcorreo{
+    min-width: 18.4em;
+}
+
+.botonNos{
+    background-color: rgba(57, 57, 57, 1);
+    color: rgba(246, 246, 246, 1);
+    border-radius: 55px;
+    font-size: 36px;
+    padding-left: 2em;
+    padding-right: 2em;
+    border-color: transparent;
+    position: absolute;
+    bottom: -2em;
+    left: 7em;
+}

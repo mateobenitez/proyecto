@@ -112,19 +112,24 @@ color: #ffff;
     background-color: #F6F6F6;
 }
 
+.navbarPrinc{
+    position: fixed;
+    min-width: 100%;
+    z-index: 100;
+}
 
 .buscar{
     background-color: transparent;
-    border: transparent;
     outline: none;
-    max-width: 7em;
+    min-width: 23em;
+    border:none;
 } 
-  
-.icono:focus { outline:none }
 
-
-.searchbar{
-    min-width: 10em;
-    min-height: 1em;
-    font-size: 0.3em;
+.search{
+    font-size: 24px;
+    border: rgba(57, 57, 57, 1) 2px solid;
+    border-radius: 56px;
+    position: relative;
+    right: 4.2em;
 }
+

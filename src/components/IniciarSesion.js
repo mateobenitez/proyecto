@@ -65,19 +65,20 @@ class IniciarSesion extends Component{
               </div> 
               <div className="row justify-content-around"> 
                 <div className="col col-4">
-                  <p className="mt-5 txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                  <p className="mt-5 ttxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                   quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                   pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <img className="nen" src={require('./nena.svg')}/>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
-                  <div className="col col-3 placeh">
+                  <div className="col col-3 placeho">
                     <input id="usuario" className="txto mt-5" type="text" name="usuario" placeholder="*Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="l1 linea-texto"></hr>
                     <p className="obli3 obli-texto">*Es obligatorio completar este campo</p>
                     <input id="email" className="txto mt-5" type="text" name="email"  placeholder="*Email"  onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
                     <p className="obli4 obli-texto">*Es obligatorio completar este campo</p>
                     <input id="contraseña" className="txto mt-5" name="contraseña" type="password" placeholder="*Contraseña" onChange={this.onChange}></input><br></br><hr className="l3 linea-texto"></hr>
                     <p className="obli5 obli-texto">*Es obligatorio completar este campo</p>
-                    <input className="bot3" type="submit" formAction="/princ" name="boton" value="Iniciar Sesión"></input>
+                    <input className="boto3" type="submit" formAction="/princ" name="boton" value="Iniciar Sesión"></input>
                   </div>
                   <div className="col col-3 placeh">
                     <hr className="mt-5 linea-regi"/>

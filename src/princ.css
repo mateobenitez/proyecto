@@ -1,7 +1,8 @@
 .princ{
     overflow-x: hidden;
     font-family: pop;
-    background: #F9EAB7;
+    /*background: #F9EAB7;*/
+    overflow-y: hidden;
 }
 
 .princEdu{
@@ -25,6 +26,7 @@
     max-width: 18.27em;
 }
 
+
 .misGa1{
     position: fixed;
     top: 44.3em;
@@ -34,10 +36,10 @@
 }
 
 .misG{
-    background-color: #f6f6f6;
+    background-color: transparent;
     border-radius:2em;
     position: relative;
-    
+    top: 14.8em;
 }
 
 .misS{
@@ -58,15 +60,56 @@
     max-height: 3.7em;
 }
 
-
 .misI{
-    position: relative;
+    position: fixed;
     background-color: #DADADA;
     border-radius:2em;
+    min-width: 40em;
     max-width: 30em;
     max-height: 3.7em;
+    top: 8em;
+    right:33%;
+    z-index: 10;
 }
 
+.fondo{
+    background-color: #f6f6f6;
+    position: fixed;
+    min-width: 38.3em;
+    border-radius: 2em;
+    min-height: 80em;
+    z-index: 0;
+    top: 14.5em;
+}
+
+.asa{
+    background-color: #f6f6f6;
+    position: fixed;
+    min-width: 38.3em;
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    min-height: 2.8em;
+    z-index: 1;
+    top: 13.6em;
+}
+
+.asas{
+    background-color:rgba(249, 234, 183, 1);
+    position: fixed;
+    top: 11em;
+    z-index: 1;
+    min-width: 40em;
+    color: rgba(249, 234, 183, 1);
+    min-height: 3em;
+}
+
+.asasa{
+    background-color: rgba(249, 234, 183, 1);
+    position: fixed;
+    top: 7em;
+    z-index: 1;
+    color: rgba(249, 234, 183, 1);
+}
 
 .misC{
     position: relative;
@@ -76,9 +119,6 @@
     border-radius:2em;
     width: 30px;
 }
-
-
-
 
 .cat{
     font-size: 2em;
@@ -185,9 +225,12 @@
     color:rgba(189, 38, 101, 1);
 }
 
+#btnTec:focus{
+    outline: none;
+}
+
 #btnInfo{
     color: #EBC12C;
-    background-color: rgba(238, 211, 117, 0.19);
     border-radius: 15px;
 }
 
@@ -195,7 +238,6 @@
     border-radius: 15px;
 }
 
-button:focus {outline:0;}
 
 #btnTec{
     border-radius: 15px;
@@ -241,7 +283,7 @@ button:focus {outline:0;}
     top: 30%;
     padding: 20px;
     border-radius: 40px;
-    border-color: black;
+    border-color: black ;
 }
   
 .descPub{

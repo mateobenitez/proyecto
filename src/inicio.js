@@ -14,8 +14,6 @@ function colorElementRed() {
       obl[i].style.visibility = "visible";
     }
   }
-  
-  
 }
 
 var Validar = function(e) {
@@ -26,7 +24,6 @@ var Validar = function(e) {
     return false;
   }
 }
-
 
 class Inicio extends Component{
   
@@ -72,6 +69,7 @@ class Inicio extends Component{
                   <p className="mt-5 texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
                   quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
                   pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <img className="nena" src={require('./components/nena.svg')}/>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
                   <div className="col col-3 placeh">

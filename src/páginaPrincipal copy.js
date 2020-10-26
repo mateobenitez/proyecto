@@ -20,10 +20,105 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Modal from './components/publicar'
 
-
-
+var fondo = document.getElementsByClassName("princ") 
+var primerCuadrado = document.getElementsByClassName("asas")
+var segundoCuadrado = document.getElementsByClassName("asasa")
+var botones = document.getElementsByClassName("btn")
+var lineas = document.getElementsByClassName("publicaciones")
+function cambioInfo(e){
+    fondo[0].style.backgroundColor ="#F9EAB7"
+    primerCuadrado[0].style.backgroundColor ="#F9EAB7"
+    segundoCuadrado[0].style.backgroundColor ="#F9EAB7"
+    botones[0].style.backgroundColor ="#f6f6f6"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[0].style.color ="#EBC12C"
+    e.preventDefault()
+    lineas[0].style.borderColor = "#EED375"
+}
+function cambioArt(e){
+    fondo[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
+    primerCuadrado[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
+    segundoCuadrado[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
+    botones[0].style.backgroundColor ="#f6f6f6"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[2].style.color ="rgba(109, 0, 136, 1)"
+    e.preventDefault()
+    lineas[0].style.borderColor = "rgba(205, 157, 227, 1)"
+}
+function cambioDep(e){
+    fondo[0].style.backgroundColor ="rgba(255, 211, 170, 1)"
+    primerCuadrado[0].style.backgroundColor ="rgba(255, 211, 170, 1)"
+    segundoCuadrado[0].style.backgroundColor ="rgba(255, 211, 170, 1)"
+    botones[0].style.backgroundColor ="#f6f6f6"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[3].style.color ="rgba(152, 69, 23, 1)"
+    e.preventDefault()
+    lineas[0].style.borderColor = "rgba(255, 166, 84, 1)"
+}
+function cambioDocs(e){
+    fondo[0].style.backgroundColor ="rgba(225, 191, 159, 1)"
+    primerCuadrado[0].style.backgroundColor ="rgba(225, 191, 159, 1)"
+    segundoCuadrado[0].style.backgroundColor ="rgba(225, 191, 159, 1)"
+    botones[0].style.backgroundColor ="#f6f6f6"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[4].style.color ="rgba(109, 53, 0, 1)"
+    e.preventDefault()
+    lineas[0].style.borderColor = "rgba(182, 136, 93, 1)"
+}
+function cambioEdu(e){
+    fondo[0].style.backgroundColor ="rgba(184, 228, 194, 1)"
+    primerCuadrado[0].style.backgroundColor ="rgba(184, 228, 194, 1)"
+    segundoCuadrado[0].style.backgroundColor ="rgba(184, 228, 194, 1)"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[5].style.color ="rgba(3, 99, 13, 1)"
+    e.preventDefault()
+    lineas[0].style.borderColor = "rgba(144, 226, 161, 1)"
+}
+function cambioRel(e){
+    fondo[0].style.backgroundColor ="rgba(255, 107, 160, 0.25)"
+    primerCuadrado[0].style.backgroundColor ="rgba(255, 107, 160, 0.01)"
+    segundoCuadrado[0].style.backgroundColor ="rgba(255, 107, 160, 0.01)"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[6].style.color ="rgba(189, 38, 101, 1)"
+    e.preventDefault()
+    lineas[0].style.borderColor = "rgba(255, 180, 207, 1)"
+}
+function cambioSal(e){
+    fondo[0].style.backgroundColor ="rgba(250, 123, 123, 0.76)"
+    primerCuadrado[0].style.backgroundColor ="rgba(250, 123, 123, 0.001)"
+    segundoCuadrado[0].style.backgroundColor ="rgba(250, 123, 123, 0.001)"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[7].style.color ="rgba(148, 0, 0, 1)"
+    e.preventDefault()
+    lineas[0].style.borderColor = "rgba(239, 105, 105, 1)"
+}
+function cambioTec(e){
+    fondo[0].style.backgroundColor ="#B5D3EF"
+    primerCuadrado[0].style.backgroundColor ="#B5D3EF"
+    segundoCuadrado[0].style.backgroundColor ="#B5D3EF"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    botones[8].style.color ="#045F92"
+    e.preventDefault()
+    lineas[0].style.borderColor = "#86B8E5"
+}
 class pagPrinca extends Component{
-
+    
     constructor(props) {
         super(props);
     
@@ -41,9 +136,12 @@ class pagPrinca extends Component{
           modal: false
         });
       }
+      
     render(){
+        var fondo={backgroundColor: "#F9EAB7"}
+
         return (
-            <div className="princ">
+            <div style={fondo} className="princ">
                 <MyNavBarPrinc/>
                 <div align="center">
                     <Modal show={this.state.modal} handleClose={e => this.modalClose(e)}/>
@@ -57,14 +155,16 @@ class pagPrinca extends Component{
                         </div>
                         <div className="container-fluid misGa">
                             <form>
-                                <button id="btnInfo" name="btnInfo" className="btn mt-2" ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
-                                <button id="btnEdu" name="btnEdu" className="btn" ><FontAwesomeIcon icon={faGraduationCap}/> &nbsp;&nbsp;Educación</button>
-                                <button id="btnTec" className="btn"><FontAwesomeIcon icon={faLaptop}/> &nbsp;&nbsp;Tecnología</button><br></br>
-                                <button id="btnSal" className="btn"><FontAwesomeIcon icon={faHeart}/> &nbsp;&nbsp;Salud</button><br></br>
-                                <button id="btnDep" className="btn"><FontAwesomeIcon icon={faDumbbell}/> &nbsp;&nbsp;Deportes</button>
-                                <button id="btnDoc" className="btn"><FontAwesomeIcon icon={faGavel}/> &nbsp;&nbsp;Documentos legales</button>
-                                <button id="btnArt" className="btn"><FontAwesomeIcon icon={faPalette}/> &nbsp;&nbsp;Arte</button>
-                                <button id="btnRel" className="btn mb-2"><FontAwesomeIcon icon={faSmile}/> &nbsp;&nbsp;Relaciones sociales</button>
+                                <button id="btnInfo" onClick={cambioInfo} name="btnInfo" className="btn mt-2" ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
+                                <hr className="mt-1 mb-1"></hr>
+                                <button id="btnArt" onClick={cambioArt} className="btn"><FontAwesomeIcon icon={faPalette}/> &nbsp;&nbsp;Alimentación</button><br></br>
+                                <button id="btnArt" onClick={cambioArt} className="btn"><FontAwesomeIcon icon={faPalette}/> &nbsp;&nbsp;Arte</button><br></br>
+                                <button id="btnDep" onClick={cambioDep} className="btn"><FontAwesomeIcon icon={faDumbbell}/> &nbsp;&nbsp;Deportes</button>
+                                <button id="btnDoc" onClick={cambioDocs} className="btn"><FontAwesomeIcon icon={faGavel}/> &nbsp;&nbsp;Documentos legales</button>
+                                <button id="btnEdu" onClick={cambioEdu} name="btnEdu" className="btn" ><FontAwesomeIcon icon={faGraduationCap}/> &nbsp;&nbsp;Educación</button>
+                                <button id="btnRel" onClick={cambioRel} className="btn"><FontAwesomeIcon icon={faSmile}/> &nbsp;&nbsp;Relaciones sociales</button>
+                                <button id="btnSal" onClick={cambioSal} className="btn"><FontAwesomeIcon icon={faHeart}/> &nbsp;&nbsp;Salud</button><br></br>
+                                <button id="btnTec" onClick={cambioTec} className="btn"><FontAwesomeIcon icon={faLaptop}/> &nbsp;&nbsp;Tecnología</button><br></br>
                             </form>
                         </div>
                         <div className="container-fluid misS1">
@@ -79,10 +179,22 @@ class pagPrinca extends Component{
                         </div>
                     </div>
                     <div align="center" className="col col-4">
+                        <div className="container asasa">
+                            <p></p>
+                        </div>
                         <div className="container-fluid misI ml-2">
                             <h1 align="left" name="cate" className="cat pt-2 pb-2">&nbsp;<FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</h1>
                         </div>
-                        <div className= "container-fluid misG pt-4">
+                        <div className="asas">
+                            <p></p>
+                        </div>
+                        <div className="fondo">
+                            <p></p>
+                        </div>
+                        <div className="asa">
+                            <p></p>
+                        </div>
+                        <div className="container-fluid misG pt-4">
                             <div className="container publicaciones">
                                 <h1 className="cat mt-3"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;&nbsp;¿Qué está pensando Hernán?</h1>
                                 <br></br><br></br>  
@@ -91,20 +203,20 @@ class pagPrinca extends Component{
                                 </div>
                             </div>
                             <div className="mt-4 container publicaciones">
-                            <div className="row justify-content-around">
-                                        <div className="col col-6">
-                                            <div className="form-inline">
-                                                <h1 className="cat mt-3 ml-3"><FontAwesomeIcon icon={faUser}/></h1>
-                                                <p className="mt-3 pibe">&nbsp;&nbsp;&nbsp;El pibe</p>
-                                            </div>
-                                        </div>
-                                        <div className="col col-6">
-                                            <div className="a form-inline">
-                                                <p className="mt-4">Hace 2 horas&nbsp;</p>
-                                                <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
-                                            </div>
+                                <div className="row justify-content-around">
+                                    <div className="col col-6">
+                                        <div className="form-inline">
+                                            <h1 className="cat mt-3 ml-3"><FontAwesomeIcon icon={faUser}/></h1>
+                                            <p className="mt-3 pibe">&nbsp;&nbsp;&nbsp;El pibe</p>
                                         </div>
                                     </div>
+                                    <div className="col col-6">
+                                        <div className="a form-inline">
+                                            <p className="mt-4">Hace 2 horas&nbsp;</p>
+                                            <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div className="container-fluid cont" align="center">
                                     <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
                                     <div className="container imagenP">
@@ -116,11 +228,9 @@ class pagPrinca extends Component{
                                         </div>
                                         <div className="col col-5">
                                             <p>0 comentarios</p>
-                                            
                                         </div>
                                     </div>
                                 </div>
-                                
                                 <div className="row justify-content-left">
                                     <div className="col col-4">
                                         <button type="submit" className="botonP">Me&nbsp;gusta</button>
@@ -134,6 +244,7 @@ class pagPrinca extends Component{
                                 </div>
                                 <hr className="lineaP"></hr>
                             </div>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                     </div>
                     <div align="center" className="col col-2">
@@ -142,7 +253,6 @@ class pagPrinca extends Component{
                         </div>
                     </div>
                     <div className="col col-2">
-
                     </div>
                 </div>
             </div>
