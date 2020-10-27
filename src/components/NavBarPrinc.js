@@ -31,8 +31,16 @@ class NavBarPrinc extends React.Component{
                             <input onClick={search} type="search" placeholder="Buscar" className="buscar"></input>
                         </div>
                     </div>
-                    <div className="user mt-3" >
-                        <p><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</p>
+                    <div className="form-inline">
+                        <div className="user mr-5" align="center">
+                            <img src={require("./nena.svg")}width="50" height="50"></img><br></br><p>Menú</p>
+                        </div>
+                        <div className="user mr-5 ml-5" align="center">
+                            <img src={require("./notificaciones.svg")}></img><br></br><p>Notificaciones</p>
+                        </div>
+                        <div className="user ml-5" align="center">
+                            <img src={require("./menu.svg")}></img><br></br><p>Menú</p>
+                        </div>
                     </div>
                 </nav>
                 <hr className="linea"></hr>

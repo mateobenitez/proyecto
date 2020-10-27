@@ -128,8 +128,8 @@ color: #ffff;
 .search{
     font-size: 24px;
     border: rgba(57, 57, 57, 1) 2px solid;
-    border-radius: 56px;
+    border-radius: 9px;
     position: relative;
-    right: 4.2em;
+    right: -4.1em;
 }
 

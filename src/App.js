@@ -8,6 +8,8 @@ import Registrarse2 from './registrarse2.js'
 import PagPrinc from './páginaPrincipal.js'
 import PagPrinca from './páginaPrincipal copy.js'
 import Contacto from './contacto.js'
+import Guardados from './guardados.js'
+import Config from './configuración.js'
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -40,6 +42,12 @@ function App() {
         </Route>
         <Route path="/contacto">
           <Contacto />
+        </Route>
+        <Route path="/guardados">
+          <Guardados />
+        </Route>
+        <Route path="/config">
+          <Config />
         </Route>
         <Route path="/">
           <Inicio />

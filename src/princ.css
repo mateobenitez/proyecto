@@ -5,6 +5,20 @@
     overflow-y: hidden;
 }
 
+.configuracion{
+    background-color: #E3E3E3;
+    overflow-x: hidden;
+    font-family: pop;
+    overflow-y: hidden;
+}
+
+.guardados{
+    background-color: #E3E3E3;
+    overflow-x: hidden;
+    font-family: pop;
+    overflow-y: hidden;
+}
+
 .princEdu{
     overflow-x: hidden;
     font-family: pop;
@@ -40,6 +54,17 @@
     border-radius:2em;
     position: relative;
     top: 14.8em;
+    z-index: 4;
+}
+
+.misGuard{
+    background-color: rgba(246, 246, 246, 1);
+    border-radius:2em;
+    position: fixed;
+    left: 41em;
+    top: 12.4em;
+    max-width: 38em;
+    z-index: 4;
 }
 
 .misS{
@@ -64,12 +89,26 @@
     position: fixed;
     background-color: #DADADA;
     border-radius:2em;
-    min-width: 40em;
-    max-width: 30em;
+    max-width: 28em;
     max-height: 3.7em;
     top: 8em;
-    right:33%;
     z-index: 10;
+}
+
+.misIG{
+    position: fixed;
+    background-color: #DADADA;
+    border-radius:2em;
+    max-width: 20em;
+    max-height: 3.7em;
+    top: 8em;
+    z-index: 10;
+}
+
+.botonVolver{
+    background-color: #E9E9E9;
+    border-color: transparent;
+    border-radius: 29px;
 }
 
 .fondo{
@@ -78,36 +117,28 @@
     min-width: 38.3em;
     border-radius: 2em;
     min-height: 80em;
-    z-index: 0;
+    z-index: 3;
     top: 14.5em;
 }
 
 .asa{
-    background-color: #f6f6f6;
+    background-color:  #f6f6f6;
     position: fixed;
     min-width: 38.3em;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     min-height: 2.8em;
-    z-index: 1;
+    z-index: 7;
     top: 13.6em;
 }
 
 .asas{
-    background-color:rgba(249, 234, 183, 1);
+    background-color: #E3E3E3;
     position: fixed;
-    top: 11em;
-    z-index: 1;
-    min-width: 40em;
-    color: rgba(249, 234, 183, 1);
-    min-height: 3em;
-}
-
-.asasa{
-    background-color: rgba(249, 234, 183, 1);
-    position: fixed;
+    min-height: 8.5em;
     top: 7em;
-    z-index: 1;
+    z-index: 7;
+    min-width: 40em;
     color: rgba(249, 234, 183, 1);
 }
 
@@ -124,12 +155,37 @@
     font-size: 2em;
 }
 
+.selGuar{
+    font-size: 1.6em;
+}
+
 .publicaciones{
-    border-color: #EED375;
+    border-color: #E3E3E3;
     border-width: 0.4em;
     border-style: solid;
     border-radius: 1em;
 } 
+
+.guardadosCats{
+    border-color:#DADADA;
+    border-width: 0.5em;
+    border-style: solid;
+    border-radius: 1em;
+    z-index: 1;
+}
+
+.lineaGuar{
+    border-width: 1px;
+    background-color: rgba(233, 233, 233, 0.5);
+}
+
+#btnGuard{
+    background-color: rgba(57, 57, 57, 0.13);
+    min-width: 15em;
+    text-align: left;
+    border-radius: .8em;
+    max-height: 2.4em;
+}
 
 .pibe{
     font-size: 1.25em;
@@ -170,7 +226,7 @@
 }
 
 .imagenP{
-    background-color: #F9EAB7 ;
+    background-color: #E3E3E3 ;
     border-radius: 2em;
 }
 
@@ -184,12 +240,6 @@
     background-color: white;
     border: none;
     text-decoration: none;
-}
-
-
-
-#btnInfo:hover{
-    color: #EBC12C;
 }
 
 #btnEdu:hover{
@@ -220,24 +270,65 @@
     color:rgba(109, 0, 136, 1);
 }
 
+#btnAli:hover{
+    color:#C0990F;
+}
 
 #btnRel:hover{
     color:rgba(189, 38, 101, 1);
-}
-
-#btnTec:focus{
-    outline: none;
-}
-
-#btnInfo{
-    color: #EBC12C;
-    border-radius: 15px;
 }
 
 #btnEdu{
     border-radius: 15px;
 }
 
+.btn0g{
+    background: rgba(216, 216, 216, 0.67);
+    min-width: 30em;
+    position: absolute;
+    top: 9.8em;
+}
+
+.btnConfig{
+    background-color: rgba(57, 57, 57, 0.13);
+    min-width: 15em;
+    min-height: 2.4em;;
+    text-align: left;
+    border-radius: .8em;
+    border-color: transparent;
+}
+
+.btn1g{
+    background: rgba(242, 126, 17, 0.54);
+}
+ 
+.btn2g{
+    background: rgba(30, 198, 67, 0.56);
+}
+
+.btn3g{
+    background: rgba(224, 14, 14, 0.57);
+}
+
+.btn4g{
+    background: rgba(235, 193, 44, 0.61);
+}
+
+.btn5g{
+    background: rgba(255, 95, 162, 0.6);
+}
+
+.btn6g{
+    background: rgba(66, 133, 244, 0.54);
+}
+
+.btn7g{
+    background: rgba(167, 25, 203, 0.39);
+}
+
+.btn8g{
+    background: rgba(109, 53, 0, 0.58);
+}
 
 #btnTec{
     border-radius: 15px;
@@ -325,3 +416,22 @@
     text-align: 20em;
 }
 
+.tituloGuard{
+    background-color: rgba(30, 198, 67, 0.56);
+    min-width: 35.15em;
+    max-width: 35.15em;
+    min-height: 4em;
+    border-top-left-radius: .48em;
+    border-top-right-radius: .48em;
+    position: absolute;
+    left: 1.44em;
+    text-align: center;
+    visibility: hidden;
+    z-index: 0;
+}
+
+.pTitulo{
+    font-size: 1.5em;
+    position: relative;
+    top: .6em;
+}

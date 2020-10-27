@@ -26,6 +26,17 @@ var segundoCuadrado = document.getElementsByClassName("asasa")
 var botones = document.getElementsByClassName("btn")
 var lineas = document.getElementsByClassName("publicaciones")
 function cambioInfo(e){
+    fondo[0].style.backgroundColor ="#E3E3E3"
+    primerCuadrado[0].style.backgroundColor ="#E3E3E3"
+    segundoCuadrado[0].style.backgroundColor ="#E3E3E3"
+    botones[0].style.backgroundColor ="#f6f6f6"
+    for(var i= 0; i<9;i++){
+        botones[i].style.color ="rgba(57, 57, 57, 1)"
+    }
+    e.preventDefault()
+    lineas[0].style.borderColor = "#E3E3E3"
+}
+function cambioAli(e){
     fondo[0].style.backgroundColor ="#F9EAB7"
     primerCuadrado[0].style.backgroundColor ="#F9EAB7"
     segundoCuadrado[0].style.backgroundColor ="#F9EAB7"
@@ -33,14 +44,13 @@ function cambioInfo(e){
     for(var i= 0; i<9;i++){
         botones[i].style.color ="rgba(57, 57, 57, 1)"
     }
-    botones[0].style.color ="#EBC12C"
+    botones[1].style.color ="#EBC12C"
     e.preventDefault()
     lineas[0].style.borderColor = "#EED375"
 }
 function cambioArt(e){
     fondo[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
     primerCuadrado[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
-    segundoCuadrado[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
     botones[0].style.backgroundColor ="#f6f6f6"
     for(var i= 0; i<9;i++){
         botones[i].style.color ="rgba(57, 57, 57, 1)"
@@ -86,8 +96,7 @@ function cambioEdu(e){
 }
 function cambioRel(e){
     fondo[0].style.backgroundColor ="rgba(255, 107, 160, 0.25)"
-    primerCuadrado[0].style.backgroundColor ="rgba(255, 107, 160, 0.01)"
-    segundoCuadrado[0].style.backgroundColor ="rgba(255, 107, 160, 0.01)"
+    primerCuadrado[0].style.backgroundColor ="#FDD8E5"
     for(var i= 0; i<9;i++){
         botones[i].style.color ="rgba(57, 57, 57, 1)"
     }
@@ -96,20 +105,18 @@ function cambioRel(e){
     lineas[0].style.borderColor = "rgba(255, 180, 207, 1)"
 }
 function cambioSal(e){
-    fondo[0].style.backgroundColor ="rgba(250, 123, 123, 0.76)"
-    primerCuadrado[0].style.backgroundColor ="rgba(250, 123, 123, 0.001)"
-    segundoCuadrado[0].style.backgroundColor ="rgba(250, 123, 123, 0.001)"
+    fondo[0].style.backgroundColor ="#F5BFBF"
+    primerCuadrado[0].style.backgroundColor ="#F5BFBF"
     for(var i= 0; i<9;i++){
         botones[i].style.color ="rgba(57, 57, 57, 1)"
     }
     botones[7].style.color ="rgba(148, 0, 0, 1)"
     e.preventDefault()
-    lineas[0].style.borderColor = "rgba(239, 105, 105, 1)"
+    lineas[0].style.borderColor = "#F5BFBF"
 }
 function cambioTec(e){
     fondo[0].style.backgroundColor ="#B5D3EF"
     primerCuadrado[0].style.backgroundColor ="#B5D3EF"
-    segundoCuadrado[0].style.backgroundColor ="#B5D3EF"
     for(var i= 0; i<9;i++){
         botones[i].style.color ="rgba(57, 57, 57, 1)"
     }
@@ -138,7 +145,7 @@ class pagPrinca extends Component{
       }
       
     render(){
-        var fondo={backgroundColor: "#F9EAB7"}
+        var fondo={backgroundColor: "#E3E3E3"}
 
         return (
             <div style={fondo} className="princ">
@@ -157,7 +164,7 @@ class pagPrinca extends Component{
                             <form>
                                 <button id="btnInfo" onClick={cambioInfo} name="btnInfo" className="btn mt-2" ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
                                 <hr className="mt-1 mb-1"></hr>
-                                <button id="btnArt" onClick={cambioArt} className="btn"><FontAwesomeIcon icon={faPalette}/> &nbsp;&nbsp;Alimentación</button><br></br>
+                                <button id="btnAli" onClick={cambioAli} className="btn"><FontAwesomeIcon icon={faPalette}/> &nbsp;&nbsp;Alimentación</button><br></br>
                                 <button id="btnArt" onClick={cambioArt} className="btn"><FontAwesomeIcon icon={faPalette}/> &nbsp;&nbsp;Arte</button><br></br>
                                 <button id="btnDep" onClick={cambioDep} className="btn"><FontAwesomeIcon icon={faDumbbell}/> &nbsp;&nbsp;Deportes</button>
                                 <button id="btnDoc" onClick={cambioDocs} className="btn"><FontAwesomeIcon icon={faGavel}/> &nbsp;&nbsp;Documentos legales</button>
@@ -172,10 +179,14 @@ class pagPrinca extends Component{
                         </div>
                         <div className="container-fluid misGa1">
                             <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
-                            <button className="btn"><FontAwesomeIcon icon={faBell}/>&nbsp;&nbsp;Notificaciones</button>
-                            <button className="btn"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
-                            <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
-                            <br></br><br></br><br></br><br></br>
+                            <form method="get" action="/config">
+                                <button className="btn"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
+                            </form>
+                            <form method="get" action="/guardados">
+                                <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
+                            </form><br></br><br></br>
+                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                            <br></br>
                         </div>
                     </div>
                     <div align="center" className="col col-4">
