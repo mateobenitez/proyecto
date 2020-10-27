@@ -51,12 +51,18 @@ class Reg2 extends Component{
         return (
             <div className="Reg">
                 <MyNavBar/>
+                <form method="get" action="/registrarse1">
+                    <button  className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
+                </form>
+                <form method="get" action="/princa">
+                    <button onClick={Validar} className="continuar pt-2 pb-2 pl-3 pr-3">Finalizar&nbsp;&nbsp;<img className="pb-1" src={require('./components/finalizar.svg')}></img></button>
+                </form>
                 <div align="center">
                     <h1>¿En qué lugar se encuentra? maquina</h1>
                 </div>
                 <div className="row justify-content-left">
                     <div className="col col-3">
-                        <form name="form" method="GET"  onSubmit={Validar}>
+                        <form name="form" method="GET"  >
                             <input id="pais" className="text mt-5" type="text" placeholder="*País"></input><br></br><hr className="lin1 linea-texto"></hr>
                             <p className="obli1 obli-tds">*Es obligatorio completar este campo</p>
                             <input id="provincia" className="text mt-5" type="text" placeholder="*Provincia / Estado"></input><br></br><hr className="lin2 linea-texto"></hr>

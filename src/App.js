@@ -10,6 +10,7 @@ import PagPrinca from './páginaPrincipal copy.js'
 import Contacto from './contacto.js'
 import Guardados from './guardados.js'
 import Config from './configuración.js'
+import Perfil from './perfil.js'
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -48,6 +49,9 @@ function App() {
         </Route>
         <Route path="/config">
           <Config />
+        </Route>
+        <Route path="/perfil">
+          <Perfil />
         </Route>
         <Route path="/">
           <Inicio />

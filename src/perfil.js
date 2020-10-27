@@ -20,11 +20,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 
-
-class config extends Component{
+class perfil extends Component{
     render(){
         return(
-            <div className="configuracion">
+            <div className="perfil">
                 <MyNavBarPrinc/>
                 <div className="row">
                     <div className="col col-2">
@@ -51,9 +50,7 @@ class config extends Component{
                             <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="50" height="50" alt=""></img> &nbsp;&nbsp;&nbsp;&nbsp;Social</h1>
                         </div>
                         <div className="container-fluid misGa1">
-                            <form method="get" action="/perfil">
-                                <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
-                            </form>
+                            <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
                             <form method="get" action="/config">
                                 <button className="btnConfig"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
                             </form>
@@ -70,59 +67,40 @@ class config extends Component{
                         </div>
                         <div className="container-fluid misI ml-2 form-inline">
                             <div className="circuloCont">
-                                <img className="pt-2 pl-2" src={require('./components/configuracion.svg')}></img>
+                                <img className="pt-2 pl-2" src={require('./components/usuario.svg')}></img>
                             </div>
-                            <h1 align="left" name="cate" className="cat pt-2 pb-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Configuración</h1>
-                        </div>
-                        <div className="container-fluid misI ml-2">
-                            
+                            <h1 align="left" name="cate" className="cat pt-2 pb-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mi perfil</h1>
                         </div>
                         <div className="container-fluid misGuard pt-4">
                             <button className="mb-3 botonVolver"><img  src={require('./components/volver.svg')} height="19px" width="19px"></img>&nbsp;&nbsp;Volver</button>
                             <div className="container guardadosCats">
-                                <div className="container-fluid tituloGuard">
-                                    <p className="pTitulo"><img  src={require('./components/edu.svg')}></img>&nbsp;&nbsp;Educación</p>
+                                <br></br><br></br>
+                                <div className=" fotoPerfil">
+                                    <img className="avatar pt-4" src={require('./components/dante.svg')} ></img>
                                 </div>
-                                <div className="container selG">
-                                    <br></br>
-                                    <button className="botonDrop">Modos&nbsp;<img src={require('./components/flechaAb.svg')}></img></button>
-                                    <hr className="lineaGuar mt-2"></hr>
-                                    <div className="dropDown">
-                                        <div className="form-inline">
-                                            <p>Modo monocromático</p>&nbsp;&nbsp;&nbsp;
-                                            <label className="mb-3 switch">
-                                                <input type="checkbox"></input>
-                                                <span className="slider round"></span>
-                                            </label>
-                                            <p className="pl-3">Modo pictogramas</p>&nbsp;&nbsp;&nbsp;
-                                            <label className="mb-3 switch">
-                                                <input type="checkbox"></input>
-                                                <span className="slider round"></span>
-                                            </label>
+                                <div className="Nombre">
+                                    <h1>Sergio Coppa</h1>
+                                    <p>@SergioCoppa</p><br></br>
+                                    <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Belgrano, Buenos Aires, Argentina</p>
+                                    <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Profesor / Maestro</p>
+                                </div>
+                                <div className="descripcion container">
+                                    <p>Hola soy Sergio me gusta comer pan y enseñar lengua. Tengo un hijo de 40 años al que le gusta jugar tenis y comer papas.</p>
+                                </div><hr></hr>                     
+                                <div className="container-fluid cont" align="center">
+                                    <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
+                                    <div className="container imagenP">
+                                        <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                    </div>
+                                    <div className="row justify-content-around">
+                                        <div className="col col-5">
+                                            <p>3 me gusta</p>
+                                        </div>
+                                        <div className="col col-5">
+                                            <p>0 comentarios</p>
                                         </div>
                                     </div>
-                                    <br></br><br></br><br></br><br></br><br></br>
-                                    <button className="botonDrop boton1pos">Cambiar contraseña &nbsp;<img src={require('./components/flechaAb.svg')}></img></button>
-                                    <hr className="lineaGuar lineaPos mt-2"></hr>
-                                    <div className="dropDown">
-                                        <div className="form-inline">
-                                            <p>Modo monocromático</p>&nbsp;&nbsp;&nbsp;
-                                            <label className="mb-3 switch">
-                                                <input type="checkbox"></input>
-                                                <span className="slider round"></span>
-                                            </label>
-                                            <p className="pl-3">Modo pictogramas</p>&nbsp;&nbsp;&nbsp;
-                                            <label className="mb-3 switch">
-                                                <input type="checkbox"></input>
-                                                <span className="slider round"></span>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div className="guardarConf">
-                                        <button className="guardarConfig pt-2 pb-2 pl-5 pr-5">Guardar cambios</button>
-                                    </div>
                                 </div>
-                                <br></br>
                             </div>
                             <br></br>
                         </div>
@@ -136,4 +114,4 @@ class config extends Component{
 
 
 
-export default config
+export default perfil

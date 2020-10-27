@@ -168,7 +168,9 @@ class Guardados extends Component{
                             <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="50" height="50" alt=""></img> &nbsp;&nbsp;&nbsp;&nbsp;Social</h1>
                         </div>
                         <div className="container-fluid misGa1">
-                            <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
+                            <form method="get" action="/perfil">
+                                <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
+                            </form>
                             <form method="get" action="/config">
                                 <button className="btn"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
                             </form>

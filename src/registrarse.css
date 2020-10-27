@@ -1,6 +1,7 @@
 .Reg{
     font-family: pop;
     overflow-x: hidden;
+    background-color: #F6F6F6;
 }
 
 @font-face{
@@ -30,8 +31,28 @@
     max-width: 1000px;
     border-radius: 20px;
     border:5px solid rgba(218, 218, 218, 1);
+    position: relative;
+    top: 0.65em;
 }
 
+.atras{
+    position: absolute;
+    top: 6em;
+    left: 2em;
+    border: none;
+    font-size: 2em;
+    border-radius: 2em;
+    z-index: 1;
+}
+
+.continuar{
+    position: absolute;
+    top: 6em;
+    right: 2em;
+    border: none;
+    font-size: 2em;
+    border-radius: 2em;   
+}
 
 .btns{
     border: transparent;
@@ -228,7 +249,7 @@
 
 .imgReg1{
     position: relative;
-    bottom: 6.38em;
+    bottom: -.2em;
 }
 
 .btns:focus{
@@ -259,4 +280,5 @@
 .cmb2{
     position: relative;
     left: 55em;
+    visibility: hidden;
 }

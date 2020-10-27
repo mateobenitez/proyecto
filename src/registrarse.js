@@ -100,10 +100,16 @@ class Reg extends Component {
             <div className="Reg">
                 <MyNavBar/>
                 <div align="center">
-                    <h1>Bienvenido maquina</h1>  
+                    <h1><b>Bienvenido maquina</b></h1>  
                     <p className="mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>
                     <h2 className="mt-3">¿Qué sos?</h2>
                     <br></br><br></br><br></br><br></br>
+                    <form method="get" action="/">
+                        <button className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
+                    </form>
+                    <form method="get" action="/registrarse1">
+                        <button onClick={noTeVayas} className="continuar pt-2 pb-2 pl-3 pr-3">Siguiente&nbsp;&nbsp;<img className="pb-1" src={require('./components/continuar.svg')}></img></button>
+                    </form>
                     <div className="row justify-content-center">
                         <div className="col col-3">
                             <div className="quesos">
@@ -130,11 +136,7 @@ class Reg extends Component {
                             <h2>Otro</h2>
                         </div>
                     </div>
-                    <br></br><br></br><br></br><br></br>
-                    <form method="get" action="/registrarse1">   
-                        <button onClick={noTeVayas} className="cambio">&nbsp;&nbsp;<FontAwesomeIcon icon={faAngleRight} className="flecha"/></button>
-                    </form> 
-                    <p className="mt-3">Siguiente</p>
+                    <br></br><br></br><br></br><br></br> 
                 </div>
                 <MyFooter />
             </div>

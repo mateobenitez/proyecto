@@ -137,6 +137,12 @@ class Reg1 extends Component{
             
             <div className="Reg">
                 <MyNavBar/>
+                <form method="get" action="/registrarse">
+                    <button  className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
+                </form>
+                <form method="get" action="/registrarse2">
+                    <button onClick={obli} className="continuar pt-2 pb-2 pl-3 pr-3">Siguiente&nbsp;&nbsp;<img className="pb-1" src={require('./components/continuar.svg')}></img></button>
+                </form>
                 <div align="center">
                     <h1 className="mb-5">¿A qué grupos le gustaría unirse?</h1>
                     <div className="form-inline">
@@ -178,15 +184,9 @@ class Reg1 extends Component{
                                     <button className="btns btnM mt-4 mb-4"  onClick={prevenir8}> Seleccionar todo</button>
                                 </div>
                             </form>
-                            </div>
-                            <div className="as">
-                                <form method="get" action="/registrarse2">   
-                                    <button  onClick={obli} className="cambio"><FontAwesomeIcon icon={faAngleRight} className="flecha"/></button>
-                            </form>
-                            <p className="mt-4">Siguiente</p>
                         </div>
                     </div>
-                    <img className="imgReg1" src={require("./components/tipoGrupos.svg")}width="500" height="550" alt=""></img>
+                    <img className="imgReg1" src={require("./components/tipoGrupos.svg")} alt=""></img>
                 </div>
                 <MyFooter />
             </div>
