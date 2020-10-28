@@ -17,14 +17,20 @@ function colorElementRed() {
 }
 
 var Validar = function(e) {
-  var x = document.forms["form"]["nombre","apellido","usuario","email","contraseña","ccontraseña"].value;
-  if (x == "" || x == null) {
-    e.preventDefault();
-    colorElementRed();
-    return false;
-  }
+  var x1 = document.forms["form"]["ccontraseña"].value;
+  var x2 = document.forms["form"]["nombre"].value;
+  var x3 = document.forms["form"]["apellido"].value;
+  var x4 = document.forms["form"]["usuario"].value;
+  var x5 = document.forms["form"]["email"].value;
+  var x6 = document.forms["form"]["contraseña"].value;
+  console.log(document.forms["form"]["nombre", "apellido"].value)
+  if (x1 == "" || x1 == null || x2 == "" || x2 == null || x3 == "" || x3 == null ||
+  x4 == "" || x4 == null ||x5 == "" || x5 == null || x6 == "" || x6 == null) {
+      e.preventDefault();
+      colorElementRed();
+      return false;
+    }
 }
-
 class Inicio extends Component{
   
  constructor(props){
@@ -79,7 +85,7 @@ class Inicio extends Component{
                     <p className="obl1 obl-texto">*Es obligatorio completar este campo</p>
                     <input id="usuario" className="text mt-5" type="text" name="usuario" placeholder="*Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="li3 linea-texto"></hr>
                     <p className="obl2 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="email" className="text mt-5" type="text" name="email"  placeholder="*Email"  onChange={this.onChange}></input><br></br><hr className="li4 linea-texto"></hr>
+                    <input id="email" className="text mt-5" type="text" name="email" placeholder="*Email"  onChange={this.onChange}></input><br></br><hr className="li4 linea-texto"></hr>
                     <p className="obl3 obl-texto">*Es obligatorio completar este campo</p>
                     <input id="contraseña" className="text mt-5" name="contraseña" type="password" placeholder="*Contraseña" onChange={this.onChange}></input><br></br><hr className="li5 linea-texto"></hr>
                     <p className="obl4 obl-texto">*Es obligatorio completar este campo</p>

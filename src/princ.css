@@ -109,6 +109,7 @@
     background-color: #E9E9E9;
     border-color: transparent;
     border-radius: 29px;
+    font-size: 1.2em;
 }
 
 .fondo{
@@ -549,6 +550,7 @@ border-radius: 50%;
 
 .perfil{
     overflow-x: hidden;
+    background-color: #E3E3E3;
 }
 
 .Nombre{
@@ -562,4 +564,13 @@ border-radius: 50%;
     height: 3.2em;
     position: absolute;
     left: 0.15em;
+}
+
+.btnPerfil{
+    background-color: rgba(57, 57, 57, 0.13);
+    min-width: 15em;
+    min-height: 2.4em;;
+    text-align: left;
+    border-radius: .8em;
+    border-color: transparent;
 }

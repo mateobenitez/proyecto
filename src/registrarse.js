@@ -100,7 +100,7 @@ class Reg extends Component {
             <div className="Reg">
                 <MyNavBar/>
                 <div align="center">
-                    <h1><b>Bienvenido maquina</b></h1>  
+                    <h1><b>Bienvenido</b></h1>  
                     <p className="mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>
                     <h2 className="mt-3">¿Qué sos?</h2>
                     <br></br><br></br><br></br><br></br>

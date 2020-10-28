@@ -15,10 +15,10 @@ import {
     faGavel
 } from '@fortawesome/free-solid-svg-icons';
 
-
-
 var btn1 = document.getElementsByClassName("btns")
 var uno = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
 
 function prevenir(e){
     e.preventDefault()
@@ -36,77 +36,77 @@ function prevenir1(e){
     if(uno[1] == 0){
         btn1[1].style.opacity = "100"
         uno[1] = 1
-    }else{
+        }else{
         btn1[1].style.opacity = null
         uno[1] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir2(e){
     e.preventDefault()
     if(uno[2] == 0){
         btn1[2].style.opacity = "100"
         uno[2] = 1
-    }else{
+        }else{
         btn1[2].style.opacity = null
         uno[2] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir3(e){
     e.preventDefault()
     if(uno[3] == 0){
         btn1[3].style.opacity = "100"
         uno[3] = 1
-    }else{
+        }else{
         btn1[3].style.opacity = null
         uno[3] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir4(e){
     e.preventDefault()
     if(uno[4] == 0){
         btn1[4].style.opacity = "100"
         uno[4] = 1
-    }else{
+        }else{
         btn1[4].style.opacity = null
         uno[4] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir5(e){
     e.preventDefault()
     if(uno[5] == 0){
         btn1[5].style.opacity = "100"
         uno[5] = 1
-    }else{
+        }else{
         btn1[5].style.opacity = null
         uno[5] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir6(e){
     e.preventDefault()
     if(uno[6] == 0){
         btn1[6].style.opacity = "100"
         uno[6] = 1
-    }else{
+        }else{
         btn1[6].style.opacity = null
         uno[6] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir7(e){
     e.preventDefault()
     if(uno[7] == 0){
         btn1[7].style.opacity = "100"
         uno[7] = 1
-    }else{
+        }else{
         btn1[7].style.opacity = null
         uno[7] = 0
         uno[8] = 0
-    }
+        }
 }
 function prevenir8(e){
     e.preventDefault()
@@ -114,8 +114,9 @@ function prevenir8(e){
         for(var i = 0; i<8; i++){
             btn1[i].style.opacity = "100"
             uno[i]=1
-        }
+                }
     }
+    
 }
 
 function obli(e){
@@ -144,7 +145,7 @@ class Reg1 extends Component{
                     <button onClick={obli} className="continuar pt-2 pb-2 pl-3 pr-3">Siguiente&nbsp;&nbsp;<img className="pb-1" src={require('./components/continuar.svg')}></img></button>
                 </form>
                 <div align="center">
-                    <h1 className="mb-5">¿A qué grupos le gustaría unirse?</h1>
+                    <h1 className="mb-5">¿A qué grupos le gustaría unirse?  </h1>
                     <div className="form-inline">
                         <div className="container grupos">
                             <form name="foro">

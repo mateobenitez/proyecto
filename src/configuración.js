@@ -19,9 +19,11 @@ import {
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 
-
+var name = window.$seleccionados;
+var hola = localStorage["seleccionados"]
 
 class config extends Component{
+    
     render(){
         return(
             <div className="configuracion">
@@ -37,7 +39,7 @@ class config extends Component{
                             <form method="get" action='/princa'>
                                 <button id="btnInfo" name="btnInfo" className="btn mt-2" ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
                                 <hr className="mt-1 mb-1"></hr>
-                                <button id="btnAli" className="btn"> &nbsp;&nbsp;Alimentación</button><br></br>
+                                <button id="btnAli" className="btn"> {hola[0]} &nbsp;&nbsp;Alimentación</button><br></br>
                                 <button id="btnArt" className="btn"> &nbsp;&nbsp;Arte</button><br></br>
                                 <button id="btnDep" className="btn"> &nbsp;&nbsp;Deportes</button>
                                 <button id="btnDoc" className="btn"> &nbsp;&nbsp;Documentos legales</button>
@@ -50,7 +52,7 @@ class config extends Component{
                         <div className="container-fluid misS1">
                             <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="50" height="50" alt=""></img> &nbsp;&nbsp;&nbsp;&nbsp;Social</h1>
                         </div>
-                        <div className="container-fluid misGa1">
+                        <div className="container-fluid pt-3 misGa1">
                             <form method="get" action="/perfil">
                                 <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
                             </form>

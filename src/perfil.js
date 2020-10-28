@@ -19,6 +19,10 @@ import {
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 
+function borrarEditar(){
+    var borrar = document.getElementsByClassName("editar")
+    borrar[0].style.visibility = "hidden"
+}
 
 class perfil extends Component{
     render(){
@@ -49,15 +53,15 @@ class perfil extends Component{
                         <div className="container-fluid misS1">
                             <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="50" height="50" alt=""></img> &nbsp;&nbsp;&nbsp;&nbsp;Social</h1>
                         </div>
-                        <div className="container-fluid misGa1">
-                            <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
+                        <div className="container-fluid pt-3 misGa1">
+                            <button className="btnPerfil"><img className="" src={require('./components/usuario.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Mi perfil</button><br></br>
                             <form method="get" action="/config">
-                                <button className="btnConfig"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
+                                <button className="btn"><img className="" src={require('./components/configuracion.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Configuración</button>
                             </form>
                             <form method="get" action="/guardados">
-                                <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
+                                <button className="btn"><img className="" src={require('./components/guardados.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Guardados</button>
                             </form><br></br><br></br>
-                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;&nbsp;Cerrar sesión</button>
                             <br></br>
                         </div>
                     </div>
@@ -72,34 +76,42 @@ class perfil extends Component{
                             <h1 align="left" name="cate" className="cat pt-2 pb-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mi perfil</h1>
                         </div>
                         <div className="container-fluid misGuard pt-4">
-                            <button className="mb-3 botonVolver"><img  src={require('./components/volver.svg')} height="19px" width="19px"></img>&nbsp;&nbsp;Volver</button>
+                            <button className="mb-3 botonVolver"><img className="mb-1" src={require('./components/volver.svg')} height="19px" width="19px"></img>&nbsp;&nbsp;Volver</button>
                             <div className="container guardadosCats">
+                                <div align="right">
+                                    <button onClick={borrarEditar} className="mt-3 pb-1 pl-2 botonVolver"> Editar perfil &nbsp;&nbsp;<img className="mb-1" src={require('./components/editar.svg')} width="15px"></img></button>
+                                </div>
                                 <br></br><br></br>
                                 <div className=" fotoPerfil">
                                     <img className="avatar pt-4" src={require('./components/dante.svg')} ></img>
                                 </div>
-                                <div className="Nombre">
-                                    <h1>Sergio Coppa</h1>
-                                    <p>@SergioCoppa</p><br></br>
-                                    <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Belgrano, Buenos Aires, Argentina</p>
-                                    <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Profesor / Maestro</p>
+                                <div className="editar">
+                                    <div className="Nombre">
+                                        <h1>Sergio Coppa</h1>
+                                        <p>@SergioCoppa</p><br></br>
+                                        <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Belgrano, Buenos Aires, Argentina</p>
+                                        <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Profesor / Maestro</p>
+                                    </div>
+                                    <div className="descripcion container">
+                                        <p>Hola soy Sergio me gusta comer pan y enseñar lengua. Tengo un hijo de 40 años al que le gusta jugar tenis y comer papas.</p>
+                                    </div><hr></hr>                     
+                                    <div className="container-fluid cont" align="center">
+                                        <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
+                                        <div className="container imagenP">
+                                            <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                        </div>
+                                        <div className="row justify-content-around">
+                                            <div className="col col-5">
+                                                <p>3 me gusta</p>
+                                            </div>
+                                            <div className="col col-5">
+                                                <p>0 comentarios</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="descripcion container">
-                                    <p>Hola soy Sergio me gusta comer pan y enseñar lengua. Tengo un hijo de 40 años al que le gusta jugar tenis y comer papas.</p>
-                                </div><hr></hr>                     
-                                <div className="container-fluid cont" align="center">
-                                    <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
-                                    <div className="container imagenP">
-                                        <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                    </div>
-                                    <div className="row justify-content-around">
-                                        <div className="col col-5">
-                                            <p>3 me gusta</p>
-                                        </div>
-                                        <div className="col col-5">
-                                            <p>0 comentarios</p>
-                                        </div>
-                                    </div>
+                                <div className="editar1">
+                                    <img src={require('./components/añImg.svg')}></img>
                                 </div>
                             </div>
                             <br></br>
