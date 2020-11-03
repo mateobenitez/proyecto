@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 import MyNavBar from './components/NavBarInicio.js';
 import MyFooter from './components/footer.js';
 import './registrarse.css'
@@ -12,108 +12,110 @@ import {
     faSmile,
     faLaptop,
     faPalette,
-    faGavel
+    faGavel,
+    faChevronDown
 } from '@fortawesome/free-solid-svg-icons';
 
 var btn1 = document.getElementsByClassName("btns")
-var uno = [0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-
+global.uno = [0, 0, 0, 0, 24, 0, 0, 0, 0]
+global.uno = global.uno.filter(function(i) { return i !== 24 });
 
 function prevenir(e){
     e.preventDefault()
-    if(uno[0] == 0){
+    if(global.uno[0] == 0){
         btn1[0].style.opacity = "100"
-        uno[0] = 1
+        global.uno[0] = 1
+        
     }else{
         btn1[0].style.opacity = null
-        uno[0] = 0
-        uno[8] = 0
+        global.uno[0] = 0
+        global.uno[8] = 0
     }
+    console.log(global.uno)
 }
 function prevenir1(e){
     e.preventDefault()
-    if(uno[1] == 0){
+    if(global.uno[1] == 0){
         btn1[1].style.opacity = "100"
-        uno[1] = 1
+        global.uno[1] = 1
         }else{
         btn1[1].style.opacity = null
-        uno[1] = 0
-        uno[8] = 0
+        global.uno[1] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir2(e){
     e.preventDefault()
-    if(uno[2] == 0){
+    if(global.uno[2] == 0){
         btn1[2].style.opacity = "100"
-        uno[2] = 1
+        global.uno[2] = 1
         }else{
         btn1[2].style.opacity = null
-        uno[2] = 0
-        uno[8] = 0
+        global.uno[2] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir3(e){
     e.preventDefault()
-    if(uno[3] == 0){
+    if(global.uno[3] == 0){
         btn1[3].style.opacity = "100"
-        uno[3] = 1
+        global.uno[3] = 1
         }else{
         btn1[3].style.opacity = null
-        uno[3] = 0
-        uno[8] = 0
+        global.uno[3] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir4(e){
     e.preventDefault()
-    if(uno[4] == 0){
+    if(global.uno[4] == 0){
         btn1[4].style.opacity = "100"
-        uno[4] = 1
+        global.uno[4] = 1
         }else{
         btn1[4].style.opacity = null
-        uno[4] = 0
-        uno[8] = 0
+        global.uno[4] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir5(e){
     e.preventDefault()
-    if(uno[5] == 0){
+    if(global.uno[5] == 0){
         btn1[5].style.opacity = "100"
-        uno[5] = 1
+        global.uno[5] = 1
         }else{
         btn1[5].style.opacity = null
-        uno[5] = 0
-        uno[8] = 0
+        global.uno[5] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir6(e){
     e.preventDefault()
-    if(uno[6] == 0){
+    if(global.uno[6] == 0){
         btn1[6].style.opacity = "100"
-        uno[6] = 1
+        global.uno[6] = 1
         }else{
         btn1[6].style.opacity = null
-        uno[6] = 0
-        uno[8] = 0
+        global.uno[6] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir7(e){
     e.preventDefault()
-    if(uno[7] == 0){
+    if(global.uno[7] == 0){
         btn1[7].style.opacity = "100"
-        uno[7] = 1
+        global.uno[7] = 1
         }else{
         btn1[7].style.opacity = null
-        uno[7] = 0
-        uno[8] = 0
+        global.uno[7] = 0
+        global.uno[8] = 0
         }
 }
 function prevenir8(e){
     e.preventDefault()
-    if(uno[8] == 0){
+    if(global.uno[8] == 0){
         for(var i = 0; i<8; i++){
             btn1[i].style.opacity = "100"
-            uno[i]=1
+            global.uno[i]=1
                 }
     }
     
@@ -123,12 +125,13 @@ function obli(e){
     var eligio = false
     
     for(var i = 0; i<8; i++){
-        if(uno[i]==1){
+        if(global.uno[i]==1){
             eligio = true
         }
     }
     if(!eligio){
         e.preventDefault()
+        alert("Debe elegir al menos una categoría")
     }
 }
 
@@ -189,6 +192,7 @@ class Reg1 extends Component{
                     </div>
                     <img className="imgReg1" src={require("./components/tipoGrupos.svg")} alt=""></img>
                 </div>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <MyFooter />
             </div>
         )

@@ -133,7 +133,7 @@ function Contacto(){
                 <div className="col col-1">
                 </div>
             </div>
-            <br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             <MyFooter/>
         </div>
     )

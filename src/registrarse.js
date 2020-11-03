@@ -138,6 +138,7 @@ class Reg extends Component {
                     </div>
                     <br></br><br></br><br></br><br></br> 
                 </div>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <MyFooter />
             </div>
         )

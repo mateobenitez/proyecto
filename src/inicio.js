@@ -26,10 +26,14 @@ var Validar = function(e) {
   console.log(document.forms["form"]["nombre", "apellido"].value)
   if (x1 == "" || x1 == null || x2 == "" || x2 == null || x3 == "" || x3 == null ||
   x4 == "" || x4 == null ||x5 == "" || x5 == null || x6 == "" || x6 == null) {
-      e.preventDefault();
-      colorElementRed();
-      return false;
-    }
+    e.preventDefault();
+    colorElementRed();
+    return false;
+  }
+  else if(x1 != x6){
+    e.preventDefault()
+    alert("La contraseña debe ser igual a la confirmación")
+  }
 }
 class Inicio extends Component{
   
@@ -105,7 +109,7 @@ class Inicio extends Component{
                   <a className="ya2" href="/IniciarSesion" >Iniciar sesión</a>
                 </div>
               </div> 
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <MyFooter />
             </div>  
           </div>

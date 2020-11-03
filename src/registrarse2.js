@@ -80,7 +80,8 @@ class Reg2 extends Component{
                         </form>
                     </div>
                 </div>                
-                <img src={require("./components/lugar.svg")}width="1400" height="547" alt=""></img>
+                <img className="imgMapa" src={require("./components/lugar.svg")}width="1400" height="547" alt=""></img>
+                <br></br><br></br>
                 <MyFooter />
             </div>
         )

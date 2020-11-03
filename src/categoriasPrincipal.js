@@ -2,8 +2,7 @@ import React, {Component} from 'react';
 
 class cat extends Component{
     render(){
-        var categorias = document.getElementsByClassName("btn")
-        categorias[0]
+        global.categorias = document.getElementsByClassName("btn")
         
         return(
             <div className="container-fluid misGa">
@@ -23,3 +22,4 @@ class cat extends Component{
         )
     }
 }
+

@@ -15,7 +15,9 @@ class NavBar extends React.Component{
                     </div>
                     <form className="form-inline">
                         <a className="nav-link nav-com" href="inicio" >Inicio</a>
-                        <a className="nav-link nav-com" href="Acerca">Acerca de</a>
+                        <form method="get" action="/acerca">
+                            <a className="nav-link nav-com" href="Acerca">Acerca de</a>
+                        </form>
                         <form method="get" action="/contacto">
                             <a className="nav-link nav-com" href="Contacto">Contacto</a>
                         </form>

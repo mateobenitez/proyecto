@@ -10,12 +10,12 @@ console.log(document.getElementsByClassName("descPub"))
   return (
     <div className={showHideClassName}>
       <div className="modal-container">
-        <h1 className="queDes"><FontAwesomeIcon icon={faUser}/> &nbsp;&nbsp;¿Qué desea publicar, Hernán?</h1>
+        <h1 className="queDes">&nbsp;&nbsp;Crear publicación</h1><hr className="lineaModal"></hr>
         <form onSubmit>
           <div className="container-fluid des">
-            <input className="descPub" type="text"></input>
+            <textarea className="descPub" type="textarea" rows="10" maxLength="100"></textarea>
           </div>
-          <br></br><br></br><br></br><br></br><br></br><br></br>
+          <br></br>
           <label>Añadir a tu publicación</label><br></br>
           <div form="inline">
             <button className="btnAña"><img src={require("./imagen.svg")}width="20" height="20" alt=""></img>&nbsp;&nbsp;Imagen</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

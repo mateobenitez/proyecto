@@ -8,6 +8,7 @@ import Registrarse2 from './registrarse2.js'
 import PagPrinc from './páginaPrincipal.js'
 import PagPrinca from './páginaPrincipal copy.js'
 import Contacto from './contacto.js'
+import Acerca from './acercaDe.js'
 import Guardados from './guardados.js'
 import Config from './configuración.js'
 import Perfil from './perfil.js'
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route path="/contacto">
           <Contacto />
+        </Route>
+        <Route path="/acerca">
+          <Acerca />
         </Route>
         <Route path="/guardados">
           <Guardados />

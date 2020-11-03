@@ -54,15 +54,15 @@ class config extends Component{
                         </div>
                         <div className="container-fluid pt-3 misGa1">
                             <form method="get" action="/perfil">
-                                <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
+                                <button className="btn"><img className="" src={require('./components/usuario.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Mi perfil</button><br></br>
                             </form>
                             <form method="get" action="/config">
-                                <button className="btnConfig"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
+                                <button className="btn" id="btnConfig"><img className="" src={require('./components/configuracion.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Configuración</button>
                             </form>
                             <form method="get" action="/guardados">
-                                <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
+                                <button className="btn"><img className="" src={require('./components/guardados.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Guardados</button>
                             </form><br></br><br></br>
-                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;&nbsp;Cerrar sesión</button>
                             <br></br>
                         </div>
                     </div>

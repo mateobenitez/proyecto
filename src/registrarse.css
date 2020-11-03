@@ -252,6 +252,11 @@
     bottom: -.2em;
 }
 
+.imgMapa{
+    position: relative;
+    bottom: 15em;
+}
+
 .btns:focus{
     outline: none;
 }

@@ -35,11 +35,48 @@
 .misGa{
     position: fixed;
     top: 16.3em;
+    border-top-right-radius:2em;
+    border-top-left-radius:2em;
+    max-width: 18em;
+    left: 18em;
     background-color: #f6f6f6;
-    border-radius:2em;
-    max-width: 18.27em;
 }
 
+.Sel{
+    border-top-left-radius: 2em;
+    border-top-right-radius: 2em;
+    min-width: 18em;
+}
+
+.noSel{
+    background-color: #DADADA;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    position: fixed;
+    left: 18em;
+    max-width: 18em;
+    padding-left: 1em;
+}
+
+.hid{
+    display:none;
+}
+
+.contVer{
+    position: relative;
+    left: -1em;
+    background-color: #f6f6f6;
+    max-width: 18em;
+    min-width: 18em;
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+}
+
+.botonVer{
+    border:none;
+    background-color: transparent;
+    outline: none;
+}
 
 .misGa1{
     position: fixed;
@@ -47,6 +84,7 @@
     background-color: #f6f6f6;
     border-radius:2em;
     max-width: 18.27em;
+    left: 18em;
 }
 
 .misG{
@@ -61,13 +99,37 @@
     background-color: rgba(246, 246, 246, 1);
     border-radius:2em;
     position: fixed;
-    left: 41em;
     top: 12.4em;
     max-width: 38em;
     z-index: 4;
 }
 
+.añadirImg{
+    position: absolute;
+    top: 15em;
+    left: 3em;
+    border-radius: 2em;
+    border: none;
+    background-color: #98B9F1;
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.añadirImg:focus{
+    outline: none;
+}
+
 .misS{
+    position: fixed;
+    top: 12em;
+    left: 18em;
+    background-color: #DADADA;
+    border-radius:2em;
+    max-width: 18.27em;
+    max-height: 3.7em;
+}
+
+.misN{
     position: fixed;
     top: 12em;
     background-color: #DADADA;
@@ -79,6 +141,7 @@
 .misS1{
     position: fixed;
     top: 40em;
+    left: 18em;
     background-color: #DADADA;
     border-radius:2em;
     max-width: 18.27em;
@@ -190,22 +253,33 @@
 
 .pibe{
     font-size: 1.25em;
+    text-decoration: none;
+    color:#393939;
+}
+
+.pibeBtn{
+    border: none;
+    background-color: transparent;
+}
+
+.pibe:hover{
+    color: #393939;
 }
 
 .botonP{
-    background-color:  #C5C5C5;
+    background-color:  #E9E9E9;
     border-radius: 1.8125em;
     border:none transparent;
     font-family: "pop";
     transition: 0.6s;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
-    font-size: 1.5em;
+    font-size: 1em;
     outline:none;
 }
 
 .botonE{
-    background-color:  #C5C5C5;
+    background-color:  #E9E9E9;
     border-radius: 1.8125em;
     border:none transparent;
     font-family: "pop";
@@ -290,13 +364,12 @@
     top: 9.8em;
 }
 
-.btnConfig{
+#btnConfig{
     background-color: rgba(57, 57, 57, 0.13);
     min-width: 15em;
-    min-height: 2.4em;;
     text-align: left;
     border-radius: .8em;
-    border-color: transparent;
+    max-height: 2.4em;
 }
 
 .btn1g{
@@ -369,9 +442,9 @@
 }
 .modal-container {
     position: absolute;
-    width: 60%;
+    width: 40%;
     background: #ffffff;
-    left: 25%;
+    left: 30%;
     top: 30%;
     padding: 20px;
     border-radius: 40px;
@@ -379,26 +452,27 @@
 }
   
 .descPub{
-    width: 30em;
+    width: 40em;
+    margin-top: 1em;
     background-color: rgba(196, 196, 196, 1);
     border-color: transparent;
-    border-radius: 30px;
-    height: 3em;
+    height: 14em;
     outline: none;
 }
 
 .des{
-    width: 35em !important;
-    background-color: rgba(196, 196, 196, 1);
+    width: 42.8em !important;
+    background-color:rgba(196, 196, 196, 1);
     border-radius: 30px;
 }
 
 .queDes{
     font-size: 2.125em;
+    text-align: left;
 }
 
 .btnPub{
-    width: 35em;
+    width: 10em;
     height: 2.5em;
     background-color: rgba(196, 196, 196, 1);
     border-color: transparent;
@@ -415,6 +489,10 @@
     border-radius: 30px;
     outline: none;
     text-align: 20em;
+}
+
+.lineaModal{
+    width: 94%;
 }
 
 .tituloGuard{
@@ -550,7 +628,9 @@ border-radius: 50%;
 
 .perfil{
     overflow-x: hidden;
+    overflow-y: hidden;
     background-color: #E3E3E3;
+    font-family: pop;
 }
 
 .Nombre{
@@ -566,11 +646,201 @@ border-radius: 50%;
     left: 0.15em;
 }
 
-.btnPerfil{
+#btnPerfil{
     background-color: rgba(57, 57, 57, 0.13);
     min-width: 15em;
-    min-height: 2.4em;;
     text-align: left;
     border-radius: .8em;
-    border-color: transparent;
+    max-height: 2.4em;
+}
+
+.Infop{
+    position: relative;
+    padding-top: 7em;
+    font-size: 1.5em;
+    color: #393939;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.guardarCmb{
+    position: absolute;
+    right: 2.5em;
+    top: 18.2em;
+    padding: .5em;
+    border-radius: 2em;
+    border: none;
+    background-color: #E9E9E9;
+    z-index: 1;
+}
+
+.Locacion{
+    position: relative;
+    top: 1em;/*2.5*/
+    max-width: 15em;
+    width: 15em;
+    color: #393939;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.Adicion{
+    position: relative;
+    top: 2em;/*5.5*/
+    max-width: 15em;
+    width: 15em;
+    color: #393939;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.btnsPerfil{
+    border: none;
+    background-color:transparent;
+}
+
+.btnsPerfil:focus{
+    outline: none;
+}
+
+.inputsEdit{
+    border-top: transparent;
+    border-left: transparent;
+    border-right: transparent;
+    border-bottom: #828282 solid 1px;
+    background-color: transparent;
+    min-width: 20em;
+}
+
+.pEdits{
+    font-weight: bold;
+}
+
+#editNom{
+    position: absolute;
+    top: 24em;
+    left: 8em;
+}
+
+#editApe{
+    position: absolute;
+    top: 27.2em;
+    left: 8em;
+}
+
+#editUsu{
+    position: absolute;
+    top: 30.4em;
+    left: 2.43em;
+}
+
+#editEma{
+    position: absolute;
+    top: 33.6em;
+    left: 2.7em;
+}
+
+#editSoy{
+    position: absolute;
+    top: 36.8em;
+    left: 10.24em;
+}
+
+.lineaEdit{
+    position: absolute;
+    bottom: 38.4em;
+    max-width: 12em;
+    left: 3em;
+    width: 12em;
+}
+
+.lineaEdit2{
+    position: absolute;
+    bottom: 38.4em;
+    max-width: 12em;
+    left: 23.6em;
+    width: 12em;
+}
+
+.editForm{
+    position: relative;
+    top: 1em;
+    padding-left: 11em;
+    text-align: left;
+}
+
+.editForm1{
+    position: relative;
+    top: 5em;
+    padding-left: 11em;
+    text-align: left;
+}
+
+.editForm2{
+    position: relative;
+    top: 10em;
+    padding-left: 11em;
+    text-align: left;
+}
+
+.pregAds{
+    display: none;
+}
+
+.locac{
+    display: none;
+}
+
+.infoPer{
+    display: none;
+}
+
+.editPaís{
+    position: absolute;
+    top: 46.8em;
+    left: 10em;
+}
+
+.editProv{
+    position: absolute;
+    top: 50em;
+    left: 3.06em;
+}
+
+.editCiud{
+    position: absolute;
+    top: 53.2em;
+    left: 2.45em;
+}
+
+.lineaEdit3{
+    position: absolute;
+    bottom: 19em;
+    max-width: 7.5em;
+    left: 3em;
+    width: 7.5em;
+}
+
+.lineaEdit4{
+    position: absolute;
+    bottom: 19em;
+    max-width: 8em;
+    left: 28.5em;
+    width: 7.3em;
+}
+
+.editConq{
+    position: absolute;
+    top: 70.6em;
+    left: 2.4em;
+}
+
+.editPres{
+    position: absolute;
+    top: 64em;
+    left: 5.5em;
+}
+
+.editar1{
+    display: none;
 }
