@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyNavBar from './components/NavBarInicio.js';
+import MyNavBar2 from './components/NavBarInicio.js';
 import MyFooter from './components/footer.js';
 import './registrarse.css'
 import Inicio from './inicio.js'
@@ -98,7 +98,7 @@ class Reg extends Component {
     render(){
         return (
             <div className="Reg">
-                <MyNavBar/>
+                <MyNavBar2/><br></br><br></br><br></br>
                 <div align="center">
                     <h1><b>Bienvenido</b></h1>  
                     <p className="mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>

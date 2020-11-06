@@ -38,7 +38,7 @@
     border-top-right-radius:2em;
     border-top-left-radius:2em;
     max-width: 18em;
-    left: 18em;
+    left: 15.12%;
     background-color: #f6f6f6;
 }
 
@@ -53,7 +53,7 @@
     border-bottom-left-radius: 2em;
     border-bottom-right-radius: 2em;
     position: fixed;
-    left: 18em;
+    left: 15.12%;
     max-width: 18em;
     padding-left: 1em;
 }
@@ -63,8 +63,8 @@
 }
 
 .contVer{
-    position: relative;
-    left: -1em;
+    position: fixed;
+    left: 15.12%;
     background-color: #f6f6f6;
     max-width: 18em;
     min-width: 18em;
@@ -84,7 +84,7 @@
     background-color: #f6f6f6;
     border-radius:2em;
     max-width: 18.27em;
-    left: 18em;
+    left: 15.12%;
 }
 
 .misG{
@@ -95,6 +95,15 @@
     z-index: 4;
 }
 
+.misGuard2{
+    background-color: rgba(246, 246, 246, 1);
+    border-radius:2em;
+    position: relative;
+    top: 14.4em;
+    max-width: 38em;
+    z-index: 4;
+}
+
 .misGuard{
     background-color: rgba(246, 246, 246, 1);
     border-radius:2em;
@@ -102,6 +111,27 @@
     top: 12.4em;
     max-width: 38em;
     z-index: 4;
+}
+
+.usuarioNav{
+    position: absolute;
+    right: 19.5em;
+    top: 3.5em;
+    font-size: 1.2em;
+}
+
+.menuNav{
+    position: absolute;
+    right: 3.2em;
+    top: 3.5em;
+    font-size: 1.2em;
+}
+
+.notifNav{
+    position: absolute;
+    right: 9.3em;
+    top: 3.5em;
+    font-size: 1.2em;
 }
 
 .añadirImg{
@@ -122,11 +152,15 @@
 .misS{
     position: fixed;
     top: 12em;
-    left: 18em;
+    left: 15.2%;
     background-color: #DADADA;
     border-radius:2em;
     max-width: 18.27em;
     max-height: 3.7em;
+}
+
+.lineaPerfil{
+    width: 150%;
 }
 
 .misN{
@@ -141,7 +175,7 @@
 .misS1{
     position: fixed;
     top: 40em;
-    left: 18em;
+    left: 15.12%;
     background-color: #DADADA;
     border-radius:2em;
     max-width: 18.27em;
@@ -178,9 +212,19 @@
 .fondo{
     background-color: #f6f6f6;
     position: fixed;
-    min-width: 38.3em;
+    min-width: 32.2%;
     border-radius: 2em;
     min-height: 80em;
+    z-index: 3;
+    top: 14.5em;
+}
+
+.fondo2{
+    background-color: #f6f6f6;
+    position: fixed;
+    min-width: 32.2%;
+    border-radius: 2em;
+    min-height: 60em;
     z-index: 3;
     top: 14.5em;
 }
@@ -188,7 +232,7 @@
 .asa{
     background-color:  #f6f6f6;
     position: fixed;
-    min-width: 38.3em;
+    min-width: 32.2%;
     border-top-left-radius: 2em;
     border-top-right-radius: 2em;
     min-height: 2.8em;
@@ -202,7 +246,7 @@
     min-height: 8.5em;
     top: 7em;
     z-index: 7;
-    min-width: 40em;
+    min-width: 32.3%;
     color: rgba(249, 234, 183, 1);
 }
 
@@ -216,7 +260,8 @@
 }
 
 .cat{
-    font-size: 2em;
+    font-size: 2rem;
+    max-width: 100%;
 }
 
 .selGuar{
@@ -491,6 +536,10 @@
     text-align: 20em;
 }
 
+.text{
+    z-index: 1;
+}
+
 .lineaModal{
     width: 94%;
 }
@@ -580,21 +629,47 @@ border-radius: 50%;
 }
 
 .dropDown{
-    visibility: hidden;
+    display: none;
 }
 
+.salir{
+    text-align: center;
+}
+
+.cuenta{
+    text-align: center;
+}
+
+.eliminarCuenta{
+    border: hidden;
+    background-color: rgba(255, 166, 166, 1);
+    border-radius: 2em;
+}
 
 .botonDrop{
     border-color: transparent;
     background-color: transparent;
-    font-size: 1.2em;
-    
+    color: #393939;
+    font-size: 1.5em;
 }
 
-.boton1pos{
-    position: absolute;
-    bottom: 10.2em;
+.cambiarC{
+    text-align: center;
 }
+
+.inputsCambiar{
+    border-color: rgba(207, 207, 207, 1);
+    border-style: solid;
+    border-width: 5pxpx;
+    color:rgba(160, 160, 160, 1);
+    border-radius: 0.7em;
+    padding:.4em;
+    text-indent: .5em;
+    background-color: rgb(242,242,242,1);
+    min-width: 20em; 
+}
+
+.inputsCambiar::placeholder { color: rgba(160, 160, 160, 1) }
 
 .lineaPos{
     position: relative;
@@ -843,4 +918,38 @@ border-radius: 50%;
 
 .editar1{
     display: none;
+}
+
+#btnAliC{
+    background-color: rgba(235, 193, 44, 0.61);
+    border-radius: 2em;
+}
+#btnArtC{
+    background-color: rgba(167, 25, 203, 0.39);
+    border-radius: 2em;
+}
+#btnDepC{
+    background-color: rgba(242, 126, 17, 0.54);
+    border-radius: 2em;
+}
+#btnDocC{
+    background-color: rgba(109, 53, 0, 0.58);
+    border-radius: 2em;
+}
+
+#btnEduC{
+    background-color: rgba(30, 198, 67, 0.56);
+    border-radius: 2em;
+}
+#btnRelC{
+    background-color: rgba(255, 95, 162, 0.6);
+    border-radius: 2em;
+}
+#btnSalC{
+    background-color: rgba(224, 14, 14, 0.57);
+    border-radius: 2em;
+}
+#btnTecC{
+    border-radius: 2em;
+    background-color: rgba(66, 133, 244, 0.54);
 }

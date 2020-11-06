@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MyNavBarPrinc from './components/NavBarPrinc.js';
+import MyNavBarPrinca from './components/navBarPruebaMenu.js';
 import './princ.css'
 import reg1 from './registrarse1';
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -260,7 +260,7 @@ class pagPrinca extends Component{
         
         return (
             <div style={fondo} className="princ">
-                <MyNavBarPrinc/>
+                <MyNavBarPrinca/>
                 <div align="center">
                     <Modal show={this.state.modal} handleClose={e => this.modalClose(e)}/>
                 </div>
@@ -269,7 +269,7 @@ class pagPrinca extends Component{
                     </div>
                     <div className="col col-2">
                         <div className="container-fluid misS">
-                            <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="35" height="35" alt=""></img>&nbsp;&nbsp;Categorías</h1>
+                            <h1 className="cat pt-2 pb-2">&nbsp;&nbsp;Categorías</h1>
                         </div>
                         <div className="container-fluid misGa">
                             <button id="btnInfo aa" onClick={cambioInfo} name="btnInfo" className="btn mt-2 " ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
@@ -279,9 +279,17 @@ class pagPrinca extends Component{
                             </div>
                             <div className="noSel">
                                 <div className="hid">
-                                    {noSeleccionados}
+                                    {noSeleccionados[0]}
+                                    {noSeleccionados[1]}
+                                    {noSeleccionados[2]}
+                                    {noSeleccionados[3]}
+                                    {noSeleccionados[4]}
+                                    {noSeleccionados[5]}
+                                    {noSeleccionados[6]}
+                                    {noSeleccionados[7]}
+                                    {noSeleccionados[8]}
                                 </div>
-                                <div className="contVer container pb-3">
+                                <div className="contVer  pb-3">
                                     <button className="ml-3 mt-3 botonVer" onClick={verMas}>Unirse a más categorías <img src={require('./components/mas.svg')}></img> </button>
                                 </div>
                             </div>
@@ -369,6 +377,11 @@ class pagPrinca extends Component{
                                 </div>
                                 <hr className="lineaP"></hr>
                             </div>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                             <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                         </div>
                     </div>

@@ -55,7 +55,7 @@
 }
 
 .btns{
-    border: transparent;
+    border-color: transparent;
     border-radius: 500px;
     padding-left: 20px;
     padding-right: 20px;
@@ -153,6 +153,18 @@
     top: 17.3em;
 }
 
+#pais{
+    left: 20em;
+}
+
+#provincia{
+    left: 20em;
+}
+
+#ciudad{
+    left: 20em;
+}
+
 .textCompletar {
     background-color: transparent;
     border: none transparent;
@@ -198,43 +210,35 @@
   }
 
 .btn1{
-    background: #F27E11;
-    opacity: 54%;
+    background: rgba(242, 126, 17, 0.54);
   }
  
 .btn2{
-    background: #1EC643;
-    opacity: 56%;
+    background: rgba(30, 198, 67, 0.56);
 }
 
 .btn3{
-    background:#E00E0E;
-    opacity: 57%;
+    background:rgba(224, 14, 14, 0.57);
 }
 
 .btn4{
-    background: #EBC12C;
-    opacity: 61%;
+    background: rgba(235, 193, 44, 0.61);
 }
 
 .btn5{
-    background: #FF5FA2;
-    opacity: 60%;
+    background: rgba(255, 95, 162, 0.6);
 }
 
 .btn6{
-    background: #4285F4;
-    opacity: 54%;
+    background: rgba(66, 133, 244, 0.54);
 }
 
 .btn7{
-    background: #A719CB;
-    opacity: 39%;
+    background: rgba(167, 25, 203, 0.39);
 }
 
 .btn8{
-    background: #6D3500;
-    opacity: 58%;
+    background: rgba(109, 53, 0, 0.58);
 }
 
 .as{
@@ -259,6 +263,10 @@
 
 .btns:focus{
     outline: none;
+}
+
+.lineaPrueba{
+    width: 1900px;
 }
 
 .quesos{

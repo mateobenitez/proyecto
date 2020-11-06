@@ -1,5 +1,5 @@
 .Inicio{
-    
+    background-color: #f6f6f6;
     overflow-x: hidden;
 }
 /*p{
@@ -33,35 +33,35 @@ left: -140%;
     font-style: normal;
     font-weight: normal;
     margin-left: 0px;
+    font-size: 1.5em;
     text-align: left;
     letter-spacing: 0.01em;
     color: #393939;
     position: relative;
-    left:8%;
+    left:23%;
+    top: 8em;
+    max-width: 22em;
 }
 
-.linea-reg {
-    transform: rotate(90deg);
-    position: relative;
-    width: 28.875em;
-    border-top: 1px solid black;
-    
-  }
+.nena{
+    position: absolute;
+    left: 6em;
+    top: 5em;
+}
 
 .text {
     background-color: transparent;
     border: none transparent;
     outline: none;
     position: relative;
-    left: 70%;
+    width: 20em;
     font-family: "pop";
-
 }
 
 .linea-texto{
     position: absolute;
     left: 70%;
-    width: 16.8125em;
+    width: 30em;
 }
 
 .li1{
@@ -100,8 +100,13 @@ left: -140%;
 }
 
 .placeh{
-    position: relative;
-    right: 30%;
+    position: absolute;
+    left: -20em;
+}
+
+.placeho{
+    position: absolute;
+    left: -30em;
 }
 
 @font-face{
@@ -109,24 +114,43 @@ left: -140%;
     src: url(components/poppins/Poppins-Regular.ttf);
 }
 
-.nena{
+.ojo{
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
     position: absolute;
-    left: 30em;
+    bottom: 37.6em;
+    right: 27em;
+}
+
+.ojoConf{
+    color: black;
+    background-color: transparent;
+    border-color: transparent;
+    position: absolute;
+    bottom: 33em;
+    right: 27em;
+}
+
+.yaTienes{
+    position: absolute;
+    right: 0.3em;
+    bottom: 33em;
+    min-width: 58.5em;
 }
 
 .boton3{
-    background-color: transparent;
-    color:#393939;
+    background-color: rgba(57, 57, 57, 1);
+    color:rgba(217, 217, 217, 1);
     border-radius: 1.8125em;
     font-family: "pop";
     border:3px solid #393939;
-    transition: 0.6s;
     padding: 0.5em 2em;
     font-size: 0.9375em;
     outline:none;
     position: relative;
-    right: -223%;
-    top: 5em;
+    top: 2em;
+    left:13.5em;
     z-index: 1;
 }
 
@@ -139,6 +163,7 @@ left: -140%;
 .obl-texto{
     position: absolute;
     left: 70%;
+    top: 8em;
     width: 16.8125em;
     color: red;
     visibility: hidden;
@@ -173,6 +198,12 @@ left: -140%;
 .obl5{
     position: absolute;
     top: 34.3em;
+}
+
+.obl6{
+    position: absolute;
+    top: 34.3em;
+    min-width: 20em;
 }
 
 .ya{

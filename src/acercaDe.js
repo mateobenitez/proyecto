@@ -17,7 +17,7 @@ function acerca(){
                 A una persona con autismo le cuesta expresar lo que siente así como también entender lo que les pasa o sienten los demás. Tienen gustos e intereses restringidos. Por ejemplo, un niño puede interesarse específicamente por los dinosaurios y casi por nada más. Realizar tareas repetitivas les sirve para ordenar un mundo que percibe caótico, por ejemplo, ordenar cajas en fila una y otra vez.<br></br><br></br>
                 La detección temprana mejora considerablemente el pronóstico. <br></br>Cualquiera puede nacer con autismo y no hay manera de prevenirlo.</p>
             </div>
-            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             <MyFooter/>
         </div>
     )

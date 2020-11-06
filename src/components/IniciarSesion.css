@@ -1,5 +1,5 @@
 .IniciarSesion{
-    
+    background-color: #F6F6F6;
     overflow-x: hidden;
 }
 /*p{
@@ -120,21 +120,13 @@ left: -140%;
     font-size: 0.8em;
 }
 
-
-
 .obli3{
-    position: absolute;
-    top: 12em;
+    position: relative;
 }
 
 .obli4{
     position: absolute;
-    top: 17.8em;
-}
-
-.obli5{
-    position: absolute;
-    top: 23.4em;
+    top: 12.2em;
 }
 
 .ya{

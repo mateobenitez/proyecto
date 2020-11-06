@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import MyNavBar from './components/NavBarInicio.js';
+import MyNavBar2 from './components/NavBarInicio.js';
 import MyFooter from './components/footer.js';
 import './registrarse.css'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -17,105 +17,104 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 var btn1 = document.getElementsByClassName("btns")
-global.uno = [0, 0, 0, 0, 24, 0, 0, 0, 0]
-global.uno = global.uno.filter(function(i) { return i !== 24 });
+var uno = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 function prevenir(e){
     e.preventDefault()
-    if(global.uno[0] == 0){
-        btn1[0].style.opacity = "100"
-        global.uno[0] = 1
+    if(uno[0] == 0){
+        btn1[0].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[0] = 1
         
     }else{
-        btn1[0].style.opacity = null
-        global.uno[0] = 0
-        global.uno[8] = 0
+        btn1[0].style.borderColor = null
+        uno[0] = 0
+        uno[8] = 0
     }
-    console.log(global.uno)
+    console.log(uno)
 }
 function prevenir1(e){
     e.preventDefault()
-    if(global.uno[1] == 0){
-        btn1[1].style.opacity = "100"
-        global.uno[1] = 1
+    if(uno[1] == 0){
+        btn1[1].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[1] = 1
         }else{
-        btn1[1].style.opacity = null
-        global.uno[1] = 0
-        global.uno[8] = 0
+        btn1[1].style.borderColor = null
+        uno[1] = 0
+        uno[8] = 0
         }
 }
 function prevenir2(e){
     e.preventDefault()
-    if(global.uno[2] == 0){
-        btn1[2].style.opacity = "100"
-        global.uno[2] = 1
+    if(uno[2] == 0){
+        btn1[2].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[2] = 1
         }else{
-        btn1[2].style.opacity = null
-        global.uno[2] = 0
-        global.uno[8] = 0
+        btn1[2].style.borderColor = null
+        uno[2] = 0
+        uno[8] = 0
         }
 }
 function prevenir3(e){
     e.preventDefault()
-    if(global.uno[3] == 0){
-        btn1[3].style.opacity = "100"
-        global.uno[3] = 1
+    if(uno[3] == 0){
+        btn1[3].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[3] = 1
         }else{
-        btn1[3].style.opacity = null
-        global.uno[3] = 0
-        global.uno[8] = 0
+        btn1[3].style.borderColor = null
+        uno[3] = 0
+        uno[8] = 0
         }
 }
 function prevenir4(e){
     e.preventDefault()
-    if(global.uno[4] == 0){
-        btn1[4].style.opacity = "100"
-        global.uno[4] = 1
+    if(uno[4] == 0){
+        btn1[4].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[4] = 1
         }else{
-        btn1[4].style.opacity = null
-        global.uno[4] = 0
-        global.uno[8] = 0
+        btn1[4].style.borderColor = null
+        uno[4] = 0
+        uno[8] = 0
         }
 }
 function prevenir5(e){
     e.preventDefault()
-    if(global.uno[5] == 0){
-        btn1[5].style.opacity = "100"
-        global.uno[5] = 1
+    if(uno[5] == 0){
+        btn1[5].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[5] = 1
         }else{
-        btn1[5].style.opacity = null
-        global.uno[5] = 0
-        global.uno[8] = 0
+        btn1[5].style.borderColor = null
+        uno[5] = 0
+        uno[8] = 0
         }
 }
 function prevenir6(e){
     e.preventDefault()
-    if(global.uno[6] == 0){
-        btn1[6].style.opacity = "100"
-        global.uno[6] = 1
+    if(uno[6] == 0){
+        btn1[6].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[6] = 1
         }else{
-        btn1[6].style.opacity = null
-        global.uno[6] = 0
-        global.uno[8] = 0
+        btn1[6].style.borderColor = null
+        uno[6] = 0
+        uno[8] = 0
         }
 }
 function prevenir7(e){
     e.preventDefault()
-    if(global.uno[7] == 0){
-        btn1[7].style.opacity = "100"
-        global.uno[7] = 1
+    if(uno[7] == 0){
+        btn1[7].style.border = "3px solid rgba(151, 151, 151, 1)"
+        uno[7] = 1
         }else{
-        btn1[7].style.opacity = null
-        global.uno[7] = 0
-        global.uno[8] = 0
+        btn1[7].style.borderColor = null
+        uno[7] = 0
+        uno[8] = 0
         }
 }
 function prevenir8(e){
     e.preventDefault()
-    if(global.uno[8] == 0){
+    if(uno[8] == 0){
         for(var i = 0; i<8; i++){
-            btn1[i].style.opacity = "100"
-            global.uno[i]=1
+            btn1[i].style.border = "3px solid rgba(151, 151, 151, 1)"
+            uno[i]=1
                 }
     }
     
@@ -125,7 +124,7 @@ function obli(e){
     var eligio = false
     
     for(var i = 0; i<8; i++){
-        if(global.uno[i]==1){
+        if(uno[i]==1){
             eligio = true
         }
     }
@@ -140,7 +139,7 @@ class Reg1 extends Component{
         return (
             
             <div className="Reg">
-                <MyNavBar/>
+                <MyNavBar2/><br></br><br></br><br></br>
                 <form method="get" action="/registrarse">
                     <button  className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
                 </form>
@@ -154,10 +153,10 @@ class Reg1 extends Component{
                             <form name="foro">
                                 <div className="row justify-content-center">
                                     <div className="col col-4">
-                                    <button className="btns btn2 mt-5 mb-2"  onClick={prevenir}><FontAwesomeIcon icon={faGraduationCap}/> &nbsp;Educación</button>
+                                    <button className="btns btn2 mt-5 mb-2"  onClick={prevenir}><img src={require('./components/edu.svg')} width="20px"></img> &nbsp;Educación</button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns mt-5 btn5 mb-2" onClick={prevenir1}><FontAwesomeIcon icon={faSmile}/> Relaciones<br></br>sociales</button>
+                                        <button className="btns mt-5 btn5 mb-2" onClick={prevenir1}><img src={require('./components/carita.svg')} width="20px"></img> Relaciones<br></br>sociales</button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
@@ -165,23 +164,23 @@ class Reg1 extends Component{
                                         <button className="btns btn4 mt-4 mb-2" onClick={prevenir2}><div className="form-inline"><img  src={require('./components/tenedor.svg')} height="19px" width="19px"></img> &nbsp;Alimentación</div></button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns btn7 mt-4 mb-2" onClick={prevenir3}><FontAwesomeIcon icon={faPalette}/> &nbsp;Arte</button>
+                                        <button className="btns btn7 mt-4 mb-2" onClick={prevenir3}><img src={require('./components/arte.svg')} width="20px"></img> &nbsp;Arte</button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
                                     <div className="col col-4">
-                                        <button id="btn1" className="btns btn1 mt-4 mb-2" onClick={prevenir4}><FontAwesomeIcon icon={faDumbbell}/> &nbsp;Deportes</button>
+                                        <button id="btn1" className="btns btn1 mt-4 mb-2" onClick={prevenir4}><img src={require('./components/deportes.svg')} width="20px"></img> &nbsp;Deportes</button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns btn6 mt-4 mb-2" onClick={prevenir5}><FontAwesomeIcon icon={faLaptop}/> &nbsp;Tecnología</button>
+                                        <button className="btns btn6 mt-4 mb-2" onClick={prevenir5}><img src={require('./components/tec.svg')} width="20px"></img> &nbsp;Tecnología</button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
                                     <div className="col col-4">
-                                        <button className="btns btn3 mt-4 mb-2" onClick={prevenir6}><FontAwesomeIcon icon={faHeart} />&nbsp;Salud</button>
+                                        <button className="btns btn3 mt-4 mb-2" onClick={prevenir6}><img src={require('./components/salud.svg')} width="20px"></img>&nbsp;Salud</button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns btn8 mt-4 mb-2" onClick={prevenir7}><FontAwesomeIcon icon={faGavel}/> Documentos <br></br> legales</button>
+                                        <button className="btns btn8 mt-4 mb-2" onClick={prevenir7}><img src={require('./components/doc.svg')} width="20px"></img> Documentos <br></br> legales</button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
@@ -192,7 +191,7 @@ class Reg1 extends Component{
                     </div>
                     <img className="imgReg1" src={require("./components/tipoGrupos.svg")} alt=""></img>
                 </div>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <MyFooter />
             </div>
         )

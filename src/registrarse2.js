@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MyNavBar from './components/NavBarInicio.js';
+import MyNavBar2 from './components/NavBarInicio.js';
 import MyFooter from './components/footer.js';
 import './registrarse.css'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -54,7 +54,7 @@ class Reg2 extends Component{
     render(){
         return (
             <div className="Reg">
-                <MyNavBar/>
+                <MyNavBar2/><br></br><br></br><br></br>
                 <form method="get" action="/registrarse1">
                     <button  className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
                 </form>
@@ -62,7 +62,7 @@ class Reg2 extends Component{
                     <button onClick={Validar} className="continuar pt-2 pb-2 pl-3 pr-3">Finalizar&nbsp;&nbsp;<img className="pb-1" src={require('./components/finalizar.svg')}></img></button>
                 </form>
                 <div align="center">
-                    <h1>¿En qué lugar se encuentra? maquina</h1>
+                    <h1>¿En qué lugar se encuentra?</h1>
                 </div>
                 <div className="row justify-content-left">
                     <div className="col col-3">
@@ -80,8 +80,7 @@ class Reg2 extends Component{
                         </form>
                     </div>
                 </div>                
-                <img className="imgMapa" src={require("./components/lugar.svg")}width="1400" height="547" alt=""></img>
-                <br></br><br></br>
+                <img className="imgMapa" src={require("./components/lugar.svg")}width="1950" alt=""></img>
                 <MyFooter />
             </div>
         )

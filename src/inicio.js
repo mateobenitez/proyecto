@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
 import "./app.css"
-import MyNavBar from './components/NavBarInicio.js';
+import MyNavBar2 from './components/NavBarInicio2.js';
 import MyFooter from './components/footer.js';
 import ReactDOM from 'react-dom'
+import ojoT from './components/ojoT.svg'
+import oj from './components/ojo.svg'
+
+var elements = document.getElementsByClassName("text");
+var lineas = document.getElementsByClassName("linea-texto");
+var obl = document.getElementsByClassName("obl-texto");
+var mostrarClick1 = true
+var mostrarClick = true
+var ojo = document.getElementsByClassName("ojo")
+var ojoConf = document.getElementsByClassName("ojoConf")
 
 function colorElementRed() {
-  var elements = document.getElementsByClassName("text");
-  var lineas = document.getElementsByClassName("linea-texto");
-  var obl = document.getElementsByClassName("obl-texto");
   for(var i = 0; i<6; i++){
     if(elements[i].value == "" || elements[i].value == null){
       lineas[i].style.backgroundColor = "red"
@@ -32,9 +39,55 @@ var Validar = function(e) {
   }
   else if(x1 != x6){
     e.preventDefault()
-    alert("La contraseña debe ser igual a la confirmación")
+    lineas[5].style.backgroundColor = "red"
+    obl[6].style.visibility = "initial"
+    obl[5].style.visibility = "hidden"
+    obl[4].style.visibility = "hidden"
+    obl[3].style.visibility = "hidden"
+    obl[2].style.visibility = "hidden"
+    obl[1].style.visibility = "hidden"
+    obl[0].style.visibility = "hidden"
+    lineas[0].style.backgroundColor = null
+    lineas[1].style.backgroundColor = null
+    lineas[2].style.backgroundColor = null
+    lineas[3].style.backgroundColor = null
+    lineas[4].style.backgroundColor = null
+    lineas[5].style.backgroundColor = "red"
   }
 }
+
+function mostrarConf(){
+  if(mostrarClick1){
+    elements[5].type = "text"
+    mostrarClick1 = false
+    ojoConf[0].innerHTML = '<img src="' + oj + '" width="25px" height="25px" />'
+  }else{
+    elements[5].type = "password"
+    mostrarClick1 = true
+    ojoConf[0].innerHTML = '<img src="' + ojoT + '" width="25px" height="25px" />'
+  }
+}
+
+function mostrar(){
+  if(mostrarClick){
+    elements[4].type = "text"
+    mostrarClick = false
+    ojo[0].innerHTML = '<img src="' + oj + '" width="25px" height="25px" />'
+  }else{
+    elements[4].type = "password"
+    mostrarClick = true
+    ojo[0].innerHTML = '<img src="' + ojoT + '" width="25px" height="25px" />'
+  }
+}
+
+function mostrarOjo(){
+  ojo[0].style.display = "initial"
+}
+
+function mostrarOjo2(){
+  ojoConf[0].style.display = "initial"
+}
+
 class Inicio extends Component{
   
  constructor(props){
@@ -63,11 +116,11 @@ class Inicio extends Component{
     return (
         <div className="Inicio">
             <div>
-              <MyNavBar />
+            <MyNavBar2 /><br></br><br></br><br></br>
               <div className="container">
                 <div className="row justify-content-around ">
                   <div className="col col-3">
-                    <h1 className="que">¿Qué es?</h1>
+                    <h1 className="que"></h1>
                   </div>
                   <div className="col col-3">
                     <h1 id="registro" className="ques">Registrarse</h1>
@@ -75,40 +128,35 @@ class Inicio extends Component{
                 </div>
               </div> 
               <div className="row justify-content-around"> 
-                <div className="col col-4">
-                  <p className="mt-5 texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                  quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <img className="nena" src={require('./components/nena.svg')}/>
+                <div className="col col-3 ">
+                <img className="mt-4 nena" src={require('./components/logo.svg')}/>
+                  <p className="texto">Un espacio de comunicación y encuentro organizado para mejorar la calidad de vida de sus hijos.</p>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
-                  <div className="col col-3 placeh">
-                    <input id="nombre" className="eliminar text mt-5" type="text" name="nombre"  placeholder="*Nombre" value={this.state.nombre} onChange={this.onChange}></input><br></br><hr className="eliminar2 li1 linea-texto"></hr>
+                  <div className="col col-1 placeh">
+                    <input id="nombre" className="eliminar text mt-5" type="text" name="nombre"  placeholder="&nbsp;Nombre" value={this.state.nombre} onChange={this.onChange}></input><br></br><hr className="eliminar2 li1 linea-texto"></hr>
                     <p className="obl obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="apellido" className="eliminar text mt-5" type="text" name="apellido" placeholder="*Apellido" value={this.state.apellido} onChange={this.onChange}></input><br></br><hr className="eliminar2 li2 linea-texto"></hr>
+                    <input id="apellido" className="eliminar text mt-5" type="text" name="apellido" placeholder="&nbsp;Apellido" value={this.state.apellido} onChange={this.onChange}></input><br></br><hr className="eliminar2 li2 linea-texto"></hr>
                     <p className="obl1 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="usuario" className="text mt-5" type="text" name="usuario" placeholder="*Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="li3 linea-texto"></hr>
+                    <input id="usuario" className="text mt-5" type="text" name="usuario" placeholder="&nbsp;Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="li3 linea-texto"></hr>
                     <p className="obl2 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="email" className="text mt-5" type="text" name="email" placeholder="*Email"  onChange={this.onChange}></input><br></br><hr className="li4 linea-texto"></hr>
+                    <input id="email" className="text mt-5" type="text" name="email" placeholder="&nbsp;Email"  onChange={this.onChange}></input><br></br><hr className="li4 linea-texto"></hr>
                     <p className="obl3 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="contraseña" className="text mt-5" name="contraseña" type="password" placeholder="*Contraseña" onChange={this.onChange}></input><br></br><hr className="li5 linea-texto"></hr>
+                    <input onClick={mostrarOjo} id="contraseña" className="text mt-5" name="contraseña" type="password" placeholder="&nbsp;Contraseña" onChange={this.onChange}></input><br></br><hr className="li5 linea-texto"></hr>
                     <p className="obl4 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="ccontraseña" className="text mt-5 eliminar" name="ccontraseña" type="password" placeholder="*Confirmar contraseña" onChange={this.onChange}></input><br></br><hr className="eliminar2 li6 linea-texto"></hr>
+                    <input onClick={mostrarOjo2} id="ccontraseña" className="text mt-5 eliminar" name="ccontraseña" type="password" placeholder="&nbsp;Confirmar contraseña" onChange={this.onChange}></input><br></br><hr className="eliminar2 li6 linea-texto"></hr>
                     <p className="obl5 obl-texto">*Es obligatorio completar este campo</p>
+                    <p className="obl6 obl-texto">*Las contraseñas ingresadas son diferentes</p>
                     <input className="boton3" type="submit" formAction="/registrarse" name="boton" value="Registrarse"></input>
                   </div>
-                  <div className="col col-3 placeh">
-                    <hr className="mt-5 linea-reg"/>
-                  </div> 
                 </form>
               </div>
-              <div className="row justify-content-center">
-                <div className="col col-6"></div>
-                <div className="col col-6">
-                  <p className="ya">¿Ya tienes una cuenta?</p>
-                  <a className="ya2" href="/IniciarSesion" >Iniciar sesión</a>
-                </div>
-              </div> 
+              <button onClick={mostrar} className="ojo"><img src={require('./components/ojoT.svg')}></img></button>
+              <button onClick={mostrarConf} className="ojoConf"><img src={require('./components/ojoT.svg')}></img></button>
+              <div className="yaTienes">
+                <p className="ya">¿Ya tienes una cuenta?</p>
+                <a className="ya2" href="/IniciarSesion" >Iniciar sesión</a>
+              </div>
               <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <MyFooter />
             </div>  

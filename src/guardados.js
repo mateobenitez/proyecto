@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MyNavBarPrinc from './components/NavBarPrinc.js';
+import MyNavBarPrinc from './components/navBarPruebaMenu.js';
 import './princ.css'
 import PaginaPrinc from './páginaPrincipal copy'
 import carita from './components/carita.svg'

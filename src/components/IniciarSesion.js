@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyNavBar from './NavBarInicio.js';
+import MyNavBar2 from './NavBarInicio2.js';
 import MyFooter from './footer.js';
 import ReactDOM from 'react-dom';
 import './IniciarSesion.css';
@@ -8,7 +8,7 @@ function colorElementRed() {
   var elements = document.getElementsByClassName("txto");
   var lineas = document.getElementsByClassName("linea-texto");
   var obl = document.getElementsByClassName("obli-texto");
-  for(var i = 0; i<3; i++){
+  for(var i = 0; i<2; i++){
     if(elements[i].value == "" || elements[i].value == null){
       lineas[i].style.backgroundColor = "red"
       obl[i].style.visibility = "visible";
@@ -19,8 +19,9 @@ function colorElementRed() {
 }
 
 var Validar = function(e) {
-  var x = document.forms["form"]["usuario","email","contraseña"].value;
-  if (x == "" || x == null) {
+  var x = document.forms["form"]["contraseña"].value;
+  var x1 = document.forms["form"]["usuario"].value;
+  if (x == "" || x == null || x1 == "" || x1 == null) {
     e.preventDefault();
     colorElementRed();
     return false;
@@ -52,7 +53,7 @@ class IniciarSesion extends Component{
     return (
         <div className="IniciarSesion">
             <div>
-              <MyNavBar />
+              <MyNavBar2 /><br></br><br></br><br></br>
               <div className="container">
                 <div className="row justify-content-around ">
                   <div className="col col-3">
@@ -73,19 +74,14 @@ class IniciarSesion extends Component{
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
                   <div className="col col-3 placeho">
                     <input id="usuario" className="txto mt-5" type="text" name="usuario" placeholder="*Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="l1 linea-texto"></hr>
-                    <p className="obli3 obli-texto">*Es obligatorio completar este campo</p>
-                    <input id="email" className="txto mt-5" type="text" name="email"  placeholder="*Email"  onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
+                    <input id="contraseña" className="txto mt-5" name="contraseña" type="password" placeholder="*Contraseña" onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
                     <p className="obli4 obli-texto">*Es obligatorio completar este campo</p>
-                    <input id="contraseña" className="txto mt-5" name="contraseña" type="password" placeholder="*Contraseña" onChange={this.onChange}></input><br></br><hr className="l3 linea-texto"></hr>
-                    <p className="obli5 obli-texto">*Es obligatorio completar este campo</p>
+                    <p className="obli3 pt-2 obli-texto">*Es obligatorio completar este campo</p>
                     <input className="boto3" type="submit" formAction="/princ" name="boton" value="Iniciar Sesión"></input>
                   </div>
-                  <div className="col col-3 placeh">
-                    <hr className="mt-5 linea-regi"/>
-                  </div> 
                 </form>
               </div>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <MyFooter />
             </div>  
           </div>

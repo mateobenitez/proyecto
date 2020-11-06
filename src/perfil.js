@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import MyNavBarPrinc from './components/NavBarPrinc.js';
+import MyNavBarPrinc from './components/navBarPruebaMenu.js';
 import './princ.css'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
@@ -274,7 +274,7 @@ class perfil extends Component{
                                         </div>
                                     </div>
                                     <div className="Locacion">
-                                        <button onClick={location} className="btnsPerfil">Locación<img src={require('./components/flechaArr.svg')}></img> </button><hr></hr>
+                                        <button onClick={location} className="btnsPerfil">Localización<img src={require('./components/flechaArr.svg')}></img> </button><hr className="lineaPerfil"></hr>
                                     </div>
                                     <div className="locac">
                                         <form className="editForm1">
@@ -289,7 +289,7 @@ class perfil extends Component{
                                         </div>
                                     </div>
                                     <div className="Adicion"> 
-                                        <button onClick={adicion} className="btnsPerfil">Preguntas Adicionales <img src={require('./components/flechaArr.svg')}></img> </button><hr></hr>
+                                        <button onClick={adicion} className="btnsPerfil">Preguntas Adicionales <img src={require('./components/flechaArr.svg')}></img> </button><hr className="lineaPerfil"></hr>
                                     </div>
                                     <div className="pregAds">
                                         <form className="editForm2">
