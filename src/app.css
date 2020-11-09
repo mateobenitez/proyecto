@@ -38,14 +38,14 @@ left: -140%;
     letter-spacing: 0.01em;
     color: #393939;
     position: relative;
-    left:23%;
+    left:2em;
     top: 8em;
     max-width: 22em;
 }
 
 .nena{
     position: absolute;
-    left: 6em;
+    left: 3em;
     top: 5em;
 }
 
@@ -106,7 +106,7 @@ left: -140%;
 
 .placeho{
     position: absolute;
-    left: -30em;
+    left: -26em;
 }
 
 @font-face{
@@ -119,8 +119,8 @@ left: -140%;
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    bottom: 37.6em;
-    right: 27em;
+    bottom: 49%;
+    right: 22.4%;
 }
 
 .ojoConf{
@@ -128,15 +128,29 @@ left: -140%;
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    bottom: 33em;
-    right: 27em;
+    bottom: 43%;
+    right: 22.4%;
 }
 
 .yaTienes{
     position: absolute;
-    right: 0.3em;
+    right: 1.8em;
     bottom: 33em;
     min-width: 58.5em;
+}
+
+.yaTienes2{
+    position: absolute;
+    right: 1em;
+    bottom: 33em;
+    min-width: 58.5em;
+}
+
+.modal-close{
+    border:none;
+    position: absolute;
+    background-color: transparent;
+    right: 2em;
 }
 
 .boton3{
@@ -150,7 +164,7 @@ left: -140%;
     outline:none;
     position: relative;
     top: 2em;
-    left:13.5em;
+    left:12em;
     z-index: 1;
 }
 

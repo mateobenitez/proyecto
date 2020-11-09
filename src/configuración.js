@@ -18,16 +18,51 @@ import {
     faBorderStyle,
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
-var btnAli = <button onClick={prevenir} id="btnAliC" className="btns btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img>Alimentación</button>
-var btnArt = <button onClick={prevenir1} id="btnArtC" className="btns btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> Arte</button>
-var btnDep = <button onClick={prevenir2} id="btnDepC" className="btns btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img>Deportes</button>
-var btnDoc = <button onClick={prevenir3} id="btnDocC" className="btns btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img>Documentos legales</button>
-var btnEdu = <button onClick={prevenir4} id="btnEduC" name="btnEdu" className="btns btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img>Educación</button>
-var btnRel = <button onClick={prevenir5} id="btnRelC" className="btns btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img>Relaciones sociales</button>
-var btnSal = <button onClick={prevenir6} id="btnSalC" className="btns btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> Salud</button>
-var btnTec = <button onClick={prevenir7} id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> Tecnología</button>
+import flechaArr from './components/flechaArr.svg'
+import flechaAb from './components/flechaAb.svg'
+import info from './components/info.svg'
+import carita from './components/carita.svg'
+import tenedor from './components/tenedor.svg'
+import arte from './components/arte.svg'
+import edu from './components/edu.svg'
+import deportes from './components/deportes.svg'
+import tec from './components/tec.svg'
+import doc from './components/doc.svg'
+import salud from './components/salud.svg'
+import mas from './components/mas.svg'
+import meGusta from './components/meGusta.svg'
+import guardados from './components/guardados.svg'
+import noGuardados from './components/guardar.svg'
+
+var botonAli = document.getElementsByClassName("btnAli")
+var botonArt = document.getElementsByClassName("btnArt")
+var botonDep = document.getElementsByClassName("btnDep")
+var botonDoc = document.getElementsByClassName("btnDoc")
+var botonEdu = document.getElementsByClassName("btnEdu")
+var botonRel = document.getElementsByClassName("btnRel")
+var botonSal = document.getElementsByClassName("btnSal")
+var botonTec = document.getElementsByClassName("btnTec")
+var btnAli = <button id="btnAli" className="btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img> &nbsp;&nbsp;Alimentación&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnArt = <button id="btnArt" className="btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> &nbsp;&nbsp;Arte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnDep = <button id="btnDep" className="btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img> &nbsp;&nbsp;Deportes</button>
+var btnDoc = <button id="btnDoc" className="btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img> &nbsp;&nbsp;Documentos legales</button>
+var btnEdu = <button id="btnEdu" name="btnEdu" className="btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img> &nbsp;&nbsp;Educación</button>
+var btnRel = <button id="btnRel" className="btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img> &nbsp;&nbsp;Relaciones sociales</button>
+var btnSal = <button id="btnSal" className="btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> &nbsp;&nbsp;Salud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnTec = <button id="btnTec" className="btnTec btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> &nbsp;&nbsp;Tecnología</button>
+var btnAliS = <button onClick={prevenir} id="btnAliC" className="btns btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img>Alimentación</button>
+var btnArtS = <button onClick={prevenir1} id="btnArtC" className="btns btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> Arte</button>
+var btnDepS = <button onClick={prevenir2} id="btnDepC" className="btns btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img>Deportes</button>
+var btnDocS = <button onClick={prevenir3} id="btnDocC" className="btns btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img>Documentos legales</button>
+var btnEduS = <button onClick={prevenir4} id="btnEduC" name="btnEdu" className="btns btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img>Educación</button>
+var btnRelS = <button onClick={prevenir5} id="btnRelC" className="btns btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img>Relaciones sociales</button>
+var btnSalS= <button onClick={prevenir6} id="btnSalC" className="btns btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> Salud</button>
+var btnTecS= <button onClick={prevenir7} id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> Tecnología</button>
+let noSeleccionadosSalir =[btnAliS, btnArtS, btnDepS, btnDocS, btnEduS]
+let seleccionadosSalir =[btnRelS, btnSalS, btnTecS]
 let noSeleccionados =[btnAli, btnArt, btnDep, btnDoc, btnEdu]
 let seleccionados =[btnRel, btnSal, btnTec]
+
 var drop = document.getElementsByClassName("dropDown")
 var modoClik = false
 var contraClick = false
@@ -35,6 +70,8 @@ var salirClick = false
 var cuentaClick = false
 var btn1 = document.getElementsByClassName("btns")
 var uno = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+var titulos = document.getElementsByClassName("botonDrop")
+
 
 function prevenir(e){
     e.preventDefault()
@@ -141,9 +178,12 @@ function modos(){
     if(!modoClik){
         drop[0].style.display = "initial"
         modoClik = true
+        titulos[0].innerHTML = 'Modos<img src="' + flechaArr + '" width="40px" height="40px" />'
+
     }else{
         drop[0].style.display = null
         modoClik = false
+        titulos[0].innerHTML = 'Modos&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
@@ -151,9 +191,11 @@ function cambiarC(){
     if(!contraClick){
         drop[1].style.display = "initial"
         contraClick = true
+        titulos[1].innerHTML = 'Cambiar contraseña<img src="' + flechaArr + '" width="40px" height="40px" />'
     }else{
         drop[1].style.display = null
         contraClick = false
+        titulos[1].innerHTML = 'Cambiar contraseña&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
@@ -161,9 +203,11 @@ function cambiarSC(){
     if(!salirClick){
         drop[2].style.display = "initial"
         salirClick = true
+        titulos[2].innerHTML = 'Salir de categorías<img src="' + flechaArr + '" width="40px" height="40px" />'
     }else{
         drop[2].style.display = null
         salirClick = false
+        titulos[2].innerHTML = 'Salir de categorías&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
@@ -171,12 +215,58 @@ function cuenta(){
     if(!cuentaClick){
         drop[3].style.display = "initial"
         cuentaClick = true
+        titulos[3].innerHTML = 'Cuenta<img src="' + flechaArr + '" width="40px" height="40px" />'
     }else{
         drop[3].style.display = null
         cuentaClick = false
+        titulos[3].innerHTML = 'Cuenta&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
+function verMas(){
+    document.getElementsByClassName("hid")[0].style.display = "initial"
+    document.getElementsByClassName("contVer")[0].style.display = "none"
+    if(noSeleccionados.includes(btnAli)){
+        botonAli[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" />&nbsp;&nbsp; Alimentación &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonAli[0].innerHTML = '<img src="' + tenedor + '" width="18px" height="18px" />&nbsp;&nbsp; Alimentación &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnArt)){
+        botonArt[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Arte &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonArt[0].innerHTML = '<img src="' + arte + '" width="18px" height="18px" /> &nbsp;&nbsp; Arte &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnDep)){
+        botonDep[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Deportes &nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonDep[0].innerHTML = '<img src="' + deportes + '" width="18px" height="18px" /> &nbsp;&nbsp; Deportes &nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnDoc)){
+        botonDoc[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Documentos legales &nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonDoc[0].innerHTML = '<img src="' + doc + '" width="18px" height="18px" /> &nbsp;&nbsp; Documentos legales &nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnEdu)){
+        botonEdu[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Educación &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonEdu[0].innerHTML = '<img src="' + edu + '" width="18px" height="18px" /> &nbsp;&nbsp; Educación &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnRel)){
+        botonRel[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Relaciones sociales &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonRel[0].innerHTML = '<img src="' + carita + '" width="18px" height="18px" /> &nbsp;&nbsp; Relaciones sociales &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnSal)){
+        botonSal[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Salud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonSal[0].innerHTML = '<img src="' + salud + '" width="18px" height="18px" /> &nbsp;&nbsp; Salud &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+    if(noSeleccionados.includes(btnTec)){
+        botonTec[0].innerHTML = '<img src="' + mas + '" width="18px" height="18px" /> &nbsp;&nbsp; Tecnología &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }else{
+        botonTec[0].innerHTML = '<img src="' + tec  + '" width="18px" height="18px" /> &nbsp;&nbsp; Tecnología &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
+    }
+}
 
 class config extends Component{
     
@@ -192,17 +282,28 @@ class config extends Component{
                             <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="35" height="35" alt=""></img> &nbsp;&nbsp;Categorías</h1>
                         </div>
                         <div className="container-fluid misGa">
-                            <form method="get" action='/princa'>
-                                <button id="btnInfo" name="btnInfo" className="btn mt-2" ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
+                            <form method="get" action="/princa">
+                                <button id="btnInfo aa" name="btnInfo" className="btn mt-2 " ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
                                 <hr className="mt-1 mb-1"></hr>
-                                <button id="btnAli" className="btn"> &nbsp;&nbsp;Alimentación</button><br></br>
-                                <button id="btnArt" className="btn"> &nbsp;&nbsp;Arte</button><br></br>
-                                <button id="btnDep" className="btn"> &nbsp;&nbsp;Deportes</button>
-                                <button id="btnDoc" className="btn"> &nbsp;&nbsp;Documentos legales</button>
-                                <button id="btnEdu" className="btn" >&nbsp;&nbsp;Educación</button>
-                                <button id="btnRel" className="btn"> &nbsp;&nbsp;Relaciones sociales</button><br></br>
-                                <button id="btnSal" className="btn"> &nbsp;&nbsp;Salud</button><br></br>
-                                <button id="btnTec" className="btn"> &nbsp;&nbsp;Tecnología</button><br></br>
+                                <div className="Sel">
+                                    {seleccionados}
+                                </div>
+                                <div className="noSel">
+                                    <div className="hid">
+                                        {noSeleccionados[0]}
+                                        {noSeleccionados[1]}
+                                        {noSeleccionados[2]}
+                                        {noSeleccionados[3]}
+                                        {noSeleccionados[4]}
+                                        {noSeleccionados[5]}
+                                        {noSeleccionados[6]}
+                                        {noSeleccionados[7]}
+                                        {noSeleccionados[8]}
+                                    </div>
+                                    <div className="contVer  pb-3">
+                                        <button className="ml-3 mt-3 botonVer" onClick={verMas}>Unirse a más categorías <img src={require('./components/mas.svg')}></img> </button>
+                                    </div>
+                                </div>
                             </form>
                         </div>
                         <div className="container-fluid misS1">
@@ -250,7 +351,7 @@ class config extends Component{
                                 </div>
                                 <div className="container selG">
                                     <br></br>
-                                    <button onClick={modos} className="botonDrop">Modos&nbsp;<img src={require('./components/flechaAb.svg')}></img></button>
+                                    <button onClick={modos} className="botonDrop modos">Modos&nbsp;<img src={require('./components/flechaAb.svg')}></img></button>
                                     <hr className="lineaGuar mt-2"></hr>
                                     <div className="dropDown">
                                         <div className="form-inline">
@@ -281,14 +382,14 @@ class config extends Component{
                                     <div className="dropDown">
                                         <div className="salir">
                                             <p>Seleccione las categorías que quiera abandonar</p>
-                                            {noSeleccionados[0]}&nbsp;&nbsp;&nbsp;
-                                            {noSeleccionados[1]}<br></br><br></br>
-                                            {noSeleccionados[2]}&nbsp;&nbsp;&nbsp;
-                                            {noSeleccionados[3]}<br></br><br></br>
-                                            {noSeleccionados[4]}&nbsp;&nbsp;&nbsp;
-                                            {noSeleccionados[5]}<br></br><br></br>
-                                            {noSeleccionados[6]}&nbsp;&nbsp;&nbsp;
-                                            {noSeleccionados[7]}
+                                            {noSeleccionadosSalir[0]}&nbsp;&nbsp;&nbsp;
+                                            {noSeleccionadosSalir[1]}<br></br><br></br>
+                                            {noSeleccionadosSalir[2]}&nbsp;&nbsp;&nbsp;
+                                            {noSeleccionadosSalir[3]}<br></br><br></br>
+                                            {noSeleccionadosSalir[4]}&nbsp;&nbsp;&nbsp;
+                                            {noSeleccionadosSalir[5]}<br></br><br></br>
+                                            {noSeleccionadosSalir[6]}&nbsp;&nbsp;&nbsp;
+                                            {noSeleccionadosSalir[7]}
                                             <div>
                                                 <button className="guardarConfig pt-2 pb-2 pl-4 pr-4">Cancelar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <button className="guardarConfig pt-2 pb-2 pl-4 pr-4">Confirmar</button>

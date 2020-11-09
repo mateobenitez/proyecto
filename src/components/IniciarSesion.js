@@ -57,7 +57,6 @@ class IniciarSesion extends Component{
               <div className="container">
                 <div className="row justify-content-around ">
                   <div className="col col-3">
-                    <h1 className="que">¿Qué es?</h1>
                   </div>
                   <div className="col col-3">
                     <h1 id="registro" className="quesi">Iniciar&nbsp;sesión</h1>
@@ -65,21 +64,23 @@ class IniciarSesion extends Component{
                 </div>
               </div> 
               <div className="row justify-content-around"> 
-                <div className="col col-4">
-                  <p className="mt-5 ttxt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-                  quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                  pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  <img className="nen" src={require('./nena.svg')}/>
+                <div className="col col-3">
+                  <img className="mt-4 nena" src={require('./logo.svg')}/>
+                  <p className="texto">Un espacio de comunicación y encuentro organizado para mejorar la calidad de vida de sus hijos.</p>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
-                  <div className="col col-3 placeho">
-                    <input id="usuario" className="txto mt-5" type="text" name="usuario" placeholder="*Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="l1 linea-texto"></hr>
-                    <input id="contraseña" className="txto mt-5" name="contraseña" type="password" placeholder="*Contraseña" onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
+                  <div className="col col-1 placeho">
+                    <input id="usuario" className="txto mt-5" type="text" name="usuario" placeholder="&nbsp;Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="l1 linea-texto"></hr>
+                    <input id="contraseña" className="txto mt-5" name="contraseña" type="password" placeholder="&nbsp;Contraseña" onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
                     <p className="obli4 obli-texto">*Es obligatorio completar este campo</p>
                     <p className="obli3 pt-2 obli-texto">*Es obligatorio completar este campo</p>
-                    <input className="boto3" type="submit" formAction="/princ" name="boton" value="Iniciar Sesión"></input>
+                    <input className="boto3" type="submit" formAction="/princa" name="boton" value="Iniciar Sesión"></input>
                   </div>
                 </form>
+              </div>
+              <div className="yaTienes2">
+                <p className="ya mt-4">¿No tiene una cuenta?</p>
+                <a className="ya2 mt-4" href="/inicio" >Registrarse</a>
               </div>
               <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <MyFooter />

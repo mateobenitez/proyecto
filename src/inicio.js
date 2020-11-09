@@ -129,7 +129,7 @@ class Inicio extends Component{
               </div> 
               <div className="row justify-content-around"> 
                 <div className="col col-3 ">
-                <img className="mt-4 nena" src={require('./components/logo.svg')}/>
+                  <img className="mt-4 nena" src={require('./components/logo.svg')}/>
                   <p className="texto">Un espacio de comunicación y encuentro organizado para mejorar la calidad de vida de sus hijos.</p>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
@@ -154,7 +154,7 @@ class Inicio extends Component{
               <button onClick={mostrar} className="ojo"><img src={require('./components/ojoT.svg')}></img></button>
               <button onClick={mostrarConf} className="ojoConf"><img src={require('./components/ojoT.svg')}></img></button>
               <div className="yaTienes">
-                <p className="ya">¿Ya tienes una cuenta?</p>
+                <p className="ya">¿Ya tiene una cuenta?</p>
                 <a className="ya2" href="/IniciarSesion" >Iniciar sesión</a>
               </div>
               <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>

@@ -1,4 +1,11 @@
 .acercaImg{
     position: fixed;
     z-index: 0;
+    width: 100%;
+}
+
+.tituloAc{
+    color: rgba(57, 57, 57, 1);
+    font-weight: 400;
+    font-size: 48px;
 }

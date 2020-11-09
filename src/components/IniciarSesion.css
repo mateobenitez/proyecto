@@ -45,10 +45,6 @@ left: -140%;
     right: 3em;
 }
 
-.placeho{
-    position: absolute;
-    right: 32em;
-}
 
 .txto {
     background-color: transparent;
@@ -91,18 +87,18 @@ left: -140%;
 }
 
 .boto3{
-    background-color: transparent;
-    color:#393939;
+    background-color: rgba(57, 57, 57, 1);
+    color:rgba(217, 217, 217, 1);
     border-radius: 1.8125em;
+    font-family: "pop";
     border:3px solid #393939;
     transition: 0.6s;
     padding: 0.5em 2em;
     font-size: 0.9375em;
     outline:none;
     position: relative;
-    right: -232%;
-    top: 14em;
-    left: 18.7em;
+    top: 10em;
+    left: 12em;
 }
 
 .divBoton{

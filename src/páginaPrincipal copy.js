@@ -71,6 +71,7 @@ function cambioInfo(e){
     }
     e.preventDefault()
     lineas[0].style.borderColor = "#E3E3E3"
+    lineas[1].style.borderColor = "#E3E3E3"
 }
 function cambioAli(e){
     fondo[0].style.backgroundColor ="#F9EAB7"
@@ -83,6 +84,7 @@ function cambioAli(e){
     botonAli[0].style.color ="#EBC12C"
     e.preventDefault()
     lineas[0].style.borderColor = "#EED375"
+    lineas[1].style.borderColor = "#EED375"
 }
 function cambioArt(e){
     fondo[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
@@ -94,6 +96,7 @@ function cambioArt(e){
     botonArt[0].style.color ="rgba(109, 0, 136, 1)"
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(205, 157, 227, 1)"
+    lineas[1].style.borderColor = "rgba(205, 157, 227, 1)"
 }
 function cambioDep(e){
     fondo[0].style.backgroundColor ="rgba(255, 211, 170, 1)"
@@ -106,6 +109,7 @@ function cambioDep(e){
     botonDep[0].style.color ="rgba(152, 69, 23, 1)"
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(255, 166, 84, 1)"
+    lineas[1].style.borderColor = "rgba(255, 166, 84, 1)"
 }
 function cambioDocs(e){
     fondo[0].style.backgroundColor ="rgba(225, 191, 159, 1)"
@@ -118,6 +122,7 @@ function cambioDocs(e){
     botonDoc[0].style.color ="rgba(109, 53, 0, 1)"
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(182, 136, 93, 1)"
+    lineas[1].style.borderColor = "rgba(182, 136, 93, 1)"
 }
 function cambioEdu(e){
     fondo[0].style.backgroundColor ="rgba(184, 228, 194, 1)"
@@ -129,6 +134,7 @@ function cambioEdu(e){
     botonEdu[0].style.color ="rgba(3, 99, 13, 1)"
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(144, 226, 161, 1)"
+    lineas[1].style.borderColor = "rgba(144, 226, 161, 1)"
 }
 function cambioRel(e){
     fondo[0].style.backgroundColor ="rgba(255, 107, 160, 0.25)"
@@ -139,6 +145,7 @@ function cambioRel(e){
     botonRel[0].style.color ="rgba(189, 38, 101, 1)"
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(255, 180, 207, 1)"
+    lineas[1].style.borderColor = "rgba(255, 180, 207, 1)"
 }
 function cambioSal(e){
     fondo[0].style.backgroundColor ="#F5BFBF"
@@ -149,6 +156,7 @@ function cambioSal(e){
     botonSal[0].style.color ="rgba(148, 0, 0, 1)"
     e.preventDefault()
     lineas[0].style.borderColor = "#F5BFBF"
+    lineas[1].style.borderColor = "#F5BFBF"
 }
 function cambioTec(e){
     fondo[0].style.backgroundColor ="#B5D3EF"
@@ -159,6 +167,7 @@ function cambioTec(e){
     botonTec[0].style.color ="#045F92"
     e.preventDefault()
     lineas[0].style.borderColor = "#86B8E5"
+    lineas[1].style.borderColor = "#86B8E5"
 }
 
 function like(){
@@ -269,7 +278,10 @@ class pagPrinca extends Component{
                     </div>
                     <div className="col col-2">
                         <div className="container-fluid misS">
-                            <h1 className="cat pt-2 pb-2">&nbsp;&nbsp;Categorías</h1>
+                            <div className="circuloCont">
+                                <img className="pt-2 pl-2" src={require('./components/cats.svg')}></img>
+                            </div>
+                            <h1 className="cat pt-2 pb-2" align="center">Categorías</h1>
                         </div>
                         <div className="container-fluid misGa">
                             <button id="btnInfo aa" onClick={cambioInfo} name="btnInfo" className="btn mt-2 " ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
@@ -295,7 +307,10 @@ class pagPrinca extends Component{
                             </div>
                         </div>
                         <div className="container-fluid misS1">
-                            <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="50" height="50" alt=""></img> &nbsp;&nbsp;&nbsp;&nbsp;Social</h1>
+                            <div className="circuloCont">
+                                <img className="pt-2 pl-2" src={require('./components/social.svg')}></img>
+                            </div>
+                            <h1 className="cat pt-2 pb-2" align="center"> Social</h1>
                         </div>
                         <div className="container-fluid pt-3 misGa1">
                             <form method="get" action="/perfil">
@@ -340,7 +355,7 @@ class pagPrinca extends Component{
                                     <div className="col col-6">
                                         <form className="form-inline">
                                             <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                            <a className="mt-3 pibe" href="#">Usuario</a>
+                                            <a className="mt-3 pibe" href="/perfil2">Usuario</a>
                                         </form>
                                     </div>
                                     <div className="col col-6">

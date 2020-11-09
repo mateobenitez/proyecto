@@ -66,7 +66,7 @@ class Reg2 extends Component{
                 </div>
                 <div className="row justify-content-left">
                     <div className="col col-3">
-                        <form name="form" method="GET">
+                        <form name="form" method="GET" onSubmit={Validar}>
                             <input id="pais" className="text mt-5" type="text" placeholder="*País"></input><br></br><hr className="lin1 linea-texto"></hr>
                             <p className="obli1 obli-tds">*Es obligatorio completar este campo</p>
                             <input id="provincia" className="text mt-5" type="text" placeholder="*Provincia / Estado"></input><br></br><hr className="lin2 linea-texto"></hr>

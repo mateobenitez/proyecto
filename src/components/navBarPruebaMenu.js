@@ -23,12 +23,12 @@ function NavBarPrinca(props){
                 <a href="/inicio"><img src={require('./logo.svg')}></img></a>
             </div>
             <div className="container-fluid search">
-                    <img src={require("./buscar.svg")}></img>  &nbsp;&nbsp;
-                    <input onClick={search} type="search" placeholder="Buscar" className="buscar"></input>
-                </div>
+                <img src={require("./buscar.svg")}></img>  &nbsp;&nbsp;
+                <input onClick={search} type="search" placeholder="Buscar" className="buscar"></input>
+            </div>
             <ul className="navba-nav">
                 <NavItem ima={<img src={require("./usuario.svg")} width="50px" height="50px" alt="menu"></img>}/>
-                <p className="usuarioNav">Hernán</p>
+                <p href="perfil" className="usuarioNav">Hernán</p>
                 <NavItem ima={<img src={require("./notificaciones.svg")} width="50px" height="50px"></img>}>
                     <DropdownNotif />
                 </NavItem>

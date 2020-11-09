@@ -12,6 +12,7 @@ import Acerca from './acercaDe.js'
 import Guardados from './guardados.js'
 import Config from './configuración.js'
 import Perfil from './perfil.js'
+import Perfil2 from './perfil2.js'
 import { 
   BrowserRouter as Router, 
   Switch, 
@@ -56,6 +57,9 @@ function App() {
         </Route>
         <Route path="/perfil">
           <Perfil />
+        </Route>
+        <Route path="/perfil2">
+          <Perfil2 />
         </Route>
         <Route path="/">
           <Inicio />

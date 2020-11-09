@@ -78,9 +78,6 @@ var editCiud = document.getElementsByClassName("editProv")
 var editProv = document.getElementsByClassName("editCiud")
 var editConq = document.getElementsByClassName("editConq")
 var editPres = document.getElementsByClassName("editPres")
-var likeClick = true 
-var likes = document.getElementsByClassName("like")
-var guardClick = true
 
 function borrarEditar(){
     borrar[0].style.display = "none"
@@ -197,27 +194,6 @@ function Info(){
     }
 }
 
-function like(){
-    if(likeClick){
-        likes[0].innerHTML = '<img src="' + salud + '" width="18px" height="18px" />&nbsp; Me gusta'
-        likeClick = false
-    }
-    else{
-        likes[0].innerHTML = '<img src="' + meGusta + '" width="18px" height="18px" />&nbsp;&nbsp;Me gusta'
-        likeClick = true
-    }
-} 
-
-function guard(){
-    if(guardClick){
-        likes[2].innerHTML = '<img src="' + guardados + '" width="18px" height="18px" /> Guardar'
-        guardClick = false
-    }
-    else{
-        guardClick = true
-        likes[2].innerHTML = '<img src="' + noGuardados + '" width="18px" height="18px" /> Guardar'
-    }
-}
 
 function verMas(){
     document.getElementsByClassName("hid")[0].style.display = "initial"
@@ -324,7 +300,7 @@ class perfil extends Component{
                             <div className="circuloCont">
                                 <img className="pt-2 pl-2" src={require('./components/usuario.svg')}></img>
                             </div>
-                            <h1 align="left" name="cate" className="cat pt-2 pb-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mi perfil</h1>
+                            <h1 align="left" name="cate" className="cat pt-2 pb-2"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Perfil de Usuario</h1>
                         </div>
                         <div className="asas">
                             <p></p>
@@ -340,119 +316,36 @@ class perfil extends Component{
                                 <button className="mb-3 botonVolver"><img className="mb-1" src={require('./components/volver.svg')} height="19px" width="19px"></img>&nbsp;&nbsp;Volver</button>
                             </form>
                             <div className="container guardadosCats">
-                                <div align="right">
-                                    <button onClick={borrarEditar} className="mt-3 pb-1 pl-2 botonVolver editar"> Editar perfil &nbsp;&nbsp;<img className="mb-1" src={require('./components/editar.svg')} width="15px"></img></button>
-                                </div>
                                 <br></br><br></br>
                                 <div className=" fotoPerfil">
                                     <img className="avatar pt-4" src={require('./components/usuario.svg')} width="120"></img>
                                 </div>
                                 <div className="editar">
                                     <div className="Nombre">
-                                        <h1>Sergio Coppa</h1>
-                                        <p>@SergioCoppa</p><br></br>
+                                        <h1>Usuario</h1>
+                                        <p>@Usuario</p><br></br>
                                         <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Belgrano, Buenos Aires, Argentina</p>
                                         <p><img src={require('./components/edu.svg')} width="18px"></img>&nbsp;Profesor / Maestro</p>
                                     </div>
                                     <div className="descripcion container">
                                         <p>Hola soy Sergio me gusta comer pan y enseñar lengua. Tengo un hijo de 40 años al que le gusta jugar tenis y comer papas.</p>
                                     </div><hr></hr>                     
-                                    <div className="mt-4 container publicaciones">
-                                <div className="row justify-content-around">
-                                    <div className="col col-6">
-                                        <form className="form-inline">
-                                            <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                            <a className="mt-3 pibe" href="/perfil2">Usuario</a>
-                                        </form>
-                                    </div>
-                                    <div className="col col-6">
-                                        <div className="a form-inline">
-                                            <p className="mt-4">Hace 2 horas&nbsp;</p>
-                                            <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                    <div className="container-fluid cont" align="center">
+                                        <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
+                                        <div className="container imagenP">
+                                            <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                        </div>
+                                        <div className="row justify-content-around">
+                                            <div className="col col-5">
+                                                <p>3 me gusta</p>
+                                            </div>
+                                            <div className="col col-5">
+                                                <p>0 comentarios</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="container-fluid cont" align="center">
-                                    <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
-                                    <div className="container imagenP">
-                                        <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                    </div>
-                                    <div className="row justify-content-around">
-                                        <div className="col col-5">
-                                            <p>3 me gusta</p>
-                                        </div>
-                                        <div className="col col-5">
-                                            <p>0 comentarios</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-left">
-                                    <div className="col col-4">
-                                        <button onClick={like} type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button onClick={guard} type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
-                                    </div>
-                                </div>
-                                <hr className="lineaP"></hr>
-                            </div>
-                                </div>
-                                <div className="editar1">
-                                    <button className="añadirImg">Cambiar foto</button>
-                                    <div>
-                                        <button className="guardarCmb">Guardar cambios</button>
-                                    </div>
-                                    <div className="Infop">
-                                        <button onClick={Info} className="btnsPerfil">Información Personal <img src={require('./components/flechaArr.svg')}></img> </button><hr></hr>
-                                    </div>
-                                    <div className="infoPer">
-                                        <form className=" editForm">
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input>
-                                        </form>
-                                        <div className="pEdits">
-                                            <p id="editNom">Nombre:</p>
-                                            <p id="editApe">Apellido:</p>
-                                            <p id="editUsu">Nombre de usuario:</p>
-                                            <p id="editEma">Dirección de email:</p>
-                                            <p id="editSoy">Soy:</p>
-                                        </div>
-                                    </div>
-                                    <div className="Locacion">
-                                        <button onClick={location} className="btnsPerfil">Localización<img src={require('./components/flechaArr.svg')}></img> </button><hr className="lineaPerfil"></hr>
-                                    </div>
-                                    <div className="locac">
-                                        <form className="editForm1">
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input>
-                                        </form>
-                                        <div className="pEdits">
-                                            <p className="editPaís">País:</p>
-                                            <p className="editProv">Provincia / Estado:</p>
-                                            <p className="editCiud">Ciudad / Localidad:</p>
-                                        </div>
-                                    </div>
-                                    <div className="Adicion"> 
-                                        <button onClick={adicion} className="btnsPerfil">Preguntas Adicionales <img src={require('./components/flechaArr.svg')}></img> </button><hr className="lineaPerfil"></hr>
-                                    </div>
-                                    <div className="pregAds">
-                                        <form className="editForm2">
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input>
-                                        </form>
-                                        <div className="pEdits">
-                                            <p align="center" className="editConq">¿Con que propósito<br></br>usa la página?</p>
-                                            <p align="center" className="editPres"> Presentación <br></br>personal:</p>
-                                        </div>
-                                    </div>
-                                </div><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                             </div>
                             <br></br>
                         </div>

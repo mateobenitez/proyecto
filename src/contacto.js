@@ -60,9 +60,8 @@ function Contacto(){
     return(
         <div className="contacto"> 
             <MyNavBar/>
-            <div align="center">
-                <h1 className="titulo">Contactos</h1>
-                <p className="sel mb-5">Seleccione con quien le gustaría contactarse </p>
+            <div align="center"><br></br><br></br>
+                <h1 className="titulo">Contacto y asistencia</h1><br></br>
             </div>
             <div className="row">
                 <div className="col col-1">
