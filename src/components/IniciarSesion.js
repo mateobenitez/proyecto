@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MyNavBar2 from './NavBarInicio2.js';
+import MyNavBar2 from './NavBarIniciarSesión.js';
 import MyFooter from './footer.js';
 import ReactDOM from 'react-dom';
 import './IniciarSesion.css';
@@ -70,10 +70,10 @@ class IniciarSesion extends Component{
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
                   <div className="col col-1 placeho">
-                    <input id="usuario" className="txto mt-5" type="text" name="usuario" placeholder="&nbsp;Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="l1 linea-texto"></hr>
-                    <input id="contraseña" className="txto mt-5" name="contraseña" type="password" placeholder="&nbsp;Contraseña" onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
+                    <input id="usuario" className="txto" type="text" name="usuario" placeholder="&nbsp;Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="l1 linea-texto"></hr>
+                    <input id="contraseña" className="txto" name="contraseña" type="password" placeholder="&nbsp;Contraseña" onChange={this.onChange}></input><br></br><hr className="l2 linea-texto"></hr>
                     <p className="obli4 obli-texto">*Es obligatorio completar este campo</p>
-                    <p className="obli3 pt-2 obli-texto">*Es obligatorio completar este campo</p>
+                    <p className="obli5 pt-2 obli-texto">*Es obligatorio completar este campo</p>
                     <input className="boto3" type="submit" formAction="/princa" name="boton" value="Iniciar Sesión"></input>
                   </div>
                 </form>
@@ -82,7 +82,7 @@ class IniciarSesion extends Component{
                 <p className="ya mt-4">¿No tiene una cuenta?</p>
                 <a className="ya2 mt-4" href="/inicio" >Registrarse</a>
               </div>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <MyFooter />
             </div>  
           </div>

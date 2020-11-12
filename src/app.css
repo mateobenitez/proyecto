@@ -55,34 +55,46 @@ left: -140%;
     outline: none;
     position: relative;
     width: 20em;
+    left: 8em;
     font-family: "pop";
+    color: rgba(57, 57, 57, 1);
+    font-weight: 400;
+    font-size: 20px;
+    text-indent: .2em;
+    margin-top: .9em;
 }
 
 .linea-texto{
     position: absolute;
-    left: 70%;
-    width: 30em;
+    left: 11.3em;
+    width: 20em;
+}
+
+.linea-texto2{
+    position: absolute;
+    left: 26.3em;
+    width: 20em;
 }
 
 .li1{
     position: absolute;
-    bottom:24.9em;
+    bottom:17.4em;
 }
 .li2{
     position: absolute;
-    bottom: 20.3em;
+    bottom: 14.3em;
 }
 .li3{
     position: absolute;
-    bottom: 15.7em;
+    bottom: 11.2em;
 }
 .li4{
     position: absolute;
-    bottom: 11.1em;
+    bottom: 8.1em;
 }
 .li5{
     position: absolute;
-    bottom: 6.5em;
+    bottom: 5em;
 }
 .li6{
     position: absolute;
@@ -119,8 +131,8 @@ left: -140%;
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    bottom: 49%;
-    right: 22.4%;
+    bottom: 58.6%;
+    right: 25.5%;
 }
 
 .ojoConf{
@@ -128,21 +140,21 @@ left: -140%;
     background-color: transparent;
     border-color: transparent;
     position: absolute;
-    bottom: 43%;
-    right: 22.4%;
+    bottom: 54.6%;
+    right: 25.5%;
 }
 
 .yaTienes{
     position: absolute;
-    right: 1.8em;
-    bottom: 33em;
+    right: 0.9em;
+    bottom: 42em;
     min-width: 58.5em;
 }
 
 .yaTienes2{
     position: absolute;
-    right: 1em;
-    bottom: 33em;
+    right: -0.2em;
+    bottom: 47.5em;
     min-width: 58.5em;
 }
 
@@ -164,7 +176,7 @@ left: -140%;
     outline:none;
     position: relative;
     top: 2em;
-    left:12em;
+    left:17em;
     z-index: 1;
 }
 
@@ -176,7 +188,7 @@ left: -140%;
 
 .obl-texto{
     position: absolute;
-    left: 70%;
+    left: 14em;
     top: 8em;
     width: 16.8125em;
     color: red;
@@ -186,37 +198,37 @@ left: -140%;
 
 .obl{
     position: absolute;
-    top: 5.5em;
+    top: 3.5em;
 }
 
 .obl1{
     position: absolute; 
-    top: 11.2em;
+    top: 7.37em;
 }
 
 .obl2{
     position: absolute;
-    top: 17em;
+    top: 11.24em;
 }
 
 .obl3{
     position: absolute;
-    top: 22.7em;
+    top: 15.11em;
 }
 
 .obl4{
     position: absolute;
-    top: 28.5em;
+    top: 18.98em;
 }
 
 .obl5{
     position: absolute;
-    top: 34.3em;
+    top: 22.85em;
 }
 
 .obl6{
     position: absolute;
-    top: 34.3em;
+    top: 22.85em;
     min-width: 20em;
 }
 

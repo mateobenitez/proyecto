@@ -30,6 +30,7 @@ import {
     faBorderStyle,
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
+import Axios from 'axios';
 
 
 var botonAli = document.getElementsByClassName("btnAli")
@@ -213,6 +214,7 @@ function verMas(){
         botonTec[0].innerHTML = '<img src="' + tec  + '" width="18px" height="18px" /> &nbsp;&nbsp; Tecnología &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'
     }
 }
+
 
 class Guardados extends Component{
     render(){

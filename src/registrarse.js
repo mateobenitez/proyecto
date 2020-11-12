@@ -102,7 +102,7 @@ class Reg extends Component {
                 <div align="center">
                     <h1><b>Bienvenido</b></h1>  
                     <p className="mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>
-                    <h2 className="mt-3">¿Qué sos?</h2>
+                    <h2 className="mt-3">Seleccione su rol</h2>
                     <br></br><br></br><br></br><br></br>
                     <form method="get" action="/">
                         <button className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
@@ -111,30 +111,19 @@ class Reg extends Component {
                         <button onClick={noTeVayas} className="continuar pt-2 pb-2 pl-3 pr-3">Siguiente&nbsp;&nbsp;<img className="pb-1" src={require('./components/continuar.svg')}></img></button>
                     </form>
                     <div className="row justify-content-center">
-                        <div className="col col-3">
-                            <div className="quesos">
-                                <input id="quesos1" type="image" onClick={cambioDeColor} src={require("./components/queSos1.svg")} width="400" height="250" alt=""></input><br></br><br></br>
-                            </div>
-                            <h2>Padre/Madre o Tutor</h2>
+                        <div className="quesos">
+                            <input id="quesos1" type="image" onClick={cambioDeColor} src={require("./components/queSos1.svg")} width="200" height="200" alt=""></input><br></br><br></br>
                         </div>
-                        <div className="col col-3">
-                            <div className="quesos">
-                                <input id="quesos2" type="image" onClick={cambioDeColor1} src={require("./components/queSos2.svg")} width="400" height="250" alt=""></input><br></br><br></br>
-                            </div>
-                            <h2>Doctor/Especialista</h2>
+                        
+                        <div className="quesos">
+                            <input id="quesos2" type="image" onClick={cambioDeColor1} src={require("./components/queSos2.svg")} width="200" height="200" alt=""></input><br></br><br></br>
                         </div>
-                        <div className="col col-3">
-                            <div className="quesos">
-                                <input id="quesos3" type="image" onClick={cambioDeColor2} src={require("./components/queSos3.svg")} width="400" height="250" alt=""></input><br></br><br></br>
-                            </div>    
-                            <h2>Profesor/Maestro</h2>
-                        </div>
-                        <div className="col col-3">
-                            <div className="quesos">
-                                <input id="quesos4" type="image" onClick={cambioDeColor3} src={require("./components/queSos4.svg")} width="400" height="250" alt=""></input><br></br><br></br>
-                            </div>    
-                            <h2>Otro</h2>
-                        </div>
+                        <div className="quesos">
+                            <input id="quesos3" type="image" onClick={cambioDeColor2} src={require("./components/queSos3.svg")} width="200" height="200" alt=""></input><br></br><br></br>
+                        </div>    
+                        <div className="quesos">
+                            <input id="quesos4" type="image" onClick={cambioDeColor3} src={require("./components/queSos4.svg")} width="200" height="200" alt=""></input><br></br><br></br>
+                        </div>    
                     </div>
                     <br></br><br></br><br></br><br></br> 
                 </div>

@@ -5,7 +5,7 @@ import MyFooter from './components/footer.js';
 import ReactDOM from 'react-dom'
 import ojoT from './components/ojoT.svg'
 import oj from './components/ojo.svg'
-
+import axios from 'axios';
 var elements = document.getElementsByClassName("text");
 var lineas = document.getElementsByClassName("linea-texto");
 var obl = document.getElementsByClassName("obl-texto");
@@ -88,6 +88,19 @@ function mostrarOjo2(){
   ojoConf[0].style.display = "initial"
 }
 
+
+axios({
+  method: "GET",
+  url: "http://localhost:3000/admin/registrarse"
+})
+  .then((resp) => {
+    const nombre = resp.data.nombre
+    console.log("nombre")
+})
+  .catch((err) => {
+    console.log(err)
+  })
+
 class Inicio extends Component{
   
  constructor(props){
@@ -123,7 +136,7 @@ class Inicio extends Component{
                     <h1 className="que"></h1>
                   </div>
                   <div className="col col-3">
-                    <h1 id="registro" className="ques">Registrarse</h1>
+                    <h1 id="registro" className="ques">Registrarse  </h1>
                   </div>
                 </div>
               </div> 
@@ -134,17 +147,17 @@ class Inicio extends Component{
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
                   <div className="col col-1 placeh">
-                    <input id="nombre" className="eliminar text mt-5" type="text" name="nombre"  placeholder="&nbsp;Nombre" value={this.state.nombre} onChange={this.onChange}></input><br></br><hr className="eliminar2 li1 linea-texto"></hr>
+                    <input id="nombre" className="eliminar text" type="text" name="nombre"  placeholder="Nombre" value={this.state.nombre} onChange={this.onChange}></input><br></br><hr className="eliminar2 li1 linea-texto"></hr>
                     <p className="obl obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="apellido" className="eliminar text mt-5" type="text" name="apellido" placeholder="&nbsp;Apellido" value={this.state.apellido} onChange={this.onChange}></input><br></br><hr className="eliminar2 li2 linea-texto"></hr>
+                    <input id="apellido" className="eliminar text" type="text" name="apellido" placeholder="Apellido" value={this.state.apellido} onChange={this.onChange}></input><br></br><hr className="eliminar2 li2 linea-texto"></hr>
                     <p className="obl1 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="usuario" className="text mt-5" type="text" name="usuario" placeholder="&nbsp;Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="li3 linea-texto"></hr>
+                    <input id="usuario" className="text" type="text" name="usuario" placeholder="Nombre de usuario" onChange={this.onChange}></input><br></br><hr className="li3 linea-texto"></hr>
                     <p className="obl2 obl-texto">*Es obligatorio completar este campo</p>
-                    <input id="email" className="text mt-5" type="text" name="email" placeholder="&nbsp;Email"  onChange={this.onChange}></input><br></br><hr className="li4 linea-texto"></hr>
+                    <input id="email" className="text" type="text" name="email" placeholder="Email"  onChange={this.onChange}></input><br></br><hr className="li4 linea-texto"></hr>
                     <p className="obl3 obl-texto">*Es obligatorio completar este campo</p>
-                    <input onClick={mostrarOjo} id="contraseña" className="text mt-5" name="contraseña" type="password" placeholder="&nbsp;Contraseña" onChange={this.onChange}></input><br></br><hr className="li5 linea-texto"></hr>
+                    <input onClick={mostrarOjo} id="contraseña" className="text" name="contraseña" type="password" placeholder="Contraseña" onChange={this.onChange}></input><br></br><hr className="li5 linea-texto"></hr>
                     <p className="obl4 obl-texto">*Es obligatorio completar este campo</p>
-                    <input onClick={mostrarOjo2} id="ccontraseña" className="text mt-5 eliminar" name="ccontraseña" type="password" placeholder="&nbsp;Confirmar contraseña" onChange={this.onChange}></input><br></br><hr className="eliminar2 li6 linea-texto"></hr>
+                    <input onClick={mostrarOjo2} id="ccontraseña" className="text eliminar" name="ccontraseña" type="password" placeholder="Confirmar contraseña" onChange={this.onChange}></input><br></br><hr className="eliminar2 li6 linea-texto"></hr>
                     <p className="obl5 obl-texto">*Es obligatorio completar este campo</p>
                     <p className="obl6 obl-texto">*Las contraseñas ingresadas son diferentes</p>
                     <input className="boton3" type="submit" formAction="/registrarse" name="boton" value="Registrarse"></input>
@@ -157,7 +170,7 @@ class Inicio extends Component{
                 <p className="ya">¿Ya tiene una cuenta?</p>
                 <a className="ya2" href="/IniciarSesion" >Iniciar sesión</a>
               </div>
-              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+              <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
               <MyFooter />
             </div>  
           </div>

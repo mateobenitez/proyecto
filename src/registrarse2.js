@@ -9,7 +9,7 @@ import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 
 function colorElementRed() {
   var elements = document.getElementsByClassName("text");
-  var lineas = document.getElementsByClassName("linea-texto");
+  var lineas = document.getElementsByClassName("linea-texto2");
   var obl = document.getElementsByClassName("obli-tds");
     for(var i = 0; i<3; i++){
       if(elements[i].value == "" || elements[i].value == null){
@@ -67,11 +67,11 @@ class Reg2 extends Component{
                 <div className="row justify-content-left">
                     <div className="col col-3">
                         <form name="form" method="GET" onSubmit={Validar}>
-                            <input id="pais" className="text mt-5" type="text" placeholder="*País"></input><br></br><hr className="lin1 linea-texto"></hr>
+                            <input id="pais" className="text mt-5" type="text" placeholder="País"></input><br></br><hr className="lin1 linea-texto2"></hr>
                             <p className="obli1 obli-tds">*Es obligatorio completar este campo</p>
-                            <input id="provincia" className="text mt-5" type="text" placeholder="*Provincia / Estado"></input><br></br><hr className="lin2 linea-texto"></hr>
+                            <input id="provincia" className="text mt-5" type="text" placeholder="Provincia / Estado"></input><br></br><hr className="lin2 linea-texto2"></hr>
                             <p className="obli2 obli-tds">*Es obligatorio completar este campo</p>
-                            <input id="ciudad" className="text mt-5" type="text" placeholder="*Ciudad / Localidad"></input><br></br><hr className="lin3 linea-texto"></hr>
+                            <input id="ciudad" className="text mt-5" type="text" placeholder="Ciudad / Localidad"></input><br></br><hr className="lin3 linea-texto2"></hr>
                             <p className="obli3 obli-tds">*Es obligatorio completar este campo</p>
                             <div className="cmb2"> 
                               <button className="cambio" formAction="/princa"><FontAwesomeIcon icon={faAngleRight} className="flecha"/></button>

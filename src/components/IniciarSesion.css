@@ -2,9 +2,7 @@
     background-color: #F6F6F6;
     overflow-x: hidden;
 }
-/*p{
-    text-align: center;
-}*/
+
 .que{
 font-style: normal;
 font-weight: normal;
@@ -23,6 +21,7 @@ left: -140%;
     color:#393939;
     position: relative;
     left:-2%;
+    top: 1.4em;
 }
 
 .ttxt{
@@ -52,24 +51,28 @@ left: -140%;
     outline: none;
     position: relative;
     top: 5em;
-    left: 70%;
-
+    left: 8em;
+    font-family: "pop";
+    color: rgba(57, 57, 57, 1);
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: .9em;
 }
 
 .linea-texto{
     position: absolute;
-    left: 70%;
-    width: 16.8125em;
+    left: 11.3em;
+    width: 20em;
     
 }
 
 .l1{
     position: absolute;
-    top:8.75em;
+    top:8.2em;
 }
 .l2{
     position: absolute;
-    top: 13.35em;
+    top: 11.3em;
 }
 .l3{
     position: absolute;
@@ -97,8 +100,8 @@ left: -140%;
     font-size: 0.9375em;
     outline:none;
     position: relative;
-    top: 10em;
-    left: 12em;
+    top: 9em;
+    left:17em;
 }
 
 .divBoton{
@@ -109,20 +112,11 @@ left: -140%;
 
 .obli-texto{
     position: absolute;
-    left: 70%;
+    left: 14.2em;
     width: 16.8125em;
     color: red;
     visibility: hidden;
     font-size: 0.8em;
-}
-
-.obli3{
-    position: relative;
-}
-
-.obli4{
-    position: absolute;
-    top: 12.2em;
 }
 
 .ya{

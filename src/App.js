@@ -13,12 +13,12 @@ import Guardados from './guardados.js'
 import Config from './configuración.js'
 import Perfil from './perfil.js'
 import Perfil2 from './perfil2.js'
+import axios from 'axios';
 import { 
   BrowserRouter as Router, 
   Switch, 
   Route 
 } from 'react-router-dom';
-
 
 
 function App() {

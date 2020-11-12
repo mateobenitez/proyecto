@@ -279,7 +279,10 @@ class config extends Component{
                     </div>
                     <div className="col col-2">
                         <div className="container-fluid misS">
-                            <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="35" height="35" alt=""></img> &nbsp;&nbsp;Categorías</h1>
+                            <div className="circuloCont">
+                                <img className="pt-2 pl-2" src={require('./components/cats.svg')}></img>
+                            </div>
+                            <h1 className="cat cat1 pt-2 pb-2" align="center">Categorías</h1>
                         </div>
                         <div className="container-fluid misGa">
                             <form method="get" action="/princa">
@@ -307,7 +310,10 @@ class config extends Component{
                             </form>
                         </div>
                         <div className="container-fluid misS1">
-                            <h1 className="cat pt-2 pb-2"><img src={require("./components/nena.svg")}width="50" height="50" alt=""></img> &nbsp;&nbsp;&nbsp;&nbsp;Social</h1>
+                            <div className="circuloCont">
+                                <img className="pt-2 pl-2" src={require('./components/social.svg')}></img>
+                            </div>
+                            <h1 className="cat pt-2 pb-2" align="center"> Social</h1>
                         </div>
                         <div className="container-fluid pt-3 misGa1">
                             <form method="get" action="/perfil">

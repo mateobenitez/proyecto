@@ -20,8 +20,8 @@ class NavBar extends React.Component{
                         <a className="nav-link nav-com" href="Contacto">Contacto</a>
                     </form>
                     <form method="get" action="/inicio">
-                        <button className="boton1" type="submit">Registrarse</button>
-                    </form>
+                        <button className="boton2" type="submit">Registrarse</button>
+                    </form>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <form methos="get" action="/IniciarSesion">
                         <button className="boton2" type="submit">Iniciar sesión</button>
                     </form>
