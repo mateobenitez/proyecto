@@ -4,6 +4,7 @@ import MyFooter from './components/footer.js';
 import './registrarse.css'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios'
 
 
 
@@ -29,6 +30,23 @@ var Validar = function(e) {
       return false;
     }
   } 
+
+  function postear(){
+    axios({
+        method: "post",
+        url: "http://localhost:3000/admin/registrarse",
+        data:{
+            ciudad: this.state.ciudad,
+            provincia: this.state.provincia,
+            pais: this.state.pais
+        }
+      })
+        .then((resp) => {
+      })
+        .catch((err) => {
+          console.log(err)
+        })
+}
 
 class Reg2 extends Component{
   
@@ -58,7 +76,7 @@ class Reg2 extends Component{
                 <form method="get" action="/registrarse1">
                     <button  className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
                 </form>
-                <form method="get" action="/princa">
+                <form method="get" action="/princa" onSubmit={postear}>
                     <button onClick={Validar} className="continuar pt-2 pb-2 pl-3 pr-3">Finalizar&nbsp;&nbsp;<img className="pb-1" src={require('./components/finalizar.svg')}></img></button>
                 </form>
                 <div align="center">

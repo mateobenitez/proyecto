@@ -5,6 +5,8 @@ import './registrarse.css'
 import Inicio from './inicio.js'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios'
+
 
 var conf = [false, false, false, false] 
 
@@ -84,6 +86,24 @@ function cambioDeColor3(){
     }
 }
 
+function postear(){
+    axios({
+        method: "post",
+        url: "http://localhost:3000/admin/registrarse",
+        data:{
+            padre: conf[0],
+            doctor: conf[1],
+            profe: conf[2],
+            otro: conf[3]
+        }
+      })
+        .then((resp) => {
+      })
+        .catch((err) => {
+          console.log(err)
+        })
+}
+
 function noTeVayas(e){
         if(conf[0] || conf[1] || conf[2] || conf[3] == true){
 
@@ -100,21 +120,20 @@ class Reg extends Component {
             <div className="Reg">
                 <MyNavBar2/><br></br><br></br><br></br>
                 <div align="center">
-                    <h1><b>Bienvenido</b></h1>  
-                    <p className="mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>
+                    <h1><b>Bienvenido </b></h1>  
+                    <p className="complete mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>
                     <h2 className="mt-3">Seleccione su rol</h2>
                     <br></br><br></br><br></br><br></br>
                     <form method="get" action="/">
                         <button className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
                     </form>
-                    <form method="get" action="/registrarse1">
+                    <form method="get" onSubmit={postear} action="/registrarse1">
                         <button onClick={noTeVayas} className="continuar pt-2 pb-2 pl-3 pr-3">Siguiente&nbsp;&nbsp;<img className="pb-1" src={require('./components/continuar.svg')}></img></button>
                     </form>
                     <div className="row justify-content-center">
                         <div className="quesos">
                             <input id="quesos1" type="image" onClick={cambioDeColor} src={require("./components/queSos1.svg")} width="200" height="200" alt=""></input><br></br><br></br>
                         </div>
-                        
                         <div className="quesos">
                             <input id="quesos2" type="image" onClick={cambioDeColor1} src={require("./components/queSos2.svg")} width="200" height="200" alt=""></input><br></br><br></br>
                         </div>
@@ -124,6 +143,20 @@ class Reg extends Component {
                         <div className="quesos">
                             <input id="quesos4" type="image" onClick={cambioDeColor3} src={require("./components/queSos4.svg")} width="200" height="200" alt=""></input><br></br><br></br>
                         </div>    
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="padre">
+                            <h3>Padre / Madre/ Tutor</h3>
+                        </div>
+                        <div className="doctor">
+                            <h3>Doctor / Especialista</h3>
+                        </div> 
+                        <div className="profe">
+                            <h3>Profesor/Maestro</h3>
+                        </div> 
+                        <div className="otro">
+                            <h3>Otro</h3>
+                        </div>     
                     </div>
                     <br></br><br></br><br></br><br></br> 
                 </div>

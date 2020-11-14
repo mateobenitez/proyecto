@@ -133,6 +133,7 @@ left: -140%;
     position: absolute;
     bottom: 58.6%;
     right: 25.5%;
+    z-index: 1;
 }
 
 .ojoConf{
@@ -142,6 +143,7 @@ left: -140%;
     position: absolute;
     bottom: 54.6%;
     right: 25.5%;
+    z-index: 1;
 }
 
 .yaTienes{

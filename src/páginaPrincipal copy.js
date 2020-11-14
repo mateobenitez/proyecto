@@ -34,6 +34,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Modal from './components/publicar'
 import { createPortal } from 'react-dom';
+import axios from 'axios'
 
 var fondo = document.getElementsByClassName("princ") 
 var primerCuadrado = document.getElementsByClassName("asas")
@@ -58,7 +59,9 @@ var btnTec = <button id="btnTec" onClick={cambioTec} className="btnTec btn"><img
 var likeClick = true 
 var likes = document.getElementsByClassName("like")
 var guardClick = true
-
+var publicacion = [
+];
+var botonPresionado = 1
 
 var lineas = document.getElementsByClassName("publicaciones")
 function cambioInfo(e){
@@ -146,6 +149,7 @@ function cambioRel(e){
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(255, 180, 207, 1)"
     lineas[1].style.borderColor = "rgba(255, 180, 207, 1)"
+    botonPresionado = 1
 }
 function cambioSal(e){
     fondo[0].style.backgroundColor ="#F5BFBF"
@@ -157,6 +161,7 @@ function cambioSal(e){
     e.preventDefault()
     lineas[0].style.borderColor = "#F5BFBF"
     lineas[1].style.borderColor = "#F5BFBF"
+    botonPresionado = 2
 }
 function cambioTec(e){
     fondo[0].style.backgroundColor ="#B5D3EF"
@@ -168,6 +173,7 @@ function cambioTec(e){
     e.preventDefault()
     lineas[0].style.borderColor = "#86B8E5"
     lineas[1].style.borderColor = "#86B8E5"
+    botonPresionado = 3
 }
 
 function like(){
@@ -243,17 +249,94 @@ let seleccionados =[btnRel, btnSal, btnTec]
 
 var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
 
+
+
 class pagPrinca extends Component{
-    
+    componentDidMount(){
+        axios({
+            method: "get",
+            url: "https://jsonplaceholder.typicode.com/users"
+          })
+            .then((resp) => {
+                console.log(resp.data)
+                var usuario = resp.data[1].name
+                var posts = resp.data[9].name
+                this.setState({bodyPosts: posts})
+                this.setState({usuario})
+                this.setState({botonPresionado: botonPresionado})
+                console.log(this.state.botonPresionado)
+                for(var i = 0; i<resp.data.length; i++){
+                    if(resp.data[i].id == this.state.botonPresionado) {
+                    var a = {usu: <div>
+                                    <div className="row justify-content-around">
+                                        <div className="col col-6">
+                                            <form className="form-inline">
+                                                 <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
+                                                <a className="mt-3 pibe" href="/perfil2"> {resp.data[i].name} </a>
+                                            </form>
+                                        </div>
+                                        <div className="col col-6">
+                                            <div className="a form-inline">
+                                                <p className="mt-4">Hace 2 horas&nbsp;</p>
+                                                <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="container-fluid cont" align="center">
+                                        <p className="pibe">{resp.data[i].name} </p>
+                                        <div className="container imagenP">
+                                            <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                        </div>
+                                        <div className="row justify-content-around">
+                                            <div className="col col-5">
+                                                <p>3 me gusta</p>
+                                            </div>
+                                            <div className="col col-5">
+                                                <p>0 comentarios</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="row justify-content-left">
+                                        <div className="col col-4">
+                                            <button type="submit" onClick={like} className="botonP like pl-3 pr-3 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
+                                        </div>
+                                        <div className="col col-4">
+                                            <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
+                                        </div>
+                                        <div className="col col-4">
+                                            <button onClick={guard} type="submit" className="botonP like pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                                        </div>
+                                    </div>
+                                    <hr className="lineaP"></hr>
+                                </div>
+                , body: "b"}
+                    publicacion.push(a)
+                    }
+                }
+                
+                this.setState({publicacion: publicacion  })
+          })
+            .catch((err) => {
+              console.log(err)
+            })
+    }
     constructor(props) {
         super(props);
         this.boton = React.createRef();
         this.state = {
-          modal: false
+          modal: false,
+          usuario: [],
+          idPosts: [],
+          bodyPosts: [],
+          date: [],
+          publicacion: publicacion,
+          botonPresionado: botonPresionado
         };
       }
       modalOpen() {
-        this.setState({ modal: true });
+        this.setState({ 
+            modal: true,
+        });
       }
     
       modalClose() {
@@ -266,7 +349,11 @@ class pagPrinca extends Component{
 
     render(){
         var fondo={backgroundColor: "#E3E3E3"}
-        
+        var listPublicaiones = this.state.publicacion.map(function(publi) {
+            return (
+                    <a>{publi.usu}</a>
+            );
+        });
         return (
             <div style={fondo} className="princ">
                 <MyNavBarPrinca/>
@@ -351,46 +438,7 @@ class pagPrinca extends Component{
                                 </div>
                             </div>
                             <div className="mt-4 container publicaciones">
-                                <div className="row justify-content-around">
-                                    <div className="col col-6">
-                                        <form className="form-inline">
-                                            <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                            <a className="mt-3 pibe" href="/perfil2">Usuario</a>
-                                        </form>
-                                    </div>
-                                    <div className="col col-6">
-                                        <div className="a form-inline">
-                                            <p className="mt-4">Hace 2 horas&nbsp;</p>
-                                            <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="container-fluid cont" align="center">
-                                    <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
-                                    <div className="container imagenP">
-                                        <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                    </div>
-                                    <div className="row justify-content-around">
-                                        <div className="col col-5">
-                                            <p>3 me gusta</p>
-                                        </div>
-                                        <div className="col col-5">
-                                            <p>0 comentarios</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-left">
-                                    <div className="col col-4">
-                                        <button type="submit" onClick={like} className="botonP like pl-3 pr-3 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button onClick={guard} type="submit" className="botonP like pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
-                                    </div>
-                                </div>
-                                <hr className="lineaP"></hr>
+                                {listPublicaiones}
                             </div>
                             <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                             <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
@@ -403,6 +451,7 @@ class pagPrinca extends Component{
                     <div align="center" className="col col-2">
                         <div className="container-fluid misN ml-5">
                             <h1 align="left" className="cat pt-2  pb-2"> &nbsp;&nbsp; &nbsp;&nbsp;Novedades</h1>
+                            
                         </div>
                     </div>
                     <div className="col col-2">

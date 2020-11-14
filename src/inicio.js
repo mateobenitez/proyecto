@@ -14,6 +14,8 @@ var mostrarClick = true
 var ojo = document.getElementsByClassName("ojo")
 var ojoConf = document.getElementsByClassName("ojoConf")
 
+
+
 function colorElementRed() {
   for(var i = 0; i<6; i++){
     if(elements[i].value == "" || elements[i].value == null){
@@ -30,7 +32,6 @@ var Validar = function(e) {
   var x4 = document.forms["form"]["usuario"].value;
   var x5 = document.forms["form"]["email"].value;
   var x6 = document.forms["form"]["contraseña"].value;
-  console.log(document.forms["form"]["nombre", "apellido"].value)
   if (x1 == "" || x1 == null || x2 == "" || x2 == null || x3 == "" || x3 == null ||
   x4 == "" || x4 == null ||x5 == "" || x5 == null || x6 == "" || x6 == null) {
     e.preventDefault();
@@ -54,6 +55,24 @@ var Validar = function(e) {
     lineas[4].style.backgroundColor = null
     lineas[5].style.backgroundColor = "red"
   }
+  else{
+    axios({
+      method: "post",
+      url: "http://localhost:3000/admin/registrarse",
+      data: {
+        nombre: this.state.nombre,
+        apellido: this.state.apellido, 
+        name_user: this.state.ususario,
+        mail: this.state.email,
+        password: this.state.contraseña
+      }
+    })
+      .then((resp) => {
+    })
+      .catch((err) => {
+        console.log(err)
+      })
+  }
 }
 
 function mostrarConf(){
@@ -66,6 +85,7 @@ function mostrarConf(){
     mostrarClick1 = true
     ojoConf[0].innerHTML = '<img src="' + ojoT + '" width="25px" height="25px" />'
   }
+  
 }
 
 function mostrar(){
@@ -80,6 +100,8 @@ function mostrar(){
   }
 }
 
+
+
 function mostrarOjo(){
   ojo[0].style.display = "initial"
 }
@@ -88,22 +110,10 @@ function mostrarOjo2(){
   ojoConf[0].style.display = "initial"
 }
 
-
-axios({
-  method: "GET",
-  url: "http://localhost:3000/admin/registrarse"
-})
-  .then((resp) => {
-    const nombre = resp.data.nombre
-    console.log("nombre")
-})
-  .catch((err) => {
-    console.log(err)
-  })
-
 class Inicio extends Component{
-  
- constructor(props){
+
+
+  constructor(props){
    super();
    this.state = {
       nombre: '',
@@ -111,7 +121,7 @@ class Inicio extends Component{
       usuario:'',
       email:'',
       contraseña:'',
-      ccontraseña:'',
+      ccontraseña:''
    }
    this.onChange = this.onChange.bind(this);
  }
@@ -136,14 +146,14 @@ class Inicio extends Component{
                     <h1 className="que"></h1>
                   </div>
                   <div className="col col-3">
-                    <h1 id="registro" className="ques">Registrarse  </h1>
+                    <h1 id="registro" className="ques">Registrarse {this.state.nom} </h1>
                   </div>
                 </div>
               </div> 
               <div className="row justify-content-around"> 
                 <div className="col col-3 ">
                   <img className="mt-4 nena" src={require('./components/logo.svg')}/>
-                  <p className="texto">Un espacio de comunicación y encuentro organizado para mejorar la calidad de vida de sus hijos.</p>
+                  <p className="texto">Un espacio de comunicación y encuentro organizado sobre TEA.</p>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
                   <div className="col col-1 placeh">

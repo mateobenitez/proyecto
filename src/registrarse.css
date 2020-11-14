@@ -35,6 +35,26 @@
     top: 0.65em;
 }
 
+.complete{
+    font-size: 1.2em;
+}
+
+.padre{
+    transform: translateX(-16em);
+}
+
+.doctor{
+    transform: translateX(-11em);
+}
+
+.profe{
+    transform: translateX(-4em);
+}
+
+.otro{
+    transform: translateX(8.5em);  
+}
+
 .atras{
     position: absolute;
     top: 8em;

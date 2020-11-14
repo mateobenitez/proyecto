@@ -15,6 +15,7 @@ import {
     faGavel,
     faChevronDown
 } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios'
 
 var btn1 = document.getElementsByClassName("btns")
 var uno = [0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -134,6 +135,20 @@ function obli(e){
     }
 }
 
+function postear(){
+    axios({
+        method: "post",
+        url: "http://localhost:3000/admin/registrarse",
+        data:{
+        }
+      })
+        .then((resp) => {
+      })
+        .catch((err) => {
+          console.log(err)
+        })
+}
+
 class Reg1 extends Component{
     render() {
         return (
@@ -184,7 +199,7 @@ class Reg1 extends Component{
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
-                                    <button className="btns btnM mt-4 mb-4"  onClick={prevenir8}> Seleccionar todo</button>
+                                    <button className="btns btnM mt-4 mb-4"  onSubmit={postear} onClick={prevenir8}> Seleccionar todo</button>
                                 </div>
                             </form>
                         </div>
