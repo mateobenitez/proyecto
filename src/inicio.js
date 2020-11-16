@@ -81,9 +81,12 @@ var Validar = function(e) {
     })
       .then((resp) => {
         const userpass = this.state.usuario + ':' + this.state.nombre
-    const encodedString = Buffer.from(userpass).toString('base64');
-    console.log("ENCODED: ", encodedString)
-  
+        const encodedString = Buffer.from(userpass).toString('base64');
+        console.log("ENCODED: ", encodedString)
+    })
+      .catch((err) => {
+        console.log(err)
+    })
     axios({
       method: 'post',
       url: 'http://localhost:3000/user/login',
@@ -96,10 +99,6 @@ var Validar = function(e) {
       window.localStorage.setItem('token', resp.data.token)
       this.setState({logged: true})
     }).catch((err) => console.log(err))
-    })
-      .catch((err) => {
-        console.log(err)
-      })
   }
 }
 
