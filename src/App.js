@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom'
 import Registrarse from './registrarse.js'
 import Inicio from './inicio.js'
 import IniciarSesion from './components/IniciarSesion.js'
@@ -13,7 +12,6 @@ import Guardados from './guardados.js'
 import Config from './configuración.js'
 import Perfil from './perfil.js'
 import Perfil2 from './perfil2.js'
-import axios from 'axios';
 import { 
   BrowserRouter as Router, 
   Switch, 

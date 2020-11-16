@@ -3,20 +3,7 @@ import MyNavBarPrinc from './components/navBarPruebaMenu.js';
 import './princ.css'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-    faDumbbell,
-    faGraduationCap,
-    faHeart,
     faInfoCircle,
-    faSmile,
-    faLaptop,
-    faPalette,
-    faGavel,
-    faBell,
-    faCog,
-    faUser,
-    faBookmark,
-    faBorderStyle,
-    faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 import flechaArr from './components/flechaArr.svg'
 import flechaAb from './components/flechaAb.svg'

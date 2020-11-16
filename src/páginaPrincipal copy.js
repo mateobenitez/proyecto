@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
 import MyNavBarPrinca from './components/navBarPruebaMenu.js';
 import './princ.css'
-import reg1 from './registrarse1';
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import info from './components/info.svg'
 import carita from './components/carita.svg'
 import tenedor from './components/tenedor.svg'
 import arte from './components/arte.svg'
@@ -17,23 +15,13 @@ import meGusta from './components/meGusta.svg'
 import guardados from './components/guardados.svg'
 import noGuardados from './components/guardar.svg'
 import {
-    faDumbbell,
-    faGraduationCap,
-    faHeart,
     faInfoCircle,
-    faSmile,
-    faLaptop,
-    faPalette,
-    faGavel,
-    faBell,
     faCog,
     faUser,
     faBookmark,
-    faBorderStyle,
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 import Modal from './components/publicar'
-import { createPortal } from 'react-dom';
 import axios from 'axios'
 
 var fondo = document.getElementsByClassName("princ") 
@@ -48,14 +36,14 @@ var botonEdu = document.getElementsByClassName("btnEdu")
 var botonRel = document.getElementsByClassName("btnRel")
 var botonSal = document.getElementsByClassName("btnSal")
 var botonTec = document.getElementsByClassName("btnTec")
-var btnAli = <button id="btnAli" onClick={cambioAli}  className="btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img> &nbsp;&nbsp;Alimentación&nbsp;&nbsp;&nbsp;&nbsp;</button>
-var btnArt = <button id="btnArt" onClick={cambioArt} className="btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> &nbsp;&nbsp;Arte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-var btnDep = <button id="btnDep" onClick={cambioDep} className="btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img> &nbsp;&nbsp;Deportes</button>
-var btnDoc = <button id="btnDoc" onClick={cambioDocs} className="btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img> &nbsp;&nbsp;Documentos legales</button>
-var btnEdu = <button id="btnEdu" onClick={cambioEdu} name="btnEdu" className="btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img> &nbsp;&nbsp;Educación</button>
-var btnRel = <button id="btnRel" onClick={cambioRel} className="btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img> &nbsp;&nbsp;Relaciones sociales</button>
-var btnSal = <button id="btnSal" onClick={cambioSal} className="btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> &nbsp;&nbsp;Salud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-var btnTec = <button id="btnTec" onClick={cambioTec} className="btnTec btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> &nbsp;&nbsp;Tecnología</button>
+var btnAli = <button id="btnAli" onClick={cambioAli}  className="btn btnAli"><img alt="" src={require('./components/tenedor.svg')} width="18px"></img> &nbsp;&nbsp;Alimentación&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnArt = <button id="btnArt" onClick={cambioArt} className="btnArt btn"><img alt="" src={require('./components/arte.svg')} width="18px"></img> &nbsp;&nbsp;Arte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnDep = <button id="btnDep" onClick={cambioDep} className="btnDep btn"><img alt="" src={require('./components/deportes.svg')} width="18px"></img> &nbsp;&nbsp;Deportes</button>
+var btnDoc = <button id="btnDoc" onClick={cambioDocs} className="btnDoc btn"><img alt="" src={require('./components/doc.svg')} width="18px"></img> &nbsp;&nbsp;Documentos legales</button>
+var btnEdu = <button id="btnEdu" onClick={cambioEdu} name="btnEdu" className="btnEdu  btn" ><img alt="" src={require('./components/edu.svg')} width="18px"></img> &nbsp;&nbsp;Educación</button>
+var btnRel = <button id="btnRel" onClick={cambioRel} className="btnRel btn"><img alt="" src={require('./components/carita.svg')} width="18px"></img> &nbsp;&nbsp;Relaciones sociales</button>
+var btnSal = <button id="btnSal" onClick={cambioSal} className="btnSal btn"><img alt="" src={require('./components/salud.svg')} width="18px"></img> &nbsp;&nbsp;Salud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnTec = <button id="btnTec" onClick={cambioTec} className="btnTec btn"><img className="b" alt="" src={require('./components/tec.svg')} width="18px"></img> &nbsp;&nbsp;Tecnología</button>
 var likeClick = true 
 var likes = document.getElementsByClassName("like")
 var guardBtn = document.getElementsByClassName("guard")
@@ -266,6 +254,7 @@ var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
 class pagPrinca extends Component{
     componentDidMount(){
         console.log(window.localStorage.getItem('token'))
+        
         axios({
             method: "get",
             url: "http://localhost:3000/user/mostrarPosts ",
@@ -281,58 +270,54 @@ class pagPrinca extends Component{
                 this.setState({usuario})
                 this.setState({post: resp.data.data})
                 console.log(resp.data.data)
-                for(var i = 0; i<1 ; i++){
-                    var likes = resp.data[i].id
-                    if(true) {
-                    var a = {usu: <div>
-                                    <div className="row justify-content-around">
-                                        <div className="col col-6">
-                                            <form className="form-inline">
-                                                <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                                <a className="mt-3 pibe" href="/perfil2"> Usuario </a>
-                                            </form>
-                                        </div>
-                                        <div className="col col-6">
-                                            <div className="a form-inline">
-                                                <p className="mt-4">Hace 2 horas&nbsp;</p>
-                                                <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="container-fluid cont" align="center">
-                                        <p className="pibe">{this.state.post.body} </p>
-                                        <div className="container imagenP">
-                                            <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                        </div>
-                                        <div className="row justify-content-around">
-                                            <div className="col col-5">
-                                                <p> {this.state.likes} me gusta</p>
-                                            </div>
-                                            <div className="col col-5">
-                                                <p>0 comentarios</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="row justify-content-left">
-                                        <div className="col col-4">
-                                            <button type="submit" onClick={like} className="botonP like pl-3 pr-3 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
-                                        </div>
-                                        <div className="col col-4">
-                                            <button type="submit" onClick={comentar} className="botonP coment pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
-                                        </div>
-                                        <div className="col col-4">
-                                            <button onClick={guard} type="submit" className="botonP guard pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
-                                        </div>
-                                    </div>
-                                    <hr className="lineaP"></hr>
-                                </div>
-                        , body: "b"}
-                    this.setState({likes: likes})
-                    publicacion.push(a)
-                    }
-                }
                 
-                this.setState({publicacion: publicacion  })
+                for(var i = 0; i<2 ; i++){
+                    var a = {usu:   <div>
+                        <div className="row justify-content-around">
+                            <div className="col col-6">
+                                <form className="form-inline">
+                                    <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
+                                    <a className="mt-3 pibe" href="/perfil2"> Usuario </a>
+                                </form>
+                            </div>
+                            <div className="col col-6">
+                                <div className="a form-inline">
+                                    <p className="mt-4">Hace 2 horas&nbsp;</p>
+                                    <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="container-fluid cont" align="center">
+                            <p className="pibe">Usuario </p>
+                            <div className="container imagenP">
+                                <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                            </div>
+                            <div className="row justify-content-around">
+                                <div className="col col-5">
+                                    <p> 0 me gusta</p>
+                                </div>
+                                <div className="col col-5">
+                                    <p>0 comentarios</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row justify-content-left">
+                            <div className="col col-4">
+                                <button type="submit" onClick={like} className="botonP like pl-3 pr-3 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
+                            </div>
+                            <div className="col col-4">
+                                <button type="submit" onClick={comentar} className="botonP coment pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
+                            </div>
+                            <div className="col col-4">
+                                <button onClick={guard} type="submit" className="botonP guard pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                            </div>
+                        </div>
+                        <hr className="lineaP"></hr>
+                    </div>
+                    , body: "b"}
+                publicacion.push(a)
+                }
+                this.setState({publicacion: publicacion})
           })
             .catch((err) => {
               console.log(err)

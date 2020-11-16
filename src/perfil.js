@@ -3,24 +3,12 @@ import MyNavBarPrinc from './components/navBarPruebaMenu.js';
 import './princ.css'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-    faDumbbell,
-    faGraduationCap,
-    faHeart,
     faInfoCircle,
-    faSmile,
-    faLaptop,
-    faPalette,
-    faGavel,
-    faBell,
-    faCog,
-    faUser,
-    faBookmark,
-    faBorderStyle,
+    
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 import flechaArr from './components/flechaArr.svg'
 import flechaAb from './components/flechaAb.svg'
-import info from './components/info.svg'
 import carita from './components/carita.svg'
 import tenedor from './components/tenedor.svg'
 import arte from './components/arte.svg'
@@ -42,22 +30,22 @@ var botonEdu = document.getElementsByClassName("btnEdu")
 var botonRel = document.getElementsByClassName("btnRel")
 var botonSal = document.getElementsByClassName("btnSal")
 var botonTec = document.getElementsByClassName("btnTec")
-var btnAli = <button id="btnAli" className="btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img> &nbsp;&nbsp;Alimentación&nbsp;&nbsp;&nbsp;&nbsp;</button>
-var btnArt = <button id="btnArt" className="btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> &nbsp;&nbsp;Arte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-var btnDep = <button id="btnDep" className="btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img> &nbsp;&nbsp;Deportes</button>
-var btnDoc = <button id="btnDoc" className="btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img> &nbsp;&nbsp;Documentos legales</button>
-var btnEdu = <button id="btnEdu" name="btnEdu" className="btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img> &nbsp;&nbsp;Educación</button>
-var btnRel = <button id="btnRel" className="btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img> &nbsp;&nbsp;Relaciones sociales</button>
-var btnSal = <button id="btnSal" className="btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> &nbsp;&nbsp;Salud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-var btnTec = <button id="btnTec" className="btnTec btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> &nbsp;&nbsp;Tecnología</button>
-var btnAliS =<button id="btnAliC" className="btns btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img>Alimentación</button>
-var btnArtS =<button id="btnArtC" className="btns btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> Arte</button>
-var btnDepS =<button id="btnDepC" className="btns btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img>Deportes</button>
-var btnDocS =<button id="btnDocC" className="btns btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img>Documentos legales</button>
-var btnEduS =<button id="btnEduC" name="btnEdu" className="btns btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img>Educación</button>
-var btnRelS =<button id="btnRelC" className="btns btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img>Relaciones sociales</button>
-var btnSalS= <button id="btnSalC" className="btns btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> Salud</button>
-var btnTecS= <button id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> Tecnología</button>
+var btnAli = <button id="btnAli" className="btn btnAli"><img src={require('./components/tenedor.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Alimentación&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnArt = <button id="btnArt" className="btnArt btn"><img src={require('./components/arte.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Arte&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnDep = <button id="btnDep" className="btnDep btn"><img src={require('./components/deportes.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Deportes</button>
+var btnDoc = <button id="btnDoc" className="btnDoc btn"><img src={require('./components/doc.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Documentos legales</button>
+var btnEdu = <button id="btnEdu" name="btnEdu" className="btnEdu  btn" ><img src={require('./components/edu.svg')} alt=""  width="18px"></img> &nbsp;&nbsp;Educación</button>
+var btnRel = <button id="btnRel" className="btnRel btn"><img src={require('./components/carita.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Relaciones sociales</button>
+var btnSal = <button id="btnSal" className="btnSal btn"><img src={require('./components/salud.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Salud&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+var btnTec = <button id="btnTec" className="btnTec btn"><img className="b" src={require('./components/tec.svg')} alt="" width="18px"></img> &nbsp;&nbsp;Tecnología</button>
+var btnAliS =<button id="btnAliC" className="btns btn btnAli"><img src={require('./components/tenedor.svg')} alt="" width="18px"></img>Alimentación</button>
+var btnArtS =<button id="btnArtC" className="btns btnArt btn"><img src={require('./components/arte.svg')} alt="" width="18px"></img> Arte</button>
+var btnDepS =<button id="btnDepC" className="btns btnDep btn"><img src={require('./components/deportes.svg')} alt="" width="18px"></img>Deportes</button>
+var btnDocS =<button id="btnDocC" className="btns btnDoc btn"><img src={require('./components/doc.svg')} alt="" width="18px"></img>Documentos legales</button>
+var btnEduS =<button id="btnEduC" name="btnEdu" className="btns btnEdu  btn" ><img src={require('./components/edu.svg')} alt="" width="18px"></img>Educación</button>
+var btnRelS =<button id="btnRelC" className="btns btnRel btn"><img src={require('./components/carita.svg')} alt="" width="18px"></img>Relaciones sociales</button>
+var btnSalS= <button id="btnSalC" className="btns btnSal btn"><img src={require('./components/salud.svg')} alt="" width="18px"></img> Salud</button>
+var btnTecS= <button id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} alt="" width="18px"></img> Tecnología</button>
 let noSeleccionadosSalir =[btnAliS, btnArtS, btnDepS, btnDocS, btnEduS]
 let seleccionadosSalir =[btnRelS, btnSalS, btnTecS]
 let noSeleccionados =[btnAli, btnArt, btnDep, btnDoc, btnEdu]

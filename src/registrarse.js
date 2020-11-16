@@ -2,11 +2,7 @@ import React, { Component } from 'react';
 import MyNavBar2 from './components/NavBarInicio.js';
 import MyFooter from './components/footer.js';
 import './registrarse.css'
-import Inicio from './inicio.js'
-import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
-import {  useCookies  } from 'react-cookie';
 
 
 var conf = [false, false, false, false] 
@@ -111,7 +107,7 @@ function postear(){
         data:{
           body: document.getElementsByClassName("descPub")[0].value ,
           arch_adjunto: "archivo", 
-          date: fecha
+          date: "a"
         }
     }).then((resp) => {
       console.log("RESPONSE RECEIVED: ", resp);

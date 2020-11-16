@@ -1,14 +1,8 @@
 import React, {useState} from 'react';
 import {CSSTransition} from 'react-transition-group';
 import "./NavBar.css"
-import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {
-    faUser,
-    faSearch
-} from '@fortawesome/free-solid-svg-icons';
 
 var buscador = document.getElementsByClassName("buscar")
-var buscador1 = document.getElementsByClassName("btn")
 var notificaciones = false
 
 function search(e) {
@@ -23,17 +17,17 @@ function NavBarPrinca(props){
                 <a href="/inicio"><img src={require('./logo.svg')}></img></a>
             </div>
             <div className="container-fluid search">
-                <img src={require("./buscar.svg")}></img>  &nbsp;&nbsp;
+                <img src={require("./buscar.svg")} alt=""></img>  &nbsp;&nbsp;
                 <input onClick={search} type="search" placeholder="Buscar" className="buscar"></input>
             </div>
             <ul className="navba-nav">
-                <NavItem ima={<img src={require("./usuario.svg")} width="50px" height="50px" alt="menu"></img>}/>
+                <NavItem ima={<img alt="" src={require("./usuario.svg")} width="50px" height="50px" alt="menu"></img>}/>
                 <p href="perfil" className="usuarioNav">Hernán</p>
-                <NavItem ima={<img src={require("./notificaciones.svg")} width="50px" height="50px"></img>}>
+                <NavItem ima={<img src={require("./notificaciones.svg")} alt="" width="50px" height="50px"></img>}>
                     <DropdownNotif />
                 </NavItem>
                 <p className="notifNav">Notificaciones</p>
-                <NavItem ima={<img src={require("./menu.svg")} width="50px" height="50px"></img>}> 
+                <NavItem ima={<img src={require("./menu.svg")} alt="" width="50px" height="50px"></img>}> 
                     <DropdownMenu />
                 </NavItem>
                 <p className="menuNav">Menú</p>

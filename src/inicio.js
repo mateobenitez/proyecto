@@ -2,17 +2,9 @@ import React, { Component } from 'react';
 import "./app.css"
 import MyNavBar2 from './components/NavBarInicio2.js';
 import MyFooter from './components/footer.js';
-import ReactDOM from 'react-dom'
 import ojoT from './components/ojoT.svg'
 import oj from './components/ojo.svg'
 import axios from 'axios';
-import { 
-  BrowserRouter as Router, 
-  Switch, 
-  Route,
-  Link 
-} from 'react-router-dom';
-import {  useCookies  } from 'react-cookie';
 
 
 
@@ -28,7 +20,7 @@ var ojoConf = document.getElementsByClassName("ojoConf")
 
 function colorElementRed() {
   for(var i = 0; i<6; i++){
-    if(elements[i].value == "" || elements[i].value == null){
+    if(elements[i].value === "" || elements[i].value === null){
       lineas[i].style.backgroundColor = "red"
       obl[i].style.visibility = "visible";
     }
@@ -44,13 +36,13 @@ var Validar = function(e) {
   var x4 = document.forms["form"]["usuario"].value;
   var x5 = document.forms["form"]["email"].value;
   var x6 = document.forms["form"]["contraseña"].value;
-  if (x1 == "" || x1 == null || x2 == "" || x2 == null || x3 == "" || x3 == null ||
-  x4 == "" || x4 == null ||x5 == "" || x5 == null || x6 == "" || x6 == null) {
+  if (x1 === "" || x1 === null || x2 === "" || x2 === null || x3 === "" || x3 === null ||
+  x4 === "" || x4 === null ||x5 === "" || x5 === null || x6 === "" || x6 === null) {
     e.preventDefault();
     colorElementRed();
     return false;
   }
-  else if(x1 != x6){
+  else if(x1 !== x6){
     e.preventDefault()
     lineas[5].style.backgroundColor = "red"
     obl[6].style.visibility = "initial"

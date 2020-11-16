@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import MyNavBar2 from './NavBarIniciarSesión.js';
 import MyFooter from './footer.js';
-import ReactDOM from 'react-dom';
 import './IniciarSesion.css';
 import axios from 'axios'
 
@@ -10,7 +9,7 @@ function colorElementRed() {
   var lineas = document.getElementsByClassName("linea-texto");
   var obl = document.getElementsByClassName("obli-texto");
   for(var i = 0; i<2; i++){
-    if(elements[i].value == "" || elements[i].value == null){
+    if(elements[i].value === "" || elements[i].value == null){
       lineas[i].style.backgroundColor = "red"
       obl[i].style.visibility = "visible";
     }
@@ -22,7 +21,7 @@ function colorElementRed() {
 var Validar = function(e) {
   var x = document.forms["form"]["contraseña"].value;
   var x1 = document.forms["form"]["usuario"].value;
-  if (x == "" || x == null || x1 == "" || x1 == null) {
+  if (x === "" || x == null || x1 === "" || x1 == null) {
     e.preventDefault();
     colorElementRed();
     return false;
@@ -84,7 +83,7 @@ class IniciarSesion extends Component{
               </div> 
               <div className="row justify-content-around"> 
                 <div className="col col-3">
-                  <img className="mt-4 nena" src={require('./logo.svg')}/>
+                  <img className="mt-4 nena" alt="" src={require('./logo.svg')}/>
                   <p className="texto">Un espacio de comunicación y encuentro organizado para mejorar la calidad de vida de sus hijos.</p>
                 </div>
                 <form className="form-inline aa" name="form" method="GET" onSubmit={Validar}>
