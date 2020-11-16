@@ -33,7 +33,6 @@ export default class Modal extends React.Component {
   };
   publicar(e){
     e.preventDefault()
-    let token = window.localStorage.getItem('token')
     var f = new Date();
     var fecha = f.getFullYear() + '-'  + f.getMonth() + '-' + f.getDay() + '-'
     var archivo = document.getElementsByClassName("publicfoto")[0] 
@@ -49,7 +48,7 @@ export default class Modal extends React.Component {
           { "Access-Control-Allow-Headers": 'Origin, X-Requested-With, Content-Type, Acmcept '},
           { "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE" },
           { "Access-Control-Max-Age": 3600 },*/
-          Authorization: 'Bearer ' + token
+          Authorization: 'Bearer ' + window.localStorage.getItem('token')
        },
       data:{
         body: document.getElementsByClassName("descPub")[0].value ,
