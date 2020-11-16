@@ -273,7 +273,7 @@ class pagPrinca extends Component{
                 this.setState({post: resp.data.data})
                 console.log(resp.data.data.length)
                 
-                for(var i = 0; i<resp.data.length ; i++){
+                for(var i = 0; i<resp.data.data.length ; i++){
                     var a = {usu:   <div>
                         <div className="row justify-content-around">
                             <div className="col col-6">
