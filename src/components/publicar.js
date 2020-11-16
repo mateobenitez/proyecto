@@ -51,12 +51,14 @@ export default class Modal extends React.Component {
       url: 'http://localhost:3000/user/',
       headers: {
         Authorization: "Bearer " + window.localStorage.getItem('token')
+        
       },
       data:{
-        body: document.getElementsByClassName("descPub")[0],
-        arch_adjunto: "hola"
+        body:"hola",
+        arch_adjunto:"hola", 
       }
   }).then((resp) => {
+    resp.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
     console.log("RESPONSE RECEIVED: ", resp);
   }).catch((err) =>  console.log("AXIOS ERROR: ", err));
   }
