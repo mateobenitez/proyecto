@@ -6,15 +6,15 @@ import {
 import axios from 'axios'
 import { render } from "@testing-library/react";
 
-function publicar(){
+function publicar(e){
   var f = new Date();
   console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-  
+  e.preventDefault()
   axios({
     method: "post",
     url: "http://localhost:3000/admin/subirPosts",
     data:{
-        body: document.getElementsByClassName("descPub")[0].value,
+        body: "hola",
         arch_adjunto: this.state.file
     }
   })
@@ -33,6 +33,7 @@ export default class Modal extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this)
   }
+
   handleChange(event) {
     this.setState({
       file: URL.createObjectURL(event.target.files[0])
@@ -56,7 +57,7 @@ export default class Modal extends React.Component {
             </button>
           </div>
           <hr className="lineaModal"></hr>
-          <form onSubmit={publicar}>
+          <form>
             <div className="container-fluid des">
               <textarea className="descPub" type="textarea" rows="10" maxLength="100"></textarea>
             </div>
@@ -75,8 +76,8 @@ export default class Modal extends React.Component {
                 </label>
               </div>
               <br></br>
-              <button className="btnPub">Publicar</button>
-              </div>
+              <button onClick={publicar} className="btnPub">Publicar</button>
+            </div>
           </form>
         </div>
       </div>
