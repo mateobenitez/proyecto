@@ -53,9 +53,6 @@ export default class Modal extends React.Component {
         headers: [
           { "X-localization": localStorage.getItem("lan") },
           { "Access-Control-Allow-Origin": '*' },
-          { "Access-Control-Allow-Headers": 'Origin, X-Requested-With, Content-Type, Accept '},
-          { "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE" },
-          { "Access-Control-Max-Age": 3600 },
           {Authorization: "Bearer " + window.localStorage.getItem('token')}
         ],
       data:{
