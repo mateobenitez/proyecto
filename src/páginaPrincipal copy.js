@@ -266,12 +266,12 @@ class pagPrinca extends Component{
     componentDidMount(){
         axios({
             method: "get",
-            url: "https://jsonplaceholder.typicode.com/users"
+            url: "http://localhost:3000/user/mostrarPosts "
           })
             .then((resp) => {
                 console.log(resp.data)
-                var usuario = resp.data[1].name
-                var posts = resp.data[9].name
+                var usuario = "usuario"
+                var posts = resp.body
                 this.setState({bodyPosts: posts})
                 this.setState({usuario})
                 this.setState({botonPresionado: botonPresionado})

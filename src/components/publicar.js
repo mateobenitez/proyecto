@@ -53,7 +53,7 @@ export default class Modal extends React.Component {
        },
       data:{
         body: document.getElementsByClassName("descPub")[0].value ,
-        arch_adjunto: archivo.src, 
+        arch_adjunto: "archivo", 
         date: fecha
       }
   }).then((resp) => {
