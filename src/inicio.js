@@ -80,13 +80,13 @@ var Validar = function(e) {
       }
     })
       .then((resp) => {
-        const userpass = this.state.usuario + ':' + this.state.nombre
-        const encodedString = Buffer.from(userpass).toString('base64');
-        console.log("ENCODED: ", encodedString)
     })
       .catch((err) => {
         console.log(err)
     })
+    const userpass = this.state.usuario + ':' + this.state.nombre
+        const encodedString = Buffer.from(userpass).toString('base64');
+        console.log("ENCODED: ", encodedString)
     axios({
       method: 'post',
       url: 'http://localhost:3000/user/login',
