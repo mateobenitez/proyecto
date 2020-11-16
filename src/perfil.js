@@ -317,8 +317,10 @@ class perfil extends Component{
                             </form>
                             <form method="get" action="/guardados">
                                 <button className="btn"><img className="" src={require('./components/guardados.svg')} width="20px"></img>&nbsp;&nbsp;&nbsp;Guardados</button>
-                            </form><br></br><br></br>
-                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;&nbsp;Cerrar sesión</button>
+                            </form><br></br>
+                            <form method="get" action="/IniciarSesion">
+                                <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                            </form>
                             <br></br>
                         </div>
                     </div>

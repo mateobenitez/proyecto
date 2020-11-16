@@ -421,8 +421,10 @@ class pagPrinca extends Component{
                                 </form>
                                 <form method="get" action="/guardados">
                                     <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
-                                </form><br></br><br></br>
-                                <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                                </form><br></br>
+                                <form method="get" action="/IniciarSesion">
+                                    <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                                </form>
                                 <br></br>
                             </div>
                         </div>
@@ -473,6 +475,9 @@ class pagPrinca extends Component{
                         <div align="center" className="col col-2">
                             <div className="container-fluid misN ml-5">
                                 <h1 align="left" className="cat pt-2  pb-2"> &nbsp;&nbsp; &nbsp;&nbsp;Novedades</h1>
+                            </div>
+                            <div className="container-fluid misNo">
+                                <p className="pt-3">Aún no hay novedades. </p>
                             </div>
                         </div>
                         <div className="col col-2">

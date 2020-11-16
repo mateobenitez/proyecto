@@ -48,22 +48,22 @@ export default class Modal extends React.Component {
 
     axios({
       method: 'post',
-      url: 'http://localhost:3000/user/',
+      url: 'http://localhost:3000/user/subirPost',
       mode: 'cors',
-        headers: [
-          { "X-localization": localStorage.getItem("lan") },
-          { "Access-Control-Allow-Origin": '*' },
-          { "Access-Control-Allow-Headers": 'Origin, X-Requested-With, Content-Type, Accept '},
+       headers: {
+         /* { "X-localization": localStorage.getItem("lan") },
+          { "Access-Control-Allow-Origin": true },
+          { "Access-Control-Allow-Headers": 'Origin, X-Requested-With, Content-Type, Acmcept '},
           { "Access-Control-Allow-Methods": "POST, GET, PUT, OPTIONS, DELETE" },
-          { "Access-Control-Max-Age": 3600 },
-          {Authorization: "Bearer " + window.localStorage.getItem('token')}
-        ],
+          { "Access-Control-Max-Age": 3600 },*/
+          Authorization: 'Bearer ' + token
+       },
       data:{
         body:"hola",
         arch_adjunto:"hola", 
       }
   }).then((resp) => {
-    resp.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
+    //resp.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
     console.log("RESPONSE RECEIVED: ", resp);
   }).catch((err) =>  console.log("AXIOS ERROR: ", err));
   }

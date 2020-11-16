@@ -172,6 +172,15 @@
     max-height: 3.7em;
 }
 
+.misNo{
+    position: fixed;
+    top: 16.3em;
+    border-radius:2em;
+    max-width: 18em;
+    right:14.5%;
+    background-color: #f6f6f6;
+}
+
 .misS1{
     position: fixed;
     top: 40em;
