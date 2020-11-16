@@ -18,8 +18,8 @@ function publicar(e){
     },
     data:{
       body: "hola",
-      arch_adjunto: this.state.file
-  }
+      arch_adjunto: "hola"
+    }
   })
     .then((resp) => {
   })
