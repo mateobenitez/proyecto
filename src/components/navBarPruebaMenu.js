@@ -22,7 +22,7 @@ function NavBarPrinca(props){
             </div>
             <ul className="navba-nav">
                 <NavItem ima={<img alt="" src={require("./usuario.svg")} width="50px" height="50px" alt="menu"></img>}/>
-                <p href="perfil" className="usuarioNav">Hernán</p>
+                <p href="perfil" className="usuarioNav pr-2">Tathi</p>
                 <NavItem ima={<img src={require("./notificaciones.svg")} alt="" width="50px" height="50px"></img>}>
                     <DropdownNotif />
                 </NavItem>

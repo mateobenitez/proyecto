@@ -345,39 +345,35 @@ class perfil extends Component{
                                 </div>
                                 <div className="editar">
                                     <div className="Nombre">
-                                        <h1>Sergio Coppa</h1>
-                                        <p>@SergioCoppa</p><br></br>
-                                        <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Belgrano, Buenos Aires, Argentina</p>
+                                        <h1>Tathiana PP</h1>
+                                        <p>@Tathi</p><br></br>
+                                        <p><img src={require('./components/ubicacion.svg')}></img>&nbsp;Ciudad de Buenos Aires, Ciudad de Buenos Aires, Argentina</p>
                                         <p><img src={require('./components/edu.svg')} width="18px"></img>&nbsp;Profesor / Maestro</p>
-                                    </div>
-                                    <div className="descripcion container">
-                                        <p>Hola soy Sergio me gusta comer pan y enseñar lengua. Tengo un hijo de 40 años al que le gusta jugar tenis y comer papas.</p>
                                     </div><hr></hr>                     
                                     <div className="mt-4 container ">
                                         <div className="row justify-content-around">
                                             <div className="col col-6">
                                                 <form className="form-inline">
                                                     <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                                    <a className="mt-3 pibe" href="/perfil2">Usuario</a>
+                                                    <a className="mt-3 pibe" href="/perfil2">Tathi</a>
                                                 </form>
                                             </div>
                                             <div className="col col-6">
                                                 <div className="a form-inline">
-                                                    <p className="mt-4">Hace 2 horas&nbsp;</p>
-                                                    <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                                    <button className="botonE mt-4" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="container-fluid cont" align="center">
-                                            <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
+                                            <p className="pibe">Muchas gracias al psicólogo Mateo Benitez por su colaboración. </p>
                                             <div className="container imagenP">
                                                 <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                            </div>
+                                            </div><br></br>
                                             <div className="row justify-content-around">
-                                                <div className="col col-5">
-                                                    <p>Me gusta</p>
+                                                <div className="col col-6">
+                                                    <p>0 Me gusta</p>
                                                 </div>
-                                                <div className="col col-5">
+                                                <div className="col col-6">
                                                     <p>0 comentarios</p>
                                                 </div>
                                             </div>
@@ -406,11 +402,11 @@ class perfil extends Component{
                                     </div>
                                     <div className="infoPer">
                                         <form className=" editForm">
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input>
+                                            <input className="inputsEdit" value="Tathiana" type="text"></input><br></br><br></br>
+                                            <input className="inputsEdit" value="PP" type="text"></input><br></br><br></br>
+                                            <input className="inputsEdit" value="Tathi" type="text"></input><br></br><br></br>
+                                            <input className="inputsEdit" value="tathiana@gmail.com" type="text"></input><br></br><br></br>
+                                            <input className="inputsEdit" value="Profesor / Maestro" type="text"></input>
                                         </form>
                                         <div className="pEdits">
                                             <p id="editNom">Nombre:</p>
@@ -425,9 +421,9 @@ class perfil extends Component{
                                     </div>
                                     <div className="locac">
                                         <form className="editForm1">
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input><br></br><br></br>
-                                            <input className="inputsEdit" type="text"></input>
+                                            <input className="inputsEdit" value="Argentina" type="text"></input><br></br><br></br>
+                                            <input className="inputsEdit" value="Ciudad de Buenos Aires" type="text"></input><br></br><br></br>
+                                            <input className="inputsEdit" value="Ciudad de Buenos Aires" type="text"></input>
                                         </form>
                                         <div className="pEdits">
                                             <p className="editPaís">País:</p>

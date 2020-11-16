@@ -299,18 +299,47 @@ class Guardados extends Component{
                                 
                                 <div className="container-fluid guardPub" align="center">
                                 <br></br><br></br><br></br><br></br><br></br>
-                                        <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
-                                        <div className="container imagenP">
-                                            <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                        </div>
+                                <div className="mt-4 container ">
                                         <div className="row justify-content-around">
-                                            <div className="col col-5">
-                                                <p>3 me gusta</p>
+                                            <div className="col col-6">
+                                                <form className="form-inline">
+                                                    <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
+                                                    <a className="mt-3 pibe" href="/perfil2">Tathi</a>
+                                                </form>
                                             </div>
-                                            <div className="col col-5">
-                                                <p>0 comentarios</p>
+                                            <div className="col col-6">
+                                                <div className="a form-inline">
+                                                    <button className="botonE mt-4" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                                </div>
                                             </div>
                                         </div>
+                                        <div className="container-fluid cont" align="center">
+                                            <p className="pibe">Muchas gracias al psicólogo Mateo Benitez por su colaboración. </p>
+                                            <div className="container imagenP">
+                                                <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                            </div><br></br>
+                                            <div className="row justify-content-around">
+                                                <div className="col col-6">
+                                                    <p>0 Me gusta</p>
+                                                </div>
+                                                <div className="col col-6">
+                                                    <p>0 comentarios</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row justify-content-left">
+                                            <div className="col col-4">
+                                                <button  type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
+                                            </div>
+                                            <div className="col col-4">
+                                                <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
+                                            </div>
+                                            <div className="col col-4">
+                                                <button  type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                                            </div>
+                                        </div>
+                                        <hr className="lineaP"></hr>
+                                    </div>
                                     </div>
                                 <div className="container selG">
                                     <h1 className="selGuar mt-3">Seleccione el grupo de publicaciones</h1><h1 className="selGuar" align="center">guardadas</h1><hr className="lineaGuar"></hr>

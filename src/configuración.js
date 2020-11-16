@@ -45,9 +45,9 @@ var btnEduS = <button onClick={prevenir4} id="btnEduC" name="btnEdu" className="
 var btnRelS = <button onClick={prevenir5} id="btnRelC" className="btns btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img>Relaciones sociales</button>
 var btnSalS= <button onClick={prevenir6} id="btnSalC" className="btns btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> Salud</button>
 var btnTecS= <button onClick={prevenir7} id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> Tecnología</button>
-let noSeleccionadosSalir =[btnAliS, btnArtS, btnDepS, btnDocS, btnEduS]
-let seleccionadosSalir =[btnRelS, btnSalS, btnTecS]
-let noSeleccionados =[btnAli, btnArt, btnDep, btnDoc, btnEdu]
+let noSeleccionadosSalir =[btnAliS, btnArtS, btnDepS, btnDocS, btnEduS,btnRelS, btnSalS, btnTecS]
+let seleccionadosSalir =[]
+let noSeleccionados =[btnAli, btnArt, btnDep, btnDoc, btnEdu, ]
 let seleccionados =[btnRel, btnSal, btnTec]
 
 var drop = document.getElementsByClassName("dropDown")
@@ -369,7 +369,7 @@ class config extends Component{
                                             {noSeleccionadosSalir[4]}&nbsp;&nbsp;&nbsp;
                                             {noSeleccionadosSalir[5]}<br></br><br></br>
                                             {noSeleccionadosSalir[6]}&nbsp;&nbsp;&nbsp;
-                                            {noSeleccionadosSalir[7]}
+                                            {noSeleccionadosSalir[7]}<br></br><br></br>
                                             <div>
                                                 <button className="guardarConfig pt-2 pb-2 pl-4 pr-4">Cancelar</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                 <button className="guardarConfig pt-2 pb-2 pl-4 pr-4">Confirmar</button>

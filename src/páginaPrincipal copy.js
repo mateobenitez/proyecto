@@ -22,7 +22,6 @@ import {
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 import Modal from './components/publicar'
-import Modal2 from './components/editar'
 import axios from 'axios'
 
 var fondo = document.getElementsByClassName("princ") 
@@ -337,23 +336,13 @@ class pagPrinca extends Component{
           botonPresionado: botonPresionado,
           likes: [0],
           show: false,
-          show2: false
         };
       }
-      showModal2 = e => {
-        this.setState({
-          show2: !this.state.show2
-        });
-        document.getElementsByClassName("princ")[0].style.opacity = "0.5"
-      };
       showModal = e => {
         this.setState({
           show: !this.state.show
         });
         document.getElementsByClassName("princ")[0].style.opacity = "0.5"
-      };
-      onClose2 = e => {
-        this.props.onClose2 && this.props.onClose2(e);
       };
       onClose = e => {
         this.props.onClose && this.props.onClose(e);
@@ -368,7 +357,6 @@ class pagPrinca extends Component{
         return (
             <div>
                 <Modal onClose={this.showModal} show={this.state.show}/>
-                <Modal onClose={this.showModal2} show2={this.state.show2}/>
                 <div style={fondo} className="princ">
                     <MyNavBarPrinca/>
                     
