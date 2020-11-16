@@ -31,6 +31,7 @@ var Validar = function(e) {
     const userpass = x1 + ':' + x
     const encodedString = Buffer.from(userpass).toString('base64');
     console.log("ENCODED: ", encodedString)
+  
     axios({
       method: 'post',
       url: 'http://localhost:3000/user/login',

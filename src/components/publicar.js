@@ -33,9 +33,10 @@ export default class Modal extends React.Component {
   };
   publicar(e){
     e.preventDefault()
+    console.log(window.localStorage.getItem("token"))
     var postData = {
       body: document.getElementsByClassName("descPub")[0],
-      arch_adjunto: this.state.file
+      arch_adjunto: "hola"
     };
     let axiosConfig = {
       headers: {
@@ -44,9 +45,27 @@ export default class Modal extends React.Component {
     };
     var f = new Date();
     console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-    axios.post('http://localhost:3000/user/subirPost', postData, axiosConfig)
+
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/user/',
+      headers: {
+        Authorization: 'Basic ' + encodedString
+      },
+      data:{
+        body: document.getElementsByClassName("descPub")[0],
+        arch_adjunto: "hola"
+      }
+  }).then((resp) => {
+    console.log("RESPONSE RECEIVED: ", res);
+  }).catch((err) =>  console.log("AXIOS ERROR: ", err));
+ 
+   
+  
+  axios.post('http://localhost:3000/user/subirPost', postData, axiosConfig)
      .then((res) => {
       console.log("RESPONSE RECEIVED: ", res);
+      
     })
     .catch((err) => {
       console.log("AXIOS ERROR: ", err);
