@@ -13,10 +13,13 @@ function publicar(e){
   axios({
     method: "post",
     url: "http://localhost:3000/admin/subirPosts",
+    headers: {
+      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWRVc3VhcmlvcyI6MTAsIm5hbWVfdXNlciI6InRhdGhpIiwibm9tYnJlIjoidGF0aGkiLCJhcGVsbGlkbyI6InBvZ2dpIiwibWFpbCI6InRhdGhpQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MDU0ODIxNTksImV4cCI6MTYwNTU2ODU1OX0.GdXvXc1tdyxWJHcLhPglYmzel-AAk5n5nk_yczD_vmc"
+    },
     data:{
-        body: "hola",
-        arch_adjunto: this.state.file
-    }
+      body: "hola",
+      arch_adjunto: this.state.file
+  }
   })
     .then((resp) => {
   })
