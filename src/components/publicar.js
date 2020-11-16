@@ -8,6 +8,10 @@ import { render } from "@testing-library/react";
 
 
 
+function postImg(){
+  document.getElementsByClassName("publicfoto")[0].style.height="300px"
+}
+
 export default class Modal extends React.Component {
   
   constructor(props){
@@ -28,18 +32,18 @@ export default class Modal extends React.Component {
     window.location.reload()
   };
   publicar(e){
+    e.preventDefault()
     var postData = {
-      body: document.getElementsByClassName("desscPub")[0],
+      body: document.getElementsByClassName("descPub")[0],
       arch_adjunto: this.state.file
     };
     let axiosConfig = {
       headers: {
-        'Authorization': `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWRVc3VhcmlvcyI6MTAsIm5hbWVfdXNlciI6InRhdGhpIiwibm9tYnJlIjoidGF0aGkiLCJhcGVsbGlkbyI6InBvZ2dpIiwibWFpbCI6InRhdGhpQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MDU0ODIxNTksImV4cCI6MTYwNTU2ODU1OX0.GdXvXc1tdyxWJHcLhPglYmzel-AAk5n5nk_yczD_vmc` 
+        Authorization: "Bearer " + window.localStorage.getItem('token')
       }
     };
     var f = new Date();
     console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-    e.preventDefault()
     axios.post('http://localhost:3000/user/subirPost', postData, axiosConfig)
     .then((res) => {
       console.log("RESPONSE RECEIVED: ", res);
@@ -71,7 +75,7 @@ export default class Modal extends React.Component {
               <img className="publicfoto" src={this.state.file}/><br></br>
               <label>Añadir a tu publicación </label><br></br>
               <div className="row justify-content-center">
-                <label className="btnAña">
+                <label onClick={postImg} className="btnAña">
                   &nbsp;&nbsp;<img src={require("./imagen.svg")}width="20" height="20" alt=""></img>&nbsp;&nbsp;Imagen
                   <input type="file" style={{display:'none'}} onChange={this.handleChange}/>
                 </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

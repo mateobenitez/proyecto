@@ -275,6 +275,12 @@
     border-radius: 1em;
 } 
 
+.coments{
+    background-color: rgba(218, 218, 218, 1);
+    min-width: 36.2em;
+    transform: translate(-1em,-1em);
+}
+
 .guardadosCats{
     border-color:#DADADA;
     border-width: 0.5em;
@@ -504,32 +510,33 @@
 .descPub{
     width: 40em;
     margin-top: 1em;
-    background-color: rgba(196, 196, 196, 1);
+    background-color: rgba(233, 233, 233, 1);
     border-color: transparent;
-    height: 6em;
+    height: 14em;
     outline: none;
 }
 
 .publicfoto{
-    height: 300px;
+    
     border-image: none;
 }
 
 .des{
     width: 42.8em !important;
-    background-color:rgba(196, 196, 196, 1);
+    background-color:rgba(233, 233, 233, 1);
     border-radius: 30px;
 }
 
 .queDes{
     font-size: 2.125em;
     text-align: left;
+    font-weight: 400;
 }
 
 .btnPub{
     width: 10em;
     height: 2.5em;
-    background-color: rgba(196, 196, 196, 1);
+    background-color: rgba(233, 233, 233, 1);
     border-color: transparent;
     border-radius: 30px;
     outline: none;
@@ -539,7 +546,7 @@
 .btnAña{
     width: 13em;
     height: 2.5em;
-    background-color: rgba(196, 196, 196, 1);
+    background-color: rgba(233, 233, 233, 1);
     border-color: transparent;
     border-radius: 30px;
     outline: none;

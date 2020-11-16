@@ -181,26 +181,31 @@ var cambioTec = (e) =>{
 }
 
 function like(){
-    for(var i = 0; i<10; i++){
     if(likeClick){
-        likes[i].innerHTML = '<img src="' + salud + '" width="18px" height="18px" />&nbsp; Me gusta'
+        likes[0].innerHTML = '<img src="' + salud + '" width="18px" height="18px" />&nbsp; Me gusta'
         likeClick = false
     }
     else{
-        likes[i].innerHTML = '<img src="' + meGusta + '" width="18px" height="18px" />&nbsp;&nbsp;Me gusta'
+        likes[0].innerHTML = '<img src="' + meGusta + '" width="18px" height="18px" />&nbsp;&nbsp;Me gusta'
         likeClick = true
     }
-}
 } 
 
 function guard(){
     if(guardClick){
-        guardBtn.innerHTML = '<img src="' + guardados + '" width="18px" height="18px" /> Guardar'
+        guardBtn[0].innerHTML = '<img src="' + guardados + '" width="18px" height="18px" /> Guardar'
         guardClick = false
     }
     else{
         guardClick = true
         guardBtn[0].innerHTML = '<img src="' + noGuardados + '" width="18px" height="18px" /> Guardar'
+    }
+}
+
+function comentar(){
+    for(var i=0; i<2; i++){
+        lineas[i].style.display = 'none'
+        lineas[2].style.borderColor = 'rgba(218, 218, 218, 1)'
     }
 }
 
@@ -282,7 +287,7 @@ class pagPrinca extends Component{
                                     <div className="row justify-content-around">
                                         <div className="col col-6">
                                             <form className="form-inline">
-                                                 <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
+                                                <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
                                                 <a className="mt-3 pibe" href="/perfil2"> {resp.data[i].name} </a>
                                             </form>
                                         </div>
@@ -312,7 +317,7 @@ class pagPrinca extends Component{
                                             <button type="submit" onClick={like} className="botonP like pl-3 pr-3 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
                                         </div>
                                         <div className="col col-4">
-                                            <button type="submit" className="botonP coment pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
+                                            <button type="submit" onClick={comentar} className="botonP coment pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
                                         </div>
                                         <div className="col col-4">
                                             <button onClick={guard} type="submit" className="botonP guard pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
@@ -448,12 +453,21 @@ class pagPrinca extends Component{
                                 <div className="mt-4 container publicaciones">
                                     {listPublicaiones}
                                 </div>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <div className="mt-4 container publicaciones">
+                                    <div className="container asasa">
+                                        <p></p>
+                                    </div>
+                                    <div className="container-fluid coments pt-2 pb-2">
+                                        <h1 className="selGuar"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</h1>
+                                    </div>
+                                    <br></br><br></br><br></br>
+                                    <div className="container-fluid comentarios">
+                                        <form className="form-inline">
+                                            <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
+                                            <a className="mt-3 pibe" href="/perfil2"> usuario </a>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div align="center" className="col col-2">
@@ -464,6 +478,7 @@ class pagPrinca extends Component{
                         <div className="col col-2">
                         </div>
                     </div>
+                    <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  
                 </div>
             </div>
         )

@@ -3,6 +3,7 @@ import MyNavBar2 from './NavBarIniciarSesión.js';
 import MyFooter from './footer.js';
 import ReactDOM from 'react-dom';
 import './IniciarSesion.css';
+import axios from 'axios'
 
 function colorElementRed() {
   var elements = document.getElementsByClassName("txto");
@@ -25,6 +26,23 @@ var Validar = function(e) {
     e.preventDefault();
     colorElementRed();
     return false;
+  }
+  else{
+    const userpass = x1 + ':' + x
+    const encodedString = Buffer.from(userpass).toString('base64');
+    console.log("ENCODED: ", encodedString)
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/user/login',
+      headers: {
+        Authorization: 'Basic ' + encodedString
+      }
+  }).then((resp) => {
+      console.log(resp.data);
+      console.log("TOKEN: ", resp.data.token);
+      window.localStorage.setItem('token', resp.data.token)
+      this.setState({logged: true})
+  }).catch((err) => console.log(err))
   }
 }
 

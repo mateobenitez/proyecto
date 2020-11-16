@@ -34,7 +34,7 @@ function App() {
         <Route path="/princ">
           <PagPrinc />
         </Route>
-        <Route path="/registrarse" component={Registrarse} />
+        <Route path="/registrarse" component={Registrarse}/>
         <Route path="/registrarse1" component={Registrarse1}/>
         <Route path="/registrarse2">
           <Registrarse2 />
