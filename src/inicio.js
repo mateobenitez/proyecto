@@ -70,7 +70,7 @@ var Validar = function(e) {
   else{
     axios({
       method: "post",
-      url: "http://localhost:3000/admin/registrarse",
+      url: "http://localhost:3000/user/registrarse",
       data: {
         nombre: this.state.nombre,
         apellido: this.state.apellido, 
