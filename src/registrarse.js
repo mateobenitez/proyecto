@@ -6,13 +6,14 @@ import Inicio from './inicio.js'
 import{FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faAngleRight} from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'
+import {  useCookies  } from 'react-cookie';
 
 
 var conf = [false, false, false, false] 
 
 function cambioDeColor(){
     var input1 = document.getElementsByClassName("quesos")
-    if(conf[0] == false){
+    if(!conf[0]){
         conf[0] = true
         conf[1] = false
         input1[1].style.backgroundColor = null
@@ -87,14 +88,24 @@ function cambioDeColor3(){
 }
 
 function postear(){
+    var interes = ""
+    if(conf[0] == true){
+        interes = "padre"
+    }
+    else if(conf[1] == true){
+        interes = "doctor"
+    }
+    else if(conf[2] == true){
+        interes = "profesor"
+    }
+    else if(conf[3] == true){
+        interes = "otro"
+    }
     axios({
         method: "post",
         url: "http://localhost:3000/admin/registrarse",
         data:{
-            padre: conf[0],
-            doctor: conf[1],
-            profe: conf[2],
-            otro: conf[3]
+            pq_interes: interes
         }
       })
         .then((resp) => {
@@ -114,7 +125,7 @@ function noTeVayas(e){
 }
 
 class Reg extends Component {
-
+    
     render(){
         return (
             <div className="Reg">

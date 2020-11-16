@@ -482,9 +482,14 @@
     font-family: sans-serif;
     text-align: center;
 }
-.modal{
-    background: rgba(0, 0, 0, 0.6);
+
+.modalAbierto{
+    position: fixed;
+    top: 20%;
+    z-index:     100000;
+    min-width: 120em;
 }
+
 .modal-container {
     position: absolute;
     width: 40%;
@@ -501,8 +506,13 @@
     margin-top: 1em;
     background-color: rgba(196, 196, 196, 1);
     border-color: transparent;
-    height: 14em;
+    height: 6em;
     outline: none;
+}
+
+.publicfoto{
+    height: 300px;
+    border-image: none;
 }
 
 .des{
@@ -534,6 +544,7 @@
     border-radius: 30px;
     outline: none;
     text-align: 20em;
+    padding-top: .4em;
 }
 
 .text{

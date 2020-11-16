@@ -140,6 +140,7 @@ function postear(){
         method: "post",
         url: "http://localhost:3000/admin/registrarse",
         data:{
+
         }
       })
         .then((resp) => {
@@ -150,6 +151,7 @@ function postear(){
 }
 
 class Reg1 extends Component{
+    
     render() {
         return (
             

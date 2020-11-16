@@ -6,6 +6,16 @@ import ReactDOM from 'react-dom'
 import ojoT from './components/ojoT.svg'
 import oj from './components/ojo.svg'
 import axios from 'axios';
+import { 
+  BrowserRouter as Router, 
+  Switch, 
+  Route,
+  Link 
+} from 'react-router-dom';
+import {  useCookies  } from 'react-cookie';
+
+
+
 var elements = document.getElementsByClassName("text");
 var lineas = document.getElementsByClassName("linea-texto");
 var obl = document.getElementsByClassName("obl-texto");
@@ -24,6 +34,8 @@ function colorElementRed() {
     }
   }
 }
+
+
 
 var Validar = function(e) {
   var x1 = document.forms["form"]["ccontraseña"].value;
@@ -68,6 +80,7 @@ var Validar = function(e) {
       }
     })
       .then((resp) => {
+        
     })
       .catch((err) => {
         console.log(err)
@@ -110,10 +123,13 @@ function mostrarOjo2(){
   ojoConf[0].style.display = "initial"
 }
 
+
+
 class Inicio extends Component{
 
-
+  
   constructor(props){
+
    super();
    this.state = {
       nombre: '',
@@ -187,4 +203,4 @@ class Inicio extends Component{
     );
   }
 }
-export default Inicio;
+export default Inicio; 

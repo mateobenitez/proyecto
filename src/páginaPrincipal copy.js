@@ -58,6 +58,7 @@ var btnSal = <button id="btnSal" onClick={cambioSal} className="btnSal btn"><img
 var btnTec = <button id="btnTec" onClick={cambioTec} className="btnTec btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> &nbsp;&nbsp;Tecnología</button>
 var likeClick = true 
 var likes = document.getElementsByClassName("like")
+var guardBtn = document.getElementsByClassName("guard")
 var guardClick = true
 var publicacion = [
 ];
@@ -163,7 +164,8 @@ function cambioSal(e){
     lineas[1].style.borderColor = "#F5BFBF"
     botonPresionado = 2
 }
-function cambioTec(e){
+
+var cambioTec = (e) =>{
     fondo[0].style.backgroundColor ="#B5D3EF"
     primerCuadrado[0].style.backgroundColor ="#B5D3EF"
     for(var i= 0; i<9;i++){
@@ -174,27 +176,31 @@ function cambioTec(e){
     lineas[0].style.borderColor = "#86B8E5"
     lineas[1].style.borderColor = "#86B8E5"
     botonPresionado = 3
+    console.log("hola")
+    this.setState({botonPresionado: botonPresionado})
 }
 
 function like(){
+    for(var i = 0; i<10; i++){
     if(likeClick){
-        likes[0].innerHTML = '<img src="' + salud + '" width="18px" height="18px" />&nbsp; Me gusta'
+        likes[i].innerHTML = '<img src="' + salud + '" width="18px" height="18px" />&nbsp; Me gusta'
         likeClick = false
     }
     else{
-        likes[0].innerHTML = '<img src="' + meGusta + '" width="18px" height="18px" />&nbsp;&nbsp;Me gusta'
+        likes[i].innerHTML = '<img src="' + meGusta + '" width="18px" height="18px" />&nbsp;&nbsp;Me gusta'
         likeClick = true
     }
+}
 } 
 
 function guard(){
     if(guardClick){
-        likes[2].innerHTML = '<img src="' + guardados + '" width="18px" height="18px" /> Guardar'
+        guardBtn.innerHTML = '<img src="' + guardados + '" width="18px" height="18px" /> Guardar'
         guardClick = false
     }
     else{
         guardClick = true
-        likes[2].innerHTML = '<img src="' + noGuardados + '" width="18px" height="18px" /> Guardar'
+        guardBtn[0].innerHTML = '<img src="' + noGuardados + '" width="18px" height="18px" /> Guardar'
     }
 }
 
@@ -265,8 +271,13 @@ class pagPrinca extends Component{
                 this.setState({usuario})
                 this.setState({botonPresionado: botonPresionado})
                 console.log(this.state.botonPresionado)
-                for(var i = 0; i<resp.data.length; i++){
-                    if(resp.data[i].id == this.state.botonPresionado) {
+                /*var likear = () => {
+                    this.setState({likes: likes + 1})
+                    console.log(this.state.likes)
+                }*/
+                for(var i = 0; i<resp.data.length ; i++){
+                    var likes = resp.data[i].id
+                    if(true) {
                     var a = {usu: <div>
                                     <div className="row justify-content-around">
                                         <div className="col col-6">
@@ -289,7 +300,7 @@ class pagPrinca extends Component{
                                         </div>
                                         <div className="row justify-content-around">
                                             <div className="col col-5">
-                                                <p>3 me gusta</p>
+                                                <p> {this.state.likes} me gusta</p>
                                             </div>
                                             <div className="col col-5">
                                                 <p>0 comentarios</p>
@@ -301,15 +312,16 @@ class pagPrinca extends Component{
                                             <button type="submit" onClick={like} className="botonP like pl-3 pr-3 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
                                         </div>
                                         <div className="col col-4">
-                                            <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
+                                            <button type="submit" className="botonP coment pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
                                         </div>
                                         <div className="col col-4">
-                                            <button onClick={guard} type="submit" className="botonP like pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                                            <button onClick={guard} type="submit" className="botonP guard pl-3 pr-3 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
                                         </div>
                                     </div>
                                     <hr className="lineaP"></hr>
                                 </div>
-                , body: "b"}
+                        , body: "b"}
+                    this.setState({likes: likes})
                     publicacion.push(a)
                     }
                 }
@@ -324,29 +336,25 @@ class pagPrinca extends Component{
         super(props);
         this.boton = React.createRef();
         this.state = {
-          modal: false,
           usuario: [],
           idPosts: [],
           bodyPosts: [],
           date: [],
           publicacion: publicacion,
-          botonPresionado: botonPresionado
+          botonPresionado: botonPresionado,
+          likes: [0],
+          show: false
         };
       }
-      modalOpen() {
-        this.setState({ 
-            modal: true,
-        });
-      }
-    
-      modalClose() {
+      showModal = e => {
         this.setState({
-          modalInputName: "",
-          modal: false
+          show: !this.state.show
         });
-      }
-
-
+        document.getElementsByClassName("princ")[0].style.opacity = "0.5"
+      };
+      onClose = e => {
+        this.props.onClose && this.props.onClose(e);
+      };
     render(){
         var fondo={backgroundColor: "#E3E3E3"}
         var listPublicaiones = this.state.publicacion.map(function(publi) {
@@ -355,106 +363,106 @@ class pagPrinca extends Component{
             );
         });
         return (
-            <div style={fondo} className="princ">
-                <MyNavBarPrinca/>
-                <div align="center">
-                    <Modal show={this.state.modal} handleClose={e => this.modalClose(e)}/>
-                </div>
-                <div className="row">
-                    <div className="col col-2">
-                    </div>
-                    <div className="col col-2">
-                        <div className="container-fluid misS">
-                            <div className="circuloCont">
-                                <img className="pt-2 pl-2" src={require('./components/cats.svg')}></img>
-                            </div>
-                            <h1 className="cat pt-2 pb-2" align="center">Categorías</h1>
+            <div>
+                <Modal onClose={this.showModal} show={this.state.show}/>
+                <div style={fondo} className="princ">
+                    <MyNavBarPrinca/>
+                    
+                    <div className="row">
+                        <div className="col col-2">
                         </div>
-                        <div className="container-fluid misGa">
-                            <button id="btnInfo aa" onClick={cambioInfo} name="btnInfo" className="btn mt-2 " ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
-                            <hr className="mt-1 mb-1"></hr>
-                            <div className="Sel">
-                                {seleccionados}
-                            </div>
-                            <div className="noSel">
-                                <div className="hid">
-                                    {noSeleccionados[0]}
-                                    {noSeleccionados[1]}
-                                    {noSeleccionados[2]}
-                                    {noSeleccionados[3]}
-                                    {noSeleccionados[4]}
-                                    {noSeleccionados[5]}
-                                    {noSeleccionados[6]}
-                                    {noSeleccionados[7]}
-                                    {noSeleccionados[8]}
+                        <div className="col col-2">
+                            <div className="container-fluid misS">
+                                <div className="circuloCont">
+                                    <img className="pt-2 pl-2" src={require('./components/cats.svg')}></img>
                                 </div>
-                                <div className="contVer  pb-3">
-                                    <button className="ml-3 mt-3 botonVer" onClick={verMas}>Unirse a más categorías <img src={require('./components/mas.svg')}></img> </button>
+                                <h1 className="cat pt-2 pb-2" align="center">Categorías</h1>
+                            </div>
+                            <div className="container-fluid misGa">
+                                <button id="btnInfo aa" onClick={cambioInfo} name="btnInfo" className="btn mt-2 " ><FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</button>
+                                <hr className="mt-1 mb-1"></hr>
+                                <div className="Sel">
+                                    {seleccionados}
                                 </div>
-                            </div>
-                        </div>
-                        <div className="container-fluid misS1">
-                            <div className="circuloCont">
-                                <img className="pt-2 pl-2" src={require('./components/social.svg')}></img>
-                            </div>
-                            <h1 className="cat pt-2 pb-2" align="center"> Social</h1>
-                        </div>
-                        <div className="container-fluid pt-3 misGa1">
-                            <form method="get" action="/perfil">
-                                <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
-                            </form>
-                            <form method="get" action="/config">
-                                <button className="btn"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
-                            </form>
-                            <form method="get" action="/guardados">
-                                <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
-                            </form><br></br><br></br>
-                            <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
-                            <br></br>
-                        </div>
-                    </div>
-                    <div align="center" className="col col-4">
-                        <div className="container asasa">
-                            <p></p>
-                        </div>
-                        <div className="container-fluid misI ml-2">
-                            <h1 align="left" name="cate" className="cat pt-2 pb-2">&nbsp;<FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</h1>
-                        </div>
-                        <div className="asas">
-                            <p></p>
-                        </div>
-                        <div className="fondo">
-                            <p></p>
-                        </div>
-                        <div className="asa">
-                            <p></p>
-                        </div>
-                        <div className="container-fluid misG pt-3">
-                            <div className="container publicaciones">
-                                <h1 className="cat mt-2 ml-2"><img src={require('./components/usuario.svg')}></img>&nbsp;&nbsp;&nbsp;¿Qué está pensando Hernán?</h1>
-                                <br></br><br></br>  
-                                <div align="right" className="pb-2">
-                                    <button type="button" onClick={e =>this.modalOpen(e)} className="botonP">Hacer publicación</button>
+                                <div className="noSel">
+                                    <div className="hid">
+                                        {noSeleccionados[0]}
+                                        {noSeleccionados[1]}
+                                        {noSeleccionados[2]}
+                                        {noSeleccionados[3]}
+                                        {noSeleccionados[4]}
+                                        {noSeleccionados[5]}
+                                        {noSeleccionados[6]}
+                                        {noSeleccionados[7]}
+                                        {noSeleccionados[8]}
+                                    </div>
+                                    <div className="contVer  pb-3">
+                                        <button className="ml-3 mt-3 botonVer" onClick={verMas}>Unirse a más categorías <img src={require('./components/mas.svg')}></img> </button>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="mt-4 container publicaciones">
-                                {listPublicaiones}
+                            <div className="container-fluid misS1">
+                                <div className="circuloCont">
+                                    <img className="pt-2 pl-2" src={require('./components/social.svg')}></img>
+                                </div>
+                                <h1 className="cat pt-2 pb-2" align="center"> Social</h1>
                             </div>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-                            <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            <div className="container-fluid pt-3 misGa1">
+                                <form method="get" action="/perfil">
+                                    <button className="btn"><FontAwesomeIcon icon={faUser}/>&nbsp;&nbsp;Mi perfil</button><br></br>
+                                </form>
+                                <form method="get" action="/config">
+                                    <button className="btn"><FontAwesomeIcon icon={faCog}/>&nbsp;&nbsp;Configuración</button>
+                                </form>
+                                <form method="get" action="/guardados">
+                                    <button className="btn"><FontAwesomeIcon icon={faBookmark}/>&nbsp;&nbsp;Guardados</button>
+                                </form><br></br><br></br>
+                                <button className="btn"><img src={require(("./components/cerrarSesion.svg"))} width="18px"></img>&nbsp;&nbsp;Cerrar sesión</button>
+                                <br></br>
+                            </div>
                         </div>
-                    </div>
-                    <div align="center" className="col col-2">
-                        <div className="container-fluid misN ml-5">
-                            <h1 align="left" className="cat pt-2  pb-2"> &nbsp;&nbsp; &nbsp;&nbsp;Novedades</h1>
-                            
+                        <div align="center" className="col col-4">
+                            <div className="container asasa">
+                                <p></p>
+                            </div>
+                            <div className="container-fluid misI ml-2">
+                                <h1 align="left" name="cate" className="cat pt-2 pb-2">&nbsp;<FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</h1>
+                            </div>
+                            <div className="asas">
+                                <p></p>
+                            </div>
+                            <div className="fondo">
+                                <p></p>
+                            </div>
+                            <div className="asa">
+                                <p></p>
+                            </div>
+                            <div className="container-fluid misG pt-3">
+                                <div className="container publicaciones queesta">
+                                    <h1 className="cat mt-2 ml-2"><img src={require('./components/usuario.svg')}></img>&nbsp;&nbsp;&nbsp;¿Qué está pensando Hernán?</h1>
+                                    <br></br><br></br>  
+                                    <div align="right" className="pb-2">
+                                        <button type="button" onClick={e => {this.showModal();}} className="botonP">Hacer publicación</button>
+                                    </div>
+                                </div>
+                                <div className="mt-4 container publicaciones">
+                                    {listPublicaiones}
+                                </div>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                            </div>
                         </div>
-                    </div>
-                    <div className="col col-2">
+                        <div align="center" className="col col-2">
+                            <div className="container-fluid misN ml-5">
+                                <h1 align="left" className="cat pt-2  pb-2"> &nbsp;&nbsp; &nbsp;&nbsp;Novedades</h1>
+                            </div>
+                        </div>
+                        <div className="col col-2">
+                        </div>
                     </div>
                 </div>
             </div>

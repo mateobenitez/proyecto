@@ -20,7 +20,7 @@ import {
   Route 
 } from 'react-router-dom';
 
-
+var registro = "a"
 function App() {
   return (
     <Router>
@@ -34,12 +34,8 @@ function App() {
         <Route path="/princ">
           <PagPrinc />
         </Route>
-        <Route path="/registrarse">
-          <Registrarse />
-        </Route>
-        <Route path="/registrarse1">
-          <Registrarse1 />
-        </Route>
+        <Route path="/registrarse" component={Registrarse} />
+        <Route path="/registrarse1" component={Registrarse1}/>
         <Route path="/registrarse2">
           <Registrarse2 />
         </Route>
