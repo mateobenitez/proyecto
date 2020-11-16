@@ -49,7 +49,7 @@ export default class Modal extends React.Component {
     axios({
       method: 'post',
       url: 'http://localhost:3000/user/',
-    
+      mode: 'cors',
         headers: [
           { "X-localization": localStorage.getItem("lan") },
           { "Access-Control-Allow-Origin": '*' },
