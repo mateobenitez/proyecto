@@ -22,6 +22,7 @@ import {
     faPencilAlt
 } from '@fortawesome/free-solid-svg-icons';
 import Modal from './components/publicar'
+import Modal2 from './components/editar'
 import axios from 'axios'
 
 var fondo = document.getElementsByClassName("princ") 
@@ -285,7 +286,7 @@ class pagPrinca extends Component{
                             <div className="col col-6">
                                 <div className="a form-inline">
                                     <p className="mt-4">{resp.data.data[i].date}&nbsp;</p>
-                                    <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                    <button className="botonE mt-2" onClick={e => {this.showModal2();}}>Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
                                 </div>
                             </div>
                         </div>
@@ -299,7 +300,7 @@ class pagPrinca extends Component{
                                     <p> 0 me gusta</p>
                                 </div>
                                 <div className="col col-5">
-                                    <p>0 comentarios</p>
+                                    <p> 0 comentarios</p>
                                 </div>
                             </div>
                         </div>
@@ -335,17 +336,18 @@ class pagPrinca extends Component{
           publicacion: publicacion,
           botonPresionado: botonPresionado,
           likes: [0],
-          show: false
+          show: false,
+          show2: false
         };
       }
-      showModal = e => {
+      showModal2 = e => {
         this.setState({
-          show: !this.state.show
+          show2: !this.state.show2
         });
         document.getElementsByClassName("princ")[0].style.opacity = "0.5"
       };
       onClose = e => {
-        this.props.onClose && this.props.onClose(e);
+        this.props.onClose2 && this.props.onClose2(e);
       };
     render(){
         var fondo={backgroundColor: "#E3E3E3"}
@@ -357,6 +359,7 @@ class pagPrinca extends Component{
         return (
             <div>
                 <Modal onClose={this.showModal} show={this.state.show}/>
+                <Modal onClose={this.showModal2} show2={this.state.show2}/>
                 <div style={fondo} className="princ">
                     <MyNavBarPrinca/>
                     

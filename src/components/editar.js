@@ -12,7 +12,7 @@ function postImg(){
   document.getElementsByClassName("publicfoto")[0].style.height="200px"
 }
 
-export default class Modal extends React.Component {
+export default class Modal2 extends React.Component {
   
   constructor(props){
     super(props)
@@ -28,7 +28,7 @@ export default class Modal extends React.Component {
     })
   }
   onClose = e => {
-    this.props.onClose && this.props.onClose(e);
+    this.props.onClose2 && this.props.onClose2(e);
     window.location.reload()
   };
   publicar(e){
@@ -60,7 +60,7 @@ export default class Modal extends React.Component {
   }).catch((err) =>  console.log("AXIOS ERROR: ", err));
   }
   render() {
-    if (!this.props.show) {
+    if (!this.props.show2) {
       return null;
     }else{
     return (

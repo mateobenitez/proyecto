@@ -176,37 +176,37 @@ function modos(){
 
 function cambiarC(){
     if(!contraClick){
-        drop[1].style.display = "initial"
+        drop[0].style.display = "initial"
         contraClick = true
-        titulos[1].innerHTML = 'Cambiar contraseña<img src="' + flechaArr + '" width="40px" height="40px" />'
+        titulos[0].innerHTML = 'Cambiar contraseña<img src="' + flechaArr + '" width="40px" height="40px" />'
     }else{
-        drop[1].style.display = null
+        drop[0].style.display = null
         contraClick = false
-        titulos[1].innerHTML = 'Cambiar contraseña&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
+        titulos[0].innerHTML = 'Cambiar contraseña&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
 function cambiarSC(){
     if(!salirClick){
-        drop[2].style.display = "initial"
+        drop[1].style.display = "initial"
         salirClick = true
-        titulos[2].innerHTML = 'Salir de categorías<img src="' + flechaArr + '" width="40px" height="40px" />'
+        titulos[1].innerHTML = 'Salir de categorías<img src="' + flechaArr + '" width="40px" height="40px" />'
     }else{
-        drop[2].style.display = null
+        drop[1].style.display = null
         salirClick = false
-        titulos[2].innerHTML = 'Salir de categorías&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
+        titulos[1].innerHTML = 'Salir de categorías&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
 function cuenta(){
     if(!cuentaClick){
-        drop[3].style.display = "initial"
+        drop[2].style.display = "initial"
         cuentaClick = true
-        titulos[3].innerHTML = 'Cuenta<img src="' + flechaArr + '" width="40px" height="40px" />'
+        titulos[2].innerHTML = 'Cuenta<img src="' + flechaArr + '" width="40px" height="40px" />'
     }else{
-        drop[3].style.display = null
+        drop[2].style.display = null
         cuentaClick = false
-        titulos[3].innerHTML = 'Cuenta&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
+        titulos[2].innerHTML = 'Cuenta&nbsp;<img src="' + flechaAb + '" width="20px" height="20px" />'
     }
 }
 
@@ -346,22 +346,7 @@ class config extends Component{
                                 </div>
                                 <div className="container selG">
                                     <br></br>
-                                    <button onClick={modos} className="botonDrop modos">Modos&nbsp;<img src={require('./components/flechaAb.svg')}></img></button>
-                                    <hr className="lineaGuar mt-2"></hr>
-                                    <div className="dropDown">
-                                        <div className="form-inline">
-                                            <p>Modo monocromático</p>&nbsp;&nbsp;&nbsp;
-                                            <label className="mb-3 switch">
-                                                <input type="checkbox"></input>
-                                                <span className="slider round"></span>
-                                            </label>
-                                            <p className="pl-3">Modo pictogramas</p>&nbsp;&nbsp;&nbsp;
-                                            <label className="mb-3 switch">
-                                                <input type="checkbox"></input>
-                                                <span className="slider round"></span>
-                                            </label>
-                                        </div>
-                                    </div>
+                                    
                                     <button onClick={cambiarC} className="botonDrop">Cambiar contraseña &nbsp;<img src={require('./components/flechaAb.svg')}></img></button>
                                     <hr></hr>
                                     <div className="dropDown">
