@@ -84,7 +84,7 @@ var Validar = function(e) {
       .catch((err) => {
         console.log(err)
     })
-    const userpass = this.state.usuario + ':' + this.state.nombre
+      const userpass = this.state.usuario + ':' + this.state.nombre
         const encodedString = Buffer.from(userpass).toString('base64');
         console.log("ENCODED: ", encodedString)
     axios({

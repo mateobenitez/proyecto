@@ -296,7 +296,9 @@ class Guardados extends Component{
                                 <div className="container-fluid tituloGuard">
                                     <p className="pTitulo"><img  src={require('./components/edu.svg')}></img>&nbsp;&nbsp;Educación</p>
                                 </div>
+                                
                                 <div className="container-fluid guardPub" align="center">
+                                <br></br><br></br><br></br><br></br><br></br>
                                         <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
                                         <div className="container imagenP">
                                             <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
