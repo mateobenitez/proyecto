@@ -284,7 +284,7 @@ class pagPrinca extends Component{
                             </div>
                             <div className="col col-6">
                                 <div className="a form-inline">
-                                    <p className="mt-4">Hace 2 horas&nbsp;</p>
+                                    <p className="mt-4">{resp.data.data[i].date}&nbsp;</p>
                                     <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
                                 </div>
                             </div>
@@ -293,6 +293,7 @@ class pagPrinca extends Component{
                             <p className="pibe">Usuario </p>
                             <div className="container imagenP">
                                 <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                {resp.data.data[i].body}
                             </div>
                             <div className="row justify-content-around">
                                 <div className="col col-5">
