@@ -50,26 +50,15 @@ export default class Modal extends React.Component {
       method: 'post',
       url: 'http://localhost:3000/user/',
       headers: {
-        Authorization: 'Basic ' + encodedString
+        Authorization: "Bearer " + window.localStorage.getItem('token')
       },
       data:{
         body: document.getElementsByClassName("descPub")[0],
         arch_adjunto: "hola"
       }
   }).then((resp) => {
-    console.log("RESPONSE RECEIVED: ", res);
+    console.log("RESPONSE RECEIVED: ", resp);
   }).catch((err) =>  console.log("AXIOS ERROR: ", err));
- 
-   
-  
-  axios.post('http://localhost:3000/user/subirPost', postData, axiosConfig)
-     .then((res) => {
-      console.log("RESPONSE RECEIVED: ", res);
-      
-    })
-    .catch((err) => {
-      console.log("AXIOS ERROR: ", err);
-    })
   }
   render() {
     if (!this.props.show) {
