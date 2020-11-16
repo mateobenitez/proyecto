@@ -72,11 +72,11 @@ var Validar = function(e) {
       method: "post",
       url: "http://localhost:3000/user/registrarse",
       data: {
-        nombre: "hola",
-        apellido: "hola", 
-        name_user:"hola",
-        mail: "hola",
-        password: "hola"
+        nombre: document.getElementsByClassName("text")[0].value,
+        apellido: document.getElementsByClassName("text")[1].value, 
+        name_user:document.getElementsByClassName("text")[2].value,
+        mail: document.getElementsByClassName("text")[3].value,
+        password: document.getElementsByClassName("text")[4].value
       }
     })
       .then((resp) => {
