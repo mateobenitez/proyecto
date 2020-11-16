@@ -346,8 +346,17 @@ class pagPrinca extends Component{
         });
         document.getElementsByClassName("princ")[0].style.opacity = "0.5"
       };
-      onClose = e => {
+      showModal = e => {
+        this.setState({
+          show: !this.state.show
+        });
+        document.getElementsByClassName("princ")[0].style.opacity = "0.5"
+      };
+      onClose2 = e => {
         this.props.onClose2 && this.props.onClose2(e);
+      };
+      onClose = e => {
+        this.props.onClose && this.props.onClose(e);
       };
     render(){
         var fondo={backgroundColor: "#E3E3E3"}

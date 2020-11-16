@@ -27,7 +27,7 @@ export default class Modal2 extends React.Component {
       file: URL.createObjectURL(event.target.files[0])
     })
   }
-  onClose = e => {
+  onClose2 = e => {
     this.props.onClose2 && this.props.onClose2(e);
     window.location.reload()
   };
