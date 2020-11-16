@@ -45,7 +45,7 @@ export default class Modal extends React.Component {
     var f = new Date();
     console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
     axios.post('http://localhost:3000/user/subirPost', postData, axiosConfig)
-    .then((res) => {
+     .then((res) => {
       console.log("RESPONSE RECEIVED: ", res);
     })
     .catch((err) => {
