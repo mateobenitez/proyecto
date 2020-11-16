@@ -281,7 +281,7 @@ class pagPrinca extends Component{
                 this.setState({usuario})
                 this.setState({post: resp.data.data})
                 console.log(resp.data.data)
-                for(var i = 0; i<resp.data.length ; i++){
+                for(var i = 0; i<1 ; i++){
                     var likes = resp.data[i].id
                     if(true) {
                     var a = {usu: <div>

@@ -186,7 +186,7 @@ class Inicio extends Component{
                     <input onClick={mostrarOjo2} id="ccontraseña" className="text eliminar" name="ccontraseña" type="password" placeholder="Confirmar contraseña" onChange={this.onChange}></input><br></br><hr className="eliminar2 li6 linea-texto"></hr>
                     <p className="obl5 obl-texto">*Es obligatorio completar este campo</p>
                     <p className="obl6 obl-texto">*Las contraseñas ingresadas son diferentes</p>
-                    <input className="boton3" type="submit" formAction="/IniciarSesion" name="boton" value="Registrarse"></input>
+                    <input className="boton3" type="submit" formAction="/registrarse" name="boton" value="Registrarse"></input>
                   </div>
                 </form>
               </div>

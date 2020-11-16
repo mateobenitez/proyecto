@@ -139,6 +139,7 @@ function postear(){
     axios({
         method: "post",
         url: "http://localhost:3000/admin/registrarse",
+        
         data:{
 
         }

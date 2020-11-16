@@ -102,17 +102,20 @@ function postear(){
         interes = "otro"
     }
     axios({
-        method: "post",
-        url: "http://localhost:3000/admin/registrarse",
+        method: 'post',
+        url: 'http://localhost:3000/user/subirPost',
+        mode: 'cors',
+         headers: {
+            Authorization: 'Bearer ' + window.localStorage.getItem('token')
+         },
         data:{
-            pq_interes: interes
+          body: document.getElementsByClassName("descPub")[0].value ,
+          arch_adjunto: "archivo", 
+          date: fecha
         }
-      })
-        .then((resp) => {
-      })
-        .catch((err) => {
-          console.log(err)
-        })
+    }).then((resp) => {
+      console.log("RESPONSE RECEIVED: ", resp);
+    }).catch((err) =>  console.log("AXIOS ERROR: ", err));
 }
 
 function noTeVayas(e){
