@@ -207,6 +207,7 @@ function comentar(){
         lineas[i].style.display = 'none'
         lineas[2].style.borderColor = 'rgba(218, 218, 218, 1)'
     }
+    document.getElementsByClassName('pubComent')[0].style.display = "initial"
 }
 
 function verMas(){
@@ -266,7 +267,10 @@ class pagPrinca extends Component{
     componentDidMount(){
         axios({
             method: "get",
-            url: "http://localhost:3000/user/mostrarPosts "
+            url: "http://localhost:3000/user/mostrarPosts ",
+            headers: {
+                Authorization: 'Basic ' + window.localStorage.getItem('token')
+            }
           })
             .then((resp) => {
                 console.log(resp.data)
@@ -274,12 +278,8 @@ class pagPrinca extends Component{
                 var posts = resp.body
                 this.setState({bodyPosts: posts})
                 this.setState({usuario})
-                this.setState({botonPresionado: botonPresionado})
+                this.setState({post: resp.data.data})
                 console.log(this.state.botonPresionado)
-                /*var likear = () => {
-                    this.setState({likes: likes + 1})
-                    console.log(this.state.likes)
-                }*/
                 for(var i = 0; i<resp.data.length ; i++){
                     var likes = resp.data[i].id
                     if(true) {
@@ -288,7 +288,7 @@ class pagPrinca extends Component{
                                         <div className="col col-6">
                                             <form className="form-inline">
                                                 <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                                <a className="mt-3 pibe" href="/perfil2"> {resp.data[i].name} </a>
+                                                <a className="mt-3 pibe" href="/perfil2"> Usuario </a>
                                             </form>
                                         </div>
                                         <div className="col col-6">
@@ -299,7 +299,7 @@ class pagPrinca extends Component{
                                         </div>
                                     </div>
                                     <div className="container-fluid cont" align="center">
-                                        <p className="pibe">{resp.data[i].name} </p>
+                                        <p className="pibe">{this.state.post} </p>
                                         <div className="container imagenP">
                                             <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
                                         </div>
@@ -342,8 +342,7 @@ class pagPrinca extends Component{
         this.boton = React.createRef();
         this.state = {
           usuario: [],
-          idPosts: [],
-          bodyPosts: [],
+          post: [],
           date: [],
           publicacion: publicacion,
           botonPresionado: botonPresionado,
@@ -455,7 +454,7 @@ class pagPrinca extends Component{
                                 <div className="mt-4 container publicaciones">
                                     {listPublicaiones}
                                 </div>
-                                <div className="mt-4 container publicaciones">
+                                <div className="mt-4 container pubComent">
                                     <div className="container asasa">
                                         <p></p>
                                     </div>

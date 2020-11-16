@@ -284,6 +284,14 @@
     border-radius: 1em;
 } 
 
+.pubComent{
+    border-color: #E3E3E3;
+    border-width: 0.4em;
+    border-style: solid;
+    border-radius: 1em;
+    display:none;
+} 
+
 .coments{
     background-color: rgba(218, 218, 218, 1);
     min-width: 36.2em;
