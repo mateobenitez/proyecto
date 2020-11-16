@@ -265,11 +265,12 @@ var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
 
 class pagPrinca extends Component{
     componentDidMount(){
+        var token = window.localStorage.getItem('token')
         axios({
             method: "get",
             url: "http://localhost:3000/user/mostrarPosts ",
             headers: {
-                Authorization: 'Basic ' + window.localStorage.getItem('token')
+                Authorization: 'Basic ' + token
             }
           })
             .then((resp) => {
@@ -299,7 +300,7 @@ class pagPrinca extends Component{
                                         </div>
                                     </div>
                                     <div className="container-fluid cont" align="center">
-                                        <p className="pibe">{this.state.post} </p>
+                                        <p className="pibe">{this.state.post.body} </p>
                                         <div className="container imagenP">
                                             <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
                                         </div>
