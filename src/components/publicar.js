@@ -18,7 +18,7 @@ export default class Modal extends React.Component {
     super(props)
     
     this.state = {
-      file: null
+      file: null,
     }
     this.handleChange = this.handleChange.bind(this)
   }
@@ -33,14 +33,10 @@ export default class Modal extends React.Component {
   };
   publicar(e){
     e.preventDefault()
-    console.log(window.localStorage.getItem("token"))
-    var postData = {
-      body: document.getElementsByClassName("descPub")[0],
-      arch_adjunto: "hola"
-    };
     let token = window.localStorage.getItem('token')
     var f = new Date();
-
+    var fecha = f.getDay() + '-' + f.getMonth() + '-' + f.getFullYear()
+    console.log(document.getElementsByClassName("descPub")[0].value)
     axios({
       method: 'post',
       url: 'http://localhost:3000/user/subirPost',
@@ -54,8 +50,9 @@ export default class Modal extends React.Component {
           Authorization: 'Bearer ' + token
        },
       data:{
-        body:"hola",
-        arch_adjunto:"hola", 
+        body: document.getElementsByClassName("descPub")[0].value ,
+        arch_adjunto: "hola", 
+        date: fecha
       }
   }).then((resp) => {
     //resp.setHeader("Access-Control-Allow-Headers", "X-Requested-With, content-type");
