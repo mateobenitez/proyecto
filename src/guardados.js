@@ -76,6 +76,7 @@ function volver(e){
         nuevoTitulo[0].style.backgroundColor = null
         linea[0].style.borderColor = null
         tocado =false
+        document.getElementsByClassName("guardPub")[0].style.display =null
     }else{
         window.location.href="/princa";
     }
@@ -148,6 +149,7 @@ function guardadoSal(e){
     texto[0].innerHTML = '<img src="' + salud + '" width="30px" height="30px" /> Salud'
     e.preventDefault();
     tocado = true
+    document.getElementsByClassName("guardPub")[0].style.display = 'initial'
 }
 function guardadoDoc(e){
     titulo[0].style.visibility = "hidden"
@@ -294,6 +296,20 @@ class Guardados extends Component{
                                 <div className="container-fluid tituloGuard">
                                     <p className="pTitulo"><img  src={require('./components/edu.svg')}></img>&nbsp;&nbsp;Educación</p>
                                 </div>
+                                <div className="container-fluid guardPub" align="center">
+                                        <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
+                                        <div className="container imagenP">
+                                            <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                        </div>
+                                        <div className="row justify-content-around">
+                                            <div className="col col-5">
+                                                <p>3 me gusta</p>
+                                            </div>
+                                            <div className="col col-5">
+                                                <p>0 comentarios</p>
+                                            </div>
+                                        </div>
+                                    </div>
                                 <div className="container selG">
                                     <h1 className="selGuar mt-3">Seleccione el grupo de publicaciones</h1><h1 className="selGuar" align="center">guardadas</h1><hr className="lineaGuar"></hr>
                                 </div>
