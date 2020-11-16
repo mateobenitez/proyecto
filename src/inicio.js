@@ -80,7 +80,22 @@ var Validar = function(e) {
       }
     })
       .then((resp) => {
-        
+        const userpass = this.state.usuario + ':' + this.state.nombre
+    const encodedString = Buffer.from(userpass).toString('base64');
+    console.log("ENCODED: ", encodedString)
+  
+    axios({
+      method: 'post',
+      url: 'http://localhost:3000/user/login',
+      headers: {
+        Authorization: 'Basic ' + encodedString
+      }
+    }).then((resp) => {
+      console.log(resp.data);
+      console.log("TOKEN: ", resp.data.token);
+      window.localStorage.setItem('token', resp.data.token)
+      this.setState({logged: true})
+    }).catch((err) => console.log(err))
     })
       .catch((err) => {
         console.log(err)
