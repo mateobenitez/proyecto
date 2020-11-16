@@ -72,14 +72,15 @@ var Validar = function(e) {
       method: "post",
       url: "http://localhost:3000/user/registrarse",
       data: {
-        nombre: this.state.nombre,
-        apellido: this.state.apellido, 
-        name_user: this.state.ususario,
-        mail: this.state.email,
-        password: this.state.contraseña
+        nombre: "hola",
+        apellido: "hola", 
+        name_user:"hola",
+        mail: "hola",
+        password: "hola"
       }
     })
       .then((resp) => {
+
     })
       .catch((err) => {
         console.log(err)
