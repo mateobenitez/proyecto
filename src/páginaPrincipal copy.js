@@ -265,12 +265,11 @@ var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
 
 class pagPrinca extends Component{
     componentDidMount(){
-        var token = window.localStorage.getItem('token')
         axios({
             method: "get",
             url: "http://localhost:3000/user/mostrarPosts ",
             headers: {
-                Authorization: 'Basic ' + token
+                Authorization: 'Basic ' + window.localStorage.getItem('token')
             }
           })
             .then((resp) => {
@@ -280,7 +279,7 @@ class pagPrinca extends Component{
                 this.setState({bodyPosts: posts})
                 this.setState({usuario})
                 this.setState({post: resp.data.data})
-                console.log(this.state.botonPresionado)
+                console.log(resp.data)
                 for(var i = 0; i<resp.data.length ; i++){
                     var likes = resp.data[i].id
                     if(true) {
