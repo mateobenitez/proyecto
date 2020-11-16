@@ -35,7 +35,7 @@ export default class Modal extends React.Component {
     e.preventDefault()
     let token = window.localStorage.getItem('token')
     var f = new Date();
-    var fecha = f.getDay() + '-' + f.getMonth() + '-' + f.getFullYear()
+    var fecha = f.getFullYear() + '-'  + f.getMonth() + '-' + f.getDay() + '-' 
     console.log(document.getElementsByClassName("descPub")[0].value)
     axios({
       method: 'post',
