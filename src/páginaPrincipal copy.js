@@ -253,13 +253,15 @@ var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
 
 class pagPrinca extends Component{
     componentDidMount(){
+        var token = window.localStorage.getItem('token')
         console.log(window.localStorage.getItem('token'))
         
         axios({
             method: "get",
             url: "http://localhost:3000/user/mostrarPosts ",
+            mode :'cors',
             headers: {
-                Authorization: 'Basic ' + window.localStorage.getItem('token')
+                Authorization: 'Bearer ' + token
             }
           })
             .then((resp) => {
