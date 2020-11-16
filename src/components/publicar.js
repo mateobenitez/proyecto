@@ -38,13 +38,8 @@ export default class Modal extends React.Component {
       body: document.getElementsByClassName("descPub")[0],
       arch_adjunto: "hola"
     };
-    let axiosConfig = {
-      headers: {
-        Authorization: "Bearer " + window.localStorage.getItem('token')
-      }
-    };
+    let token = window.localStorage.getItem('token')
     var f = new Date();
-    console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
 
     axios({
       method: 'post',
