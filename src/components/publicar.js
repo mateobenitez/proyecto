@@ -9,7 +9,7 @@ import { render } from "@testing-library/react";
 
 
 function postImg(){
-  document.getElementsByClassName("publicfoto")[0].style.height="300px"
+  document.getElementsByClassName("publicfoto")[0].style.height="200px"
 }
 
 export default class Modal extends React.Component {
@@ -35,7 +35,9 @@ export default class Modal extends React.Component {
     e.preventDefault()
     let token = window.localStorage.getItem('token')
     var f = new Date();
-    var fecha = f.getFullYear() + '-'  + f.getMonth() + '-' + f.getDay() + '-' 
+    var fecha = f.getFullYear() + '-'  + f.getMonth() + '-' + f.getDay() + '-'
+    var archivo = document.getElementsByClassName("publicfoto")[0] 
+    console.log(archivo.src)
     console.log(document.getElementsByClassName("descPub")[0].value)
     axios({
       method: 'post',
@@ -51,7 +53,7 @@ export default class Modal extends React.Component {
        },
       data:{
         body: document.getElementsByClassName("descPub")[0].value ,
-        arch_adjunto: "hola", 
+        arch_adjunto: archivo.src, 
         date: fecha
       }
   }).then((resp) => {
