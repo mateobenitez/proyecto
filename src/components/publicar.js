@@ -6,37 +6,18 @@ import {
 import axios from 'axios'
 import { render } from "@testing-library/react";
 
-function publicar(e){
-  var f = new Date();
-  console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
-  e.preventDefault()
-  axios({
-    method: "post",
-    url: "http://localhost:3000/admin/subirPosts",
-    headers: {
-      Authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWRVc3VhcmlvcyI6MTAsIm5hbWVfdXNlciI6InRhdGhpIiwibm9tYnJlIjoidGF0aGkiLCJhcGVsbGlkbyI6InBvZ2dpIiwibWFpbCI6InRhdGhpQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MDU0ODIxNTksImV4cCI6MTYwNTU2ODU1OX0.GdXvXc1tdyxWJHcLhPglYmzel-AAk5n5nk_yczD_vmc"
-    },
-    data:{
-      body: "hola",
-      arch_adjunto: "hola"
-    }
-  })
-    .then((resp) => {
-  })
-    .catch((err) => {
-      console.log(err)
-    })
-}
+
 
 export default class Modal extends React.Component {
+  
   constructor(props){
     super(props)
+    
     this.state = {
       file: null
     }
     this.handleChange = this.handleChange.bind(this)
   }
-
   handleChange(event) {
     this.setState({
       file: URL.createObjectURL(event.target.files[0])
@@ -46,6 +27,27 @@ export default class Modal extends React.Component {
     this.props.onClose && this.props.onClose(e);
     window.location.reload()
   };
+  publicar(e){
+    var postData = {
+      body: document.getElementsByClassName("desscPub")[0],
+      arch_adjunto: this.state.file
+    };
+    let axiosConfig = {
+      headers: {
+        'Authorization': `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXN1bHQiOnsiaWRVc3VhcmlvcyI6MTAsIm5hbWVfdXNlciI6InRhdGhpIiwibm9tYnJlIjoidGF0aGkiLCJhcGVsbGlkbyI6InBvZ2dpIiwibWFpbCI6InRhdGhpQGdtYWlsLmNvbSJ9LCJpYXQiOjE2MDU0ODIxNTksImV4cCI6MTYwNTU2ODU1OX0.GdXvXc1tdyxWJHcLhPglYmzel-AAk5n5nk_yczD_vmc` 
+      }
+    };
+    var f = new Date();
+    console.log(f.getHours() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+    e.preventDefault()
+    axios.post('http://localhost:3000/user/subirPost', postData, axiosConfig)
+    .then((res) => {
+      console.log("RESPONSE RECEIVED: ", res);
+    })
+    .catch((err) => {
+      console.log("AXIOS ERROR: ", err);
+    })
+  }
   render() {
     if (!this.props.show) {
       return null;
@@ -79,7 +81,7 @@ export default class Modal extends React.Component {
                 </label>
               </div>
               <br></br>
-              <button onClick={publicar} className="btnPub">Publicar</button>
+              <button onClick={this.publicar} className="btnPub">Publicar</button>
             </div>
           </form>
         </div>
