@@ -439,6 +439,7 @@ class pagPrinca extends Component{
                                 </div>
                                 <div className="mt-4 container publicaciones">
                                     {listPublicaiones}
+                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>    
                                 </div>
                                 <div className="mt-4 container pubComent">
                                     <div className="container asasa">
@@ -468,7 +469,7 @@ class pagPrinca extends Component{
                         <div className="col col-2">
                         </div>
                     </div>
-                    <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  <br></br><br></br>  
+                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>  <br></br><br></br><br></br>  <br></br><br></br><br></br>  <br></br><br></br><br></br>  <br></br><br></br><br></br>  <br></br><br></br><br></br>  <br></br><br></br><br></br>  
                 </div>
             </div>
         )

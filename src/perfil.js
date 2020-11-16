@@ -353,48 +353,48 @@ class perfil extends Component{
                                     <div className="descripcion container">
                                         <p>Hola soy Sergio me gusta comer pan y enseñar lengua. Tengo un hijo de 40 años al que le gusta jugar tenis y comer papas.</p>
                                     </div><hr></hr>                     
-                                    <div className="mt-4 container publicaciones">
-                                <div className="row justify-content-around">
-                                    <div className="col col-6">
-                                        <form className="form-inline">
-                                            <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                            <a className="mt-3 pibe" href="/perfil2">Usuario</a>
-                                        </form>
-                                    </div>
-                                    <div className="col col-6">
-                                        <div className="a form-inline">
-                                            <p className="mt-4">Hace 2 horas&nbsp;</p>
-                                            <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                    <div className="mt-4 container ">
+                                        <div className="row justify-content-around">
+                                            <div className="col col-6">
+                                                <form className="form-inline">
+                                                    <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
+                                                    <a className="mt-3 pibe" href="/perfil2">Usuario</a>
+                                                </form>
+                                            </div>
+                                            <div className="col col-6">
+                                                <div className="a form-inline">
+                                                    <p className="mt-4">Hace 2 horas&nbsp;</p>
+                                                    <button className="botonE mt-2" >Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="container-fluid cont" align="center">
-                                    <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
-                                    <div className="container imagenP">
-                                        <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                                    </div>
-                                    <div className="row justify-content-around">
-                                        <div className="col col-5">
-                                            <p>3 me gusta</p>
+                                        <div className="container-fluid cont" align="center">
+                                            <p className="pibe">Que lindo es enseñar tecnología! Super recomendado. </p>
+                                            <div className="container imagenP">
+                                                <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                            </div>
+                                            <div className="row justify-content-around">
+                                                <div className="col col-5">
+                                                    <p>Me gusta</p>
+                                                </div>
+                                                <div className="col col-5">
+                                                    <p>0 comentarios</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="col col-5">
-                                            <p>0 comentarios</p>
+                                        <div className="row justify-content-left">
+                                            <div className="col col-4">
+                                                <button onClick={like} type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
+                                            </div>
+                                            <div className="col col-4">
+                                                <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
+                                            </div>
+                                            <div className="col col-4">
+                                                <button onClick={guard} type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                                            </div>
                                         </div>
+                                        <hr className="lineaP"></hr>
                                     </div>
-                                </div>
-                                <div className="row justify-content-left">
-                                    <div className="col col-4">
-                                        <button onClick={like} type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button onClick={guard} type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
-                                    </div>
-                                </div>
-                                <hr className="lineaP"></hr>
-                            </div>
                                 </div>
                                 <div className="editar1">
                                     <button className="añadirImg">Cambiar foto</button>
