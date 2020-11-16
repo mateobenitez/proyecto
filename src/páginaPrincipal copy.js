@@ -271,7 +271,7 @@ class pagPrinca extends Component{
                 this.setState({bodyPosts: posts})
                 this.setState({usuario})
                 this.setState({post: resp.data.data})
-                console.log(resp.data.data)
+                console.log(resp.data.data.length)
                 
                 for(var i = 0; i<resp.data.length ; i++){
                     var a = {usu:   <div>
