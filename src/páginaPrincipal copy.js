@@ -331,7 +331,6 @@ class pagPrinca extends Component{
                             </div>
                             <div className="col col-6">
                                 <div className="a form-inline">
-                                    <p className="mt-4">{resp.data.data[i].date}&nbsp;</p>
                                     <button className="botonE mt-2" onClick={e => {this.showModal2();}}>Editar&nbsp;&nbsp;<FontAwesomeIcon icon={faPencilAlt}/></button>
                                 </div>
                             </div>

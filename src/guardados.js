@@ -59,8 +59,8 @@ var btnSalS= <button id="btnSalC" className="btns btnSal btn"><img src={require(
 var btnTecS= <button id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> Tecnología</button>
 let noSeleccionadosSalir =[btnAliS, btnArtS, btnDepS, btnDocS, btnEduS]
 let seleccionadosSalir =[btnRelS, btnSalS, btnTecS]
-let noSeleccionados =[btnAli, btnArt, btnDep, btnDoc, btnEdu]
-let seleccionados =[btnRel, btnSal, btnTec]
+let noSeleccionados =[]
+let seleccionados =[btnRel, btnSal, btnTec, btnAli, btnArt, btnDep, btnDoc, btnEdu]
 var titulo = document.getElementsByClassName("selG")
 var botones = document.getElementsByClassName("formCate")
 var nuevoTitulo = document.getElementsByClassName("tituloGuard")
@@ -252,9 +252,6 @@ class Guardados extends Component{
                                         {noSeleccionados[7]}
                                         {noSeleccionados[8]}
                                     </div>
-                                    <div className="contVer  pb-3">
-                                        <button className="ml-3 mt-3 botonVer" onClick={verMas}>Unirse a más categorías <img src={require('./components/mas.svg')}></img> </button>
-                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -387,7 +384,13 @@ class Guardados extends Component{
                     </div>
                     <div align="center" className="col col-2">
                         <div className="container-fluid misN ml-5">
+                            <div className="circuloCont">
+                                <img className="pt-2" src={require('./components/novedades.svg')}></img>
+                            </div>
                             <h1 align="left" className="cat pt-2  pb-2"> &nbsp;&nbsp; &nbsp;&nbsp;Novedades</h1>
+                        </div>
+                        <div className="container-fluid misNo">
+                            <p className="pt-3">Aún no hay novedades. </p>
                         </div>
                     </div>
                     <div className="col col-2">
