@@ -377,13 +377,13 @@ class perfil extends Component{
                                         </div>
                                         <div className="row justify-content-left">
                                             <div className="col col-4">
-                                                <button onClick={like} type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
+                                                <button onClick={like} type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/salud.svg')} width="22px"></img> Me&nbsp;gusta</button>
                                             </div>
                                             <div className="col col-4">
                                                 <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
                                             </div>
                                             <div className="col col-4">
-                                                <button onClick={guard} type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                                                <button onClick={guard} type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardados.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
                                             </div>
                                         </div>
                                         <hr className="lineaP"></hr>

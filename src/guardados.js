@@ -52,10 +52,10 @@ var btnTec = <button id="btnTec" className="btnTec btn"><img className="b" src={
 var btnAliS = <button id="btnAliC" className="btns btn btnAli"><img src={require('./components/tenedor.svg')} width="18px"></img>Alimentación</button>
 var btnArtS = <button id="btnArtC" className="btns btnArt btn"><img src={require('./components/arte.svg')} width="18px"></img> Arte</button>
 var btnDepS = <button id="btnDepC" className="btns btnDep btn"><img src={require('./components/deportes.svg')} width="18px"></img>Deportes</button>
-var btnDocS = <button id="btnDocC" className="btns btnDoc btn"><img src={require('./components/doc.svg')} width="18px"></img>Documentos legales</button>
+var btnDocS = <button className="btns btn8 mt-3 mb-2" ><img align="left" style={{position:"fixed"}, {transform:"translateX()"}} src={require('./components/doc.svg')} width="20px"></img><p align="center">Documentos <br></br> legales</p></button>
 var btnEduS = <button id="btnEduC" name="btnEdu" className="btns btnEdu  btn" ><img src={require('./components/edu.svg')} width="18px"></img>Educación</button>
 var btnRelS = <button id="btnRelC" className="btns btnRel btn"><img src={require('./components/carita.svg')} width="18px"></img>Relaciones sociales</button>
-var btnSalS= <button id="btnSalC" className="btns btnSal btn"><img src={require('./components/salud.svg')} width="18px"></img> Salud</button>
+var btnSalS= <button className="btns btn3 mt-3 mb-2" ><img align="left" style={{position:"fixed"}, {transform:"translateX()"}} src={require('./components/salud.svg')} width="20px"></img>Salud</button>
 var btnTecS= <button id="btnTecC" className="btnTec btns btn"><img className="b" src={require('./components/tec.svg')} width="18px"></img> Tecnología</button>
 let noSeleccionadosSalir =[btnAliS, btnArtS, btnDepS, btnDocS, btnEduS]
 let seleccionadosSalir =[btnRelS, btnSalS, btnTecS]
@@ -149,7 +149,6 @@ function guardadoSal(e){
     texto[0].innerHTML = '<img src="' + salud + '" width="30px" height="30px" /> Salud'
     e.preventDefault();
     tocado = true
-    document.getElementsByClassName("guardPub")[0].style.display = 'initial'
 }
 function guardadoDoc(e){
     titulo[0].style.visibility = "hidden"
@@ -170,6 +169,7 @@ function guardadoInfo(e){
     texto[0].innerHTML = '<img src="' + info + '" width="30px" height="30px" /> Información general'
     e.preventDefault();
     tocado = true
+    document.getElementsByClassName("guardPub")[0].style.display = 'initial'
 }
 
 function verMas(){
@@ -295,7 +295,7 @@ class Guardados extends Component{
                                 </div>
                                 
                                 <div className="container-fluid guardPub" align="center">
-                                <br></br><br></br><br></br><br></br><br></br>
+                                <br></br><br></br><br></br>
                                 <div className="mt-4 container ">
                                         <div className="row justify-content-around">
                                             <div className="col col-6">
@@ -313,7 +313,7 @@ class Guardados extends Component{
                                         <div className="container-fluid cont" align="center">
                                             <p className="pibe">Muchas gracias al psicólogo Mateo Benitez por su colaboración. </p>
                                             <div className="container imagenP">
-                                                <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
+                                                <img src={require("./components/nena.svg")}width="200" alt=""></img>
                                             </div><br></br>
                                             <div className="row justify-content-around">
                                                 <div className="col col-6">
@@ -326,13 +326,13 @@ class Guardados extends Component{
                                         </div>
                                         <div className="row justify-content-left">
                                             <div className="col col-4">
-                                                <button  type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/meGusta.svg')} width="22px"></img> Me&nbsp;gusta</button>
+                                                <button  type="submit" className="botonP like pl-2 pr-2 ml-4"><img src={require('./components/salud.svg')} width="22px"></img> Me&nbsp;gusta</button>
                                             </div>
                                             <div className="col col-4">
                                                 <button type="submit" className="botonP like pl-2 pr-"><img src={require('./components/comentar.svg')} width="22px"></img>&nbsp;Comentarios</button>
                                             </div>
                                             <div className="col col-4">
-                                                <button  type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardar.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
+                                                <button  type="submit" className="botonP like pl-2 pr-2 mr-4"><img src={require('./components/guardados.svg')} width="14px"></img>&nbsp;&nbsp;Guardar</button>
                                             </div>
                                         </div>
                                         <hr className="lineaP"></hr>
@@ -346,34 +346,34 @@ class Guardados extends Component{
                                     <br></br><br></br>
                                     <div align="center" className="row justify-content-center">
                                         <div className="col col-6">
-                                            <button className="btns btn2g mt-5 mb-2" onClick={guardadoEdu}><img  src={require('./components/edu.svg')} height="19px" width="19px"></img> &nbsp;Educación</button>
+                                            <button className="btns btn2 mt-5 mb-2"  onClick={guardadoEdu}><img align="left" src={require('./components/edu.svg')} width="20px"></img> &nbsp;Educación</button>
                                         </div>
                                         <div className="col col-6">
-                                            <button className="btns mt-5 btn5g mb-2" onClick={guardadoRel}><img  src={require('./components/carita.svg')} height="19px" width="19px"></img> Relaciones<br></br>sociales</button>
+                                            <button className="btns mt-5 btn5 mb-2" onClick={guardadoRel}><img align="left" src={require('./components/carita.svg')} width="20px"></img> Relaciones<br></br>sociales</button>
                                         </div>
                                     </div>
                                     <div align="center"  className="row justify-content-center">
                                         <div className="col col-6">
-                                            <button className="btns btn4g mt-4 mb-2" onClick={guardadoAli}><div className="form-inline"><img  src={require('./components/tenedor.svg')} height="19px" width="19px"></img> &nbsp;Alimentación</div></button>
+                                            <button className="btns btn4 mt-3 mb-2" onClick={guardadoAli}><div className="form-inline"><img align="left" src={require('./components/tenedor.svg')} height="19px" width="19px"></img> &nbsp;Alimentación</div></button>
                                         </div>
                                         <div className="col col-6">
-                                            <button className="btns btn7g mt-4 mb-2"onClick={guardadoArt} ><img  src={require('./components/arte.svg')} height="19px" width="19px"></img> &nbsp;Arte</button>
-                                        </div>
-                                    </div>
-                                    <div align="center" className="row justify-content-center">
-                                        <div className="col col-6">
-                                            <button id="btn1" className="btns btn1g mt-4 mb-2" onClick={guardadoDep}><img  src={require('./components/deportes.svg')} height="19px" width="19px"></img> &nbsp;Deportes</button>
-                                        </div>
-                                        <div className="col col-6">
-                                            <button className="btns btn6g mt-4 mb-2" onClick={guardadoTec}><img  src={require('./components/tec.svg')} height="19px" width="19px"></img> &nbsp;Tecnología</button>
+                                            <button className="btns btn7 mt-3 mb-2" onClick={guardadoArt}><img align="left" src={require('./components/arte.svg')} width="20px"></img> &nbsp;Arte</button>
                                         </div>
                                     </div>
                                     <div align="center" className="row justify-content-center">
                                         <div className="col col-6">
-                                            <button className="btns btn3g mt-4 mb-2" onClick={guardadoSal}><FontAwesomeIcon icon={faHeart} />&nbsp;Salud</button>
+                                        <   button id="btn1" className="btns btn1 mt-3 mb-2" onClick={guardadoDep}><img align="left" src={require('./components/deportes.svg')} width="20px"></img> &nbsp;Deportes</button>
                                         </div>
                                         <div className="col col-6">
-                                            <button className="btns btn8g mt-4 mb-2" onClick={guardadoDoc}><img  src={require('./components/doc.svg')} height="19px" width="19px"></img> Documentos <br></br> legales  </button>
+                                        <button className="btns btn6 mt-3 mb-2" onClick={guardadoTec}><img align="left" src={require('./components/tec.svg')} width="20px"></img> &nbsp;Tecnología</button>
+                                        </div>
+                                    </div>
+                                    <div align="center" className="row justify-content-center">
+                                        <div className="col col-6">
+                                        <button className="btns btn3 mt-3 mb-2" onClick={guardadoSal}><img align="left" style={{position:"fixed"}, {transform:"translateX()"}} src={require('./components/salud.svg')} width="20px"></img>Salud</button>
+                                        </div>
+                                        <div className="col col-6">
+                                        <button className="btns btn8 mt-3 mb-2" onClick={guardadoDoc}><img align="left" style={{position:"fixed"}, {transform:"translateX()"}} src={require('./components/doc.svg')} width="20px"></img><p align="center">Documentos <br></br> legales</p></button>
                                         </div>
                                     </div>
                                 </form>

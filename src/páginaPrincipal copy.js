@@ -219,10 +219,12 @@ function like(){
     if(likeClick){
         likes[0].innerHTML = '<img src="' + salud + '" width="18px" height="18px" />&nbsp; Me gusta'
         likeClick = false
+        document.getElementsByClassName("megusta")[0].innerHTML="1 me gusta"
     }
     else{
         likes[0].innerHTML = '<img src="' + meGusta + '" width="18px" height="18px" />&nbsp;&nbsp;Me gusta'
         likeClick = true
+        document.getElementsByClassName("megusta")[0].innerHTML="0 me gusta"
     }
 } 
 
@@ -342,7 +344,7 @@ class pagPrinca extends Component{
                             </div>
                             <div className="row justify-content-around">
                                 <div className="col col-5">
-                                    <p> 0 me gusta</p>
+                                    <p className="megusta"> 0 me gusta</p>
                                 </div>
                                 <div className="col col-5">
                                     <p> 0 comentarios</p>
