@@ -8,6 +8,7 @@ import arte from './components/arte.svg'
 import edu from './components/edu.svg'
 import deportes from './components/deportes.svg'
 import tec from './components/tec.svg'
+import info from './components/info.svg'
 import doc from './components/doc.svg'
 import salud from './components/salud.svg'
 import mas from './components/mas.svg'
@@ -24,6 +25,9 @@ import {
 import Modal from './components/publicar'
 import axios from 'axios'
 
+
+var imgTitulo = document.getElementsByClassName("imgTtl")
+var tituloCat = document.getElementsByClassName("tituloo")
 var fondo = document.getElementsByClassName("princ") 
 var primerCuadrado = document.getElementsByClassName("asas")
 var segundoCuadrado = document.getElementsByClassName("asasa")
@@ -64,6 +68,11 @@ function cambioInfo(e){
     e.preventDefault()
     lineas[0].style.borderColor = "#E3E3E3"
     lineas[1].style.borderColor = "#E3E3E3"
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Información general" 
+    imgTitulo[0].src = info
+    imgTitulo[0].style.marginTop = null
+    imgTitulo[0].style.width = null
+    imgTitulo[0].style.marginLeft = null
 }
 function cambioAli(e){
     fondo[0].style.backgroundColor ="#F9EAB7"
@@ -77,6 +86,10 @@ function cambioAli(e){
     e.preventDefault()
     lineas[0].style.borderColor = "#EED375"
     lineas[1].style.borderColor = "#EED375"
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alimentación" 
+    imgTitulo[0].src = tenedor
+    imgTitulo[0].style.marginTop = null
+    imgTitulo[0].style.marginLeft = null
 }
 function cambioArt(e){
     fondo[0].style.backgroundColor ="rgba(224, 199, 235, 1)"
@@ -89,6 +102,11 @@ function cambioArt(e){
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(205, 157, 227, 1)"
     lineas[1].style.borderColor = "rgba(205, 157, 227, 1)"
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Arte" 
+    imgTitulo[0].src = arte
+    imgTitulo[0].style.marginTop = ".27em"
+    imgTitulo[0].style.width = "42px"
+    imgTitulo[0].style.marginLeft = null
 }
 function cambioDep(e){
     fondo[0].style.backgroundColor ="rgba(255, 211, 170, 1)"
@@ -102,6 +120,11 @@ function cambioDep(e){
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(255, 166, 84, 1)"
     lineas[1].style.borderColor = "rgba(255, 166, 84, 1)"
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deportes" 
+    imgTitulo[0].src = deportes
+    imgTitulo[0].style.marginTop = null
+    imgTitulo[0].style.width = "42px"
+    imgTitulo[0].style.marginLeft = null
 }
 function cambioDocs(e){
     fondo[0].style.backgroundColor ="rgba(225, 191, 159, 1)"
@@ -115,6 +138,11 @@ function cambioDocs(e){
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(182, 136, 93, 1)"
     lineas[1].style.borderColor = "rgba(182, 136, 93, 1)"
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Documentos legales" 
+    imgTitulo[0].src = doc
+    imgTitulo[0].style.marginTop = null
+    imgTitulo[0].style.marginLeft = ".2em"
+    imgTitulo[0].style.width = "38px"
 }
 function cambioEdu(e){
     fondo[0].style.backgroundColor ="rgba(184, 228, 194, 1)"
@@ -127,6 +155,11 @@ function cambioEdu(e){
     e.preventDefault()
     lineas[0].style.borderColor = "rgba(144, 226, 161, 1)"
     lineas[1].style.borderColor = "rgba(144, 226, 161, 1)"
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Educación" 
+    imgTitulo[0].src = edu
+    imgTitulo[0].style.marginTop = ".27em"
+    imgTitulo[0].style.width = "42px"
+    imgTitulo[0].style.marginLeft = null
 }
 function cambioRel(e){
     fondo[0].style.backgroundColor ="rgba(255, 107, 160, 0.25)"
@@ -139,6 +172,11 @@ function cambioRel(e){
     lineas[0].style.borderColor = "rgba(255, 180, 207, 1)"
     lineas[1].style.borderColor = "rgba(255, 180, 207, 1)"
     botonPresionado = 1
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Relaciones Sociales" 
+    imgTitulo[0].src = carita
+    imgTitulo[0].style.marginTop = null
+    imgTitulo[0].style.width = null
+    imgTitulo[0].style.marginLeft = null
 }
 function cambioSal(e){
     fondo[0].style.backgroundColor ="#F5BFBF"
@@ -151,9 +189,14 @@ function cambioSal(e){
     lineas[0].style.borderColor = "#F5BFBF"
     lineas[1].style.borderColor = "#F5BFBF"
     botonPresionado = 2
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Salud" 
+    imgTitulo[0].src = salud
+    imgTitulo[0].style.marginTop = ".3em"
+    imgTitulo[0].style.width = null
+    imgTitulo[0].style.marginLeft = null
 }
 
-var cambioTec = (e) =>{
+    function cambioTec(e){
     fondo[0].style.backgroundColor ="#B5D3EF"
     primerCuadrado[0].style.backgroundColor ="#B5D3EF"
     for(var i= 0; i<9;i++){
@@ -165,7 +208,11 @@ var cambioTec = (e) =>{
     lineas[1].style.borderColor = "#86B8E5"
     botonPresionado = 3
     console.log("hola")
-    this.setState({botonPresionado: botonPresionado})
+    tituloCat[0].innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tecnología" 
+    imgTitulo[0].src = tec
+    imgTitulo[0].style.marginTop = ".3em"
+    imgTitulo[0].style.width = null
+    imgTitulo[0].style.marginLeft = null
 }
 
 function like(){
@@ -238,7 +285,7 @@ function verMas(){
 }
 
 let noSeleccionados =[]
-let seleccionados =[btnRel, btnSal, btnTec,btnAli, btnArt, btnDep, btnDoc, btnEdu]
+let seleccionados =[btnRel, btnSal, btnTec, btnAli, btnArt, btnDep, btnDoc, btnEdu]
                    
 
 var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
@@ -418,7 +465,10 @@ class pagPrinca extends Component{
                                 <p></p>
                             </div>
                             <div className="container-fluid misI ml-2">
-                                <h1 align="left" name="cate" className="cat pt-2 pb-2">&nbsp;<FontAwesomeIcon icon={faInfoCircle}/> &nbsp;&nbsp;Información general</h1>
+                                <div className="circuloCont">
+                                    <img className="pt-2 pl-2 mr-3 imgTtl" src={require('./components/info.svg')}></img>
+                                </div>
+                                <h1 align="left" name="cate" className="cat pt-2 pb-2 tituloo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Información general</h1>
                             </div>
                             <div className="asas">
                                 <p></p>
@@ -431,15 +481,15 @@ class pagPrinca extends Component{
                             </div>
                             <div className="container-fluid misG pt-3">
                                 <div className="container publicaciones queesta">
-                                    <h1 className="cat mt-2 ml-2"><img src={require('./components/usuario.svg')}></img>&nbsp;&nbsp;&nbsp;¿Qué está pensando Tathiana?</h1>
+                                    <h1 align="left" className="cata mt-2 ml-2"><img src={require('./components/usuario.svg')}></img>&nbsp;&nbsp;&nbsp;¿Qué está pensando Tathiana?</h1>
                                     <br></br><br></br>  
                                     <div align="right" className="pb-2">
-                                        <button type="button" onClick={e => {this.showModal();}} className="botonP">Hacer publicación</button>
+                                        <button type="button" onClick={e => {this.showModal();}} className="botonP pl-4 pr-4">Hacer publicación</button>
                                     </div>
                                 </div>
                                 <div className="mt-4 container publicaciones">
                                     {listPublicaiones}
-                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>    
+                                    <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>   <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br> 
                                 </div>
                                 <div className="mt-4 container pubComent">
                                     <div className="container asasa">
@@ -460,6 +510,9 @@ class pagPrinca extends Component{
                         </div>
                         <div align="center" className="col col-2">
                             <div className="container-fluid misN ml-5">
+                            <div className="circuloCont">
+                                    <img className="pt-2" src={require('./components/novedades.svg')}></img>
+                                </div>
                                 <h1 align="left" className="cat pt-2  pb-2"> &nbsp;&nbsp; &nbsp;&nbsp;Novedades</h1>
                             </div>
                             <div className="container-fluid misNo">
