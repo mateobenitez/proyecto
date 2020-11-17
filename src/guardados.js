@@ -317,7 +317,7 @@ class Guardados extends Component{
                                             </div><br></br>
                                             <div className="row justify-content-around">
                                                 <div className="col col-6">
-                                                    <p>0 Me gusta</p>
+                                                    <p>1 Me gusta</p>
                                                 </div>
                                                 <div className="col col-6">
                                                     <p>0 comentarios</p>
