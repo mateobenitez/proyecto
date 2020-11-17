@@ -86,7 +86,7 @@ function Contacto(){
                 </div>
                 <div className="col col-4">
                     <div align="center" className="nosotros1 container mt-5">
-                        <p className="nosp noso1 pt-4">ONG TGD Padres TEA</p><hr className="lineanos line2"></hr>
+                        <p className="nosp noso1 pt-4">GRUPO TGD Padres TEA</p><hr className="lineanos line2"></hr>
                         <button className="botCon " onClick={abrirNos2}><img  width="400" src={require("./components/tgd.svg")}></img></button><br></br><br></br>
                         <div className="container inputsNos">
                             <form align="center">
