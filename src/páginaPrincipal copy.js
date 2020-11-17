@@ -328,7 +328,7 @@ class pagPrinca extends Component{
                             <div className="col col-6">
                                 <form className="form-inline">
                                     <button className="cat pibeBtn mt-2 ml-3"><img src={require('./components/usuario.svg')}></img>&nbsp;</button>
-                                    <a className="mt-3 pibe" href="/perfil2"> Usuario </a>
+                                    <a className="mt-3 pibe" href="/perfil2"> Tathi </a>
                                 </form>
                             </div>
                             <div className="col col-6">
