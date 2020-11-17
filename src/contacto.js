@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import React, {Component} from 'react';
-import MyNavBar from './components/NavBarInicio.js';
+import MyNavBar from './components/NavBarContacto.js';
 import MyFooter from './components/footer.js';
 import './contactos.css'
 
@@ -64,72 +64,44 @@ function Contacto(){
                 <h1 className="titulo">Contacto y asistencia</h1><br></br>
             </div>
             <div className="row">
-                <div className="col col-1">
+                <div className="col col-2">
 
                 </div>
-                <div className="col col-5">
+                <div className="col col-4">
                     <div align="center" className="nosotros container mt-5">
                         <p className="nosp noso pt-4">Nosotros</p><hr className="lineanos line1"></hr>
-                        <input className="botCon" onClick={abrirNos} type="image" src={require("./components/logo.svg")}></input><br></br><br></br>
+                        <button className="botCon" onClick={abrirNos}><img className="mt-5" width="500" src={require("./components/logo.svg")}></img></button><br></br><br></br>
                         <div className="container inputsNos">
-                            <form>
-                                <div className="row">
-                                    <div className="col pl-5 col-6 pb-4">
-                                        <input type="text" className="pl-2 botonesNos" placeholder="Nombre"></input>
-                                    </div>
-                                    <div className="col pr-5 col-6">
-                                        <input type="text" className="pl-2 botonesNos" placeholder="Apellido"></input>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col pl-5 col-6 pb-4">
-                                        <input type="text" className="pl-2 botonesNos textYcorreo" placeholder="Corrreo Electrónico"></input><br></br>
-                                    </div>
-                                    <div className=" col col-6">
-                                    </div>
-                                    <div className="col pl-5 col-6">
-                                        <textarea className="botonesNos  textYcorreo" placeholder="Mensaje" rows="6" ></textarea>
-                                    </div>
-                                    <div className=" col col-6">
-                                    </div>
-                                    <input type="submit" className="botonNos" placeholder="Corrreo Electrónico"></input>
-                                </div>
+                            <form align="center">
+                                <div className="">
+                                    <input type="text" className="pl-2 botonesNos" placeholder="Nombre"></input>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="text" className="pl-2 botonesNos" placeholder="Apellido"></input>
+                                </div><br></br>
+                                <input type="text" className="pl-2 botonesNos textYcorreo" placeholder="Corrreo Electrónico"></input><br></br><br></br>
+                                <textarea className="botonesNos  textYcorreo" placeholder="Mensaje" rows="4" ></textarea>
+                                <input type="submit" className="botonNos mt-3"></input>
                             </form>
                         </div>
                     </div>   
                 </div>
-                <div className="col col-5">
+                <div className="col col-4">
                     <div align="center" className="nosotros1 container mt-5">
                         <p className="nosp noso1 pt-4">ONG TGD Padres TEA</p><hr className="lineanos line2"></hr>
-                        <input className="botCon " onClick={abrirNos2}  type="image" src={require("./components/tgd.svg")} width="500" height="250" alt=""></input><br></br><br></br>
+                        <button className="botCon " onClick={abrirNos2}><img  width="400" src={require("./components/tgd.svg")}></img></button><br></br><br></br>
                         <div className="container inputsNos">
-                            <form>
-                                <div className="row">
-                                    <div className="col pl-5 col-6 pb-4">
-                                        <input type="text" className="pl-2 botonesNos" placeholder="Nombre"></input>
-                                    </div>
-                                    <div className="col pr-5 col-6">
-                                        <input type="text" className="pl-2 botonesNos" placeholder="Apellido"></input>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col pl-5 col-6 pb-4">
-                                        <input type="text" className="pl-2 botonesNos textYcorreo" placeholder="Corrreo Electrónico"></input><br></br>
-                                    </div>
-                                    <div className=" col col-6">
-                                    </div>
-                                    <div className="col pl-5 col-6">
-                                        <textarea className="botonesNos  textYcorreo" placeholder="Mensaje" rows="6" ></textarea>
-                                    </div>
-                                    <div className=" col col-6">
-                                    </div>
-                                    <input type="submit" className="botonNos" placeholder="Corrreo Electrónico"></input>
-                                </div>
+                            <form align="center">
+                                <div className="">
+                                    <input type="text" className="pl-2 botonesNos" placeholder="Nombre"></input>&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="text" className="pl-2 botonesNos" placeholder="Apellido"></input>
+                                </div><br></br>
+                                <input type="text" className="pl-2 botonesNos textYcorreo" placeholder="Corrreo Electrónico"></input><br></br><br></br>
+                                <textarea className="botonesNos  textYcorreo" placeholder="Mensaje" rows="4" ></textarea>
+                                <input type="submit" className="botonNos mt-3"></input>
                             </form>
                         </div>
                     </div>   
                 </div>
-                <div className="col col-1">
+                <div className="col col-2">
                 </div>
             </div>
             <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>

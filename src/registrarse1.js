@@ -157,7 +157,7 @@ class Reg1 extends Component{
         return (
             
             <div className="Reg">
-                <MyNavBar2/><br></br><br></br><br></br>
+                <MyNavBar2/><br></br><br></br>
                 <form method="get" action="/registrarse">
                     <button  className="atras pt-2 pb-2 pl-3 pr-3"><img className="pb-1" src={require('./components/flechaAt.svg')}></img>&nbsp;&nbsp;Atrás</button>
                 </form>
@@ -165,40 +165,40 @@ class Reg1 extends Component{
                     <button onClick={obli} className="continuar pt-2 pb-2 pl-3 pr-3">Siguiente&nbsp;&nbsp;<img className="pb-1" src={require('./components/continuar.svg')}></img></button>
                 </form>
                 <div align="center">
-                    <h1 className="mb-5">¿A qué grupos le gustaría unirse?  </h1>
+                    <h1 className="mb-4">¿A qué categorías le gustaría unirse?  </h1>
                     <div className="form-inline">
-                        <div className="container grupos">
+                        <div className="container-fluid grupos">
                             <form name="foro">
                                 <div className="row justify-content-center">
                                     <div className="col col-4">
-                                    <button className="btns btn2 mt-5 mb-2"  onClick={prevenir}><img src={require('./components/edu.svg')} width="20px"></img> &nbsp;Educación</button>
+                                    <button className="btns btn2 mt-5 mb-2"  onClick={prevenir}><img align="left" src={require('./components/edu.svg')} width="20px"></img> &nbsp;Educación</button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns mt-5 btn5 mb-2" onClick={prevenir1}><img src={require('./components/carita.svg')} width="20px"></img> Relaciones<br></br>sociales</button>
-                                    </div>
-                                </div>
-                                <div className="row justify-content-center">
-                                    <div className="col col-4">
-                                        <button className="btns btn4 mt-4 mb-2" onClick={prevenir2}><div className="form-inline"><img  src={require('./components/tenedor.svg')} height="19px" width="19px"></img> &nbsp;Alimentación</div></button>
-                                    </div>
-                                    <div className="col col-4">
-                                        <button className="btns btn7 mt-4 mb-2" onClick={prevenir3}><img src={require('./components/arte.svg')} width="20px"></img> &nbsp;Arte</button>
+                                        <button className="btns mt-5 btn5 mb-2" onClick={prevenir1}><img align="left" src={require('./components/carita.svg')} width="20px"></img> Relaciones<br></br>sociales</button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
                                     <div className="col col-4">
-                                        <button id="btn1" className="btns btn1 mt-4 mb-2" onClick={prevenir4}><img src={require('./components/deportes.svg')} width="20px"></img> &nbsp;Deportes</button>
+                                        <button className="btns btn4 mt-3 mb-2" onClick={prevenir2}><div className="form-inline"><img align="left" src={require('./components/tenedor.svg')} height="19px" width="19px"></img> &nbsp;Alimentación</div></button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns btn6 mt-4 mb-2" onClick={prevenir5}><img src={require('./components/tec.svg')} width="20px"></img> &nbsp;Tecnología</button>
+                                        <button className="btns btn7 mt-3 mb-2" onClick={prevenir3}><img align="left" src={require('./components/arte.svg')} width="20px"></img> &nbsp;Arte</button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
                                     <div className="col col-4">
-                                        <button className="btns btn3 mt-4 mb-2" onClick={prevenir6}><img src={require('./components/salud.svg')} width="20px"></img>&nbsp;Salud</button>
+                                        <button id="btn1" className="btns btn1 mt-3 mb-2" onClick={prevenir4}><img align="left" src={require('./components/deportes.svg')} width="20px"></img> &nbsp;Deportes</button>
                                     </div>
                                     <div className="col col-4">
-                                        <button className="btns btn8 mt-4 mb-2" onClick={prevenir7}><img src={require('./components/doc.svg')} width="20px"></img> Documentos <br></br> legales</button>
+                                        <button className="btns btn6 mt-3 mb-2" onClick={prevenir5}><img align="left" src={require('./components/tec.svg')} width="20px"></img> &nbsp;Tecnología</button>
+                                    </div>
+                                </div>
+                                <div className="row justify-content-center">
+                                    <div className="col col-4">
+                                        <button className="btns btn3 mt-3 mb-2" onClick={prevenir6}><img align="left" style={{position:"fixed"}, {transform:"translateX()"}} src={require('./components/salud.svg')} width="20px"></img>Salud</button>
+                                    </div>
+                                    <div className="col col-4">
+                                        <button className="btns btn8 mt-3 mb-2" onClick={prevenir7}><img align="left" style={{position:"fixed"}, {transform:"translateX()"}} src={require('./components/doc.svg')} width="20px"></img><p align="center">Documentos <br></br> legales</p></button>
                                     </div>
                                 </div>
                                 <div className="row justify-content-center">
@@ -207,7 +207,7 @@ class Reg1 extends Component{
                             </form>
                         </div>
                     </div>
-                    <img className="imgReg1" src={require("./components/tipoGrupos.svg")} alt=""></img>
+                    <img className="imgReg1" width="320px" src={require("./components/tipoGrupos.svg")} alt=""></img>
                 </div>
                 <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <MyFooter />

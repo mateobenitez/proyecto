@@ -243,8 +243,8 @@ function verMas(){
     }
 }
 
-let noSeleccionados =[btnAli, btnArt, btnDep, btnDoc, btnEdu]
-let seleccionados =[btnRel, btnSal, btnTec]
+let noSeleccionados =[]
+let seleccionados =[btnRel, btnSal, btnTec,btnAli, btnArt, btnDep, btnDoc, btnEdu]
                    
 
 var eleccionados = seleccionados.includes(function(i) { return i !==  ""});
@@ -388,9 +388,7 @@ class pagPrinca extends Component{
                                         {noSeleccionados[7]}
                                         {noSeleccionados[8]}
                                     </div>
-                                    <div className="contVer  pb-3">
-                                        <button className="ml-3 mt-3 botonVer" onClick={verMas}>Unirse a más categorías <img src={require('./components/mas.svg')}></img> </button>
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <div className="container-fluid misS1">
@@ -433,7 +431,7 @@ class pagPrinca extends Component{
                             </div>
                             <div className="container-fluid misG pt-3">
                                 <div className="container publicaciones queesta">
-                                    <h1 className="cat mt-2 ml-2"><img src={require('./components/usuario.svg')}></img>&nbsp;&nbsp;&nbsp;¿Qué está pensando Hernán?</h1>
+                                    <h1 className="cat mt-2 ml-2"><img src={require('./components/usuario.svg')}></img>&nbsp;&nbsp;&nbsp;¿Qué está pensando Tathiana?</h1>
                                     <br></br><br></br>  
                                     <div align="right" className="pb-2">
                                         <button type="button" onClick={e => {this.showModal();}} className="botonP">Hacer publicación</button>

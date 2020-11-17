@@ -1,6 +1,12 @@
 .contacto{
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: pop;
+}
+
+@font-face{
+    font-family: "pop";
+    src: url(components/poppins/Poppins-Regular.ttf);
 }
 
 .titulo{
@@ -21,7 +27,7 @@
 }
 
 .nosotros{
-    border-radius: 40px;
+    border-radius: 20px;
     background-color: rgba(238, 238, 238, 1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-height: 36em;
@@ -32,7 +38,7 @@
 }
 
 .nosotros1{
-    border-radius: 60px;
+    border-radius: 20px;
     background-color: rgba(238, 238, 238, 1);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     min-height: 36em;
@@ -63,6 +69,8 @@
     height: 13.625em;
     width: 37.500em;
     top: 4em;
+    border: none;
+    background-color: transparent;
 }
 
 .inputsNos{
@@ -76,12 +84,18 @@
     border: 2px solid #CFCFCF;
     box-sizing: border-box;
     border-radius: .3em;
-    max-width: 9em;
-    font-size: 36px;
+    min-width: 10.6em;
+    max-width: 10.6em;
+    font-size: 25px;
+    color: rgba(160, 160, 160, 1);
+}
+
+::placeholder{
+    color: rgba(160, 160, 160, 1);
 }
 
 .textYcorreo{
-    min-width: 18.4em;
+    min-width: 22em;
 }
 
 .botonNos{
@@ -91,8 +105,5 @@
     font-size: 36px;
     padding-left: 2em;
     padding-right: 2em;
-    border-color: transparent;
-    position: absolute;
-    bottom: -2em;
-    left: 7em;
+    border-color: transparent;    
 }

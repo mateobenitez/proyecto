@@ -1,6 +1,12 @@
 .IniciarSesion{
     background-color: #F6F6F6;
     overflow-x: hidden;
+    font-family: pop;
+}
+
+@font-face{
+    font-family: "pop";
+    src: url(poppins/Poppins-Regular.ttf);
 }
 
 .que{

@@ -9,3 +9,16 @@
     font-weight: 400;
     font-size: 48px;
 }
+
+.acercaTxt{
+    font-size: 1.3em;
+}
+
+@font-face{
+    font-family: "pop";
+    src: url(components/poppins/Poppins-Regular.ttf);
+}
+
+.acerca{
+    font-family: pop;
+}

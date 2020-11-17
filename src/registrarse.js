@@ -130,7 +130,7 @@ class Reg extends Component {
             <div className="Reg">
                 <MyNavBar2/><br></br><br></br><br></br>
                 <div align="center">
-                    <h1><b>Bienvenido </b></h1>  
+                    <h1 className="bienv"><b>¡Bienvenido!</b></h1>  
                     <p className="complete mt-4 mb-5">Complete más información personal para mejorar su <br></br>experiencia.</p>
                     <h2 className="mt-3">Seleccione su rol</h2>
                     <br></br><br></br><br></br><br></br>
@@ -170,7 +170,7 @@ class Reg extends Component {
                     </div>
                     <br></br><br></br><br></br><br></br> 
                 </div>
-                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+                <br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
                 <MyFooter />
             </div>
         )

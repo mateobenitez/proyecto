@@ -1,6 +1,7 @@
 .Inicio{
     background-color: #f6f6f6;
     overflow-x: hidden;
+    font-family: pop;
 }
 /*p{
     text-align: center;
@@ -126,6 +127,16 @@ left: -140%;
     src: url(components/poppins/Poppins-Regular.ttf);
 }
 
+@font-face{
+    font-family: "popBold";
+    src: url(components/poppins/Poppins-Bold.ttf);
+}
+
+.bold{
+    font-family: "popBold";
+    color:rgba(57, 57, 57, 1);
+}
+
 .ojo{
     color: black;
     background-color: transparent;
@@ -155,7 +166,7 @@ left: -140%;
 
 .yaTienes2{
     position: absolute;
-    right: -0.2em;
+    right: .4em;
     bottom: 47.5em;
     min-width: 58.5em;
 }
