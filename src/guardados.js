@@ -311,9 +311,9 @@ class Guardados extends Component{
                                             </div>
                                         </div>
                                         <div className="container-fluid cont" align="center">
-                                            <p className="pibe">Muchas gracias al psicólogo Mateo Benitez por su colaboración. </p>
-                                            <div className="container imagenP">
-                                                <img src={require("./components/nena.svg")}width="200" alt=""></img>
+                                            <p className="">Muchas gracias al psicólogo Mateo Benitez por su colaboración. </p>
+                                            <div className="container">
+                                                <img src={require("./components/nena.svg")}width="250" alt=""></img>
                                             </div><br></br>
                                             <div className="row justify-content-around">
                                                 <div className="col col-6">

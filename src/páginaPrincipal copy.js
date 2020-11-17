@@ -339,9 +339,9 @@ class pagPrinca extends Component{
                         </div>
                         <div className="container-fluid cont" align="center">
                             <p className="pibe">{resp.data.data[i].body} </p>
-                            <div className="container imagenP">
-                                <img src={require("./components/nena.svg")}width="200" height="200" alt=""></img>
-                            </div>
+                            <div className="container">
+                                <img src={require("./components/nena.svg")}width="250" alt=""></img>
+                            </div><br></br>
                             <div className="row justify-content-around">
                                 <div className="col col-5">
                                     <p className="megusta"> 0 me gusta</p>
