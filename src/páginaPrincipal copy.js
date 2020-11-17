@@ -190,13 +190,7 @@ function guard(){
     }
 }
 
-function comentar(){
-    for(var i=0; i<2; i++){
-        lineas[i].style.display = 'none'
-        lineas[2].style.borderColor = 'rgba(218, 218, 218, 1)'
-    }
-    document.getElementsByClassName('pubComent')[0].style.display = "initial"
-}
+
 
 function verMas(){
     document.getElementsByClassName("hid")[0].style.display = "initial"
@@ -255,7 +249,13 @@ class pagPrinca extends Component{
     componentDidMount(){
         var token = window.localStorage.getItem('token')
         console.log(window.localStorage.getItem('token'))
-        
+        function comentar(){
+            for(var i=0; i<2; i++){
+                lineas[i].style.display = 'none'
+                lineas[2].style.borderColor = 'rgba(218, 218, 218, 1)'
+            }
+            document.getElementsByClassName('pubComent')[0].style.display = "initial"
+        }
         axios({
             method: "get",
             url: "http://localhost:3000/user/mostrarPosts ",
